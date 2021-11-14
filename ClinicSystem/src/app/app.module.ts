@@ -11,6 +11,7 @@ import { ClinicsComponent } from './pages/clinics/clinics.component';
 import { AppointmentsComponent } from './pages/appointments/appointments.component';
 import { NotifsComponent } from './pages/notifs/notifs.component';
 import { MessagesComponent } from './pages/messages/messages.component';
+import { AllClinicsComponent } from './pages/clinics/all-clinics/all-clinics.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MessagesComponent } from './pages/messages/messages.component';
     AppointmentsComponent,
     NotifsComponent,
     MessagesComponent,
+    AllClinicsComponent,
   ],
   imports: [
     BrowserModule
