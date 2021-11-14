@@ -1,3 +1,4 @@
+/* body styling for full screen(no white spaces on the sides) */
 body{
     position: absolute;
     top: 0;
@@ -5,6 +6,7 @@ body{
     width: 100%;
 }
 
+/* First content of main page before login */
 div.div1{
     position: relative;
     font-family: Bahnschrift;
@@ -15,13 +17,12 @@ div.div1{
     left: 0;
     top: 0;
 
-    padding-bottom: 20%;
+    padding-bottom: 15%;
     margin-top: -5%;
 }
 
-
 div.div1Content{
-    padding-top: 10%;
+    padding-top: 15%;
     padding-left: 7%;
     color: #fff;
 }
@@ -55,17 +56,61 @@ button.signUpButton:hover{
     background-color: #32D800;
 }
 
+
+/* Second Cotent of main page before login */
 div.div2{
     position: relative;
     margin: -.6%;
-    display: flexbox;
-}
-div.div2Text{
+    display: flex;
+    flex-direction: row;
 
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+    color: #707070;
+}
+div.div2 > * {
+    flex-basis: 100%;
+    padding: 5%;
+}
+div.div2TextTitle{
+    font-family: Bebas Neue;
+}
+div.div2TextContent{
+    font-family: Poppins;
 }
 div.div2Content{
-    
+    text-align: center;
+    border: solid;
+    border-color: #353535;
+    margin: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-div.div2TextContent2{
-    
+
+/* mobile responsive design */
+@media (max-width: 768px){
+    body{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* First content of main page before login */
+    div.div1{
+        background-position: right;
+    }
+    h1.div1Content1{
+        font-size: 4em;
+    }
+    h3.div1Content2{
+        font-size: small;
+        font-weight: lighter;
+    }
+
+    /* Second Cotent of main page before login */
+    div.div2Content{
+        display: none;
+    }
 }
