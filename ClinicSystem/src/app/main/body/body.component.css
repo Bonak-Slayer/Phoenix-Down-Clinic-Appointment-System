@@ -1,0 +1,71 @@
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+div.div1{
+    position: relative;
+    font-family: Bahnschrift;
+    background-image: url(./homeDiv1Background.png);
+    background-size: cover;
+
+    margin: -.6%;
+    left: 0;
+    top: 0;
+
+    padding-bottom: 20%;
+    margin-top: -5%;
+}
+
+
+div.div1Content{
+    padding-top: 10%;
+    padding-left: 7%;
+    color: #fff;
+}
+h1.div1Content1{
+    font-family: Bebas Neue;
+    font-size: 5em;
+}
+h3.div1Content2{
+    position: relative;
+    bottom: 4vw;
+}
+span.now{
+    color: #32D800;
+}
+button.signUpButton{
+    position: relative;
+    bottom: 3vw;
+    padding: .5em 4.5em;
+
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 700;
+
+    border: solid;
+    border-radius: 8px;
+    border-color: #32D800;
+    background-color: transparent;
+}
+button.signUpButton:hover{
+    background-color: #32D800;
+}
+
+div.div2{
+    position: relative;
+    margin: -.6%;
+    display: flexbox;
+}
+div.div2Text{
+
+}
+div.div2Content{
+    
+}
+div.div2TextContent2{
+    
+}
