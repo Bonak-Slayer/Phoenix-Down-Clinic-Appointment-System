@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3eba1820-12b2-4c4d-9bff-1f5eaaee64c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClinicSystem/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClinicSystem/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClinicSystem/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClinicSystem/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,46 +26,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.html">
+        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="162">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.html">
+        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="234">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -83,10 +63,13 @@
         <option value="$PROJECT_DIR$/ClinicSystem/src/app/main/main.component.css" />
         <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.ts" />
         <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.html" />
-        <option value="$PROJECT_DIR$/ClinicSystem/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.css" />
-        <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.css" />
         <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.html" />
+        <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.css" />
+        <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.ts" />
+        <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.html" />
+        <option value="$PROJECT_DIR$/ClinicSystem/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.css" />
       </list>
     </option>
   </component>
@@ -161,7 +144,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
+              <item name="clinics" type="462c0819:PsiDirectoryNode" />
+              <item name="all-clinics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phoenix-Down-Clinic-Appointment-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phoenix-Down-Clinic-Appointment-System" type="462c0819:PsiDirectoryNode" />
+              <item name="ClinicSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="clinics" type="462c0819:PsiDirectoryNode" />
+              <item name="clinic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -200,21 +194,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636862870701</updated>
-      <workItem from="1636862871856" duration="6197000" />
+      <workItem from="1636862871856" duration="9097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6197000" />
+    <option name="totallyTimeSpent" value="9097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24983476" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -254,13 +249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/navbar/navbar.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -270,15 +258,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="162">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/all-clinics/all-clinics.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="144">
+          <caret line="8" column="63" lean-forward="true" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClinicSystem/src/app/pages/clinics/clinic/clinic.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>

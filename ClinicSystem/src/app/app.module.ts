@@ -12,6 +12,9 @@ import { AppointmentsComponent } from './pages/appointments/appointments.compone
 import { NotifsComponent } from './pages/notifs/notifs.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { AllClinicsComponent } from './pages/clinics/all-clinics/all-clinics.component';
+import { ClinicComponent } from './pages/clinics/clinic/clinic.component';
+import { ClinicAppointmentComponent } from './pages/clinics/clinic-appointment/clinic-appointment.component';
+import { ClinicInquiryComponent } from './pages/clinics/clinic-inquiry/clinic-inquiry.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { AllClinicsComponent } from './pages/clinics/all-clinics/all-clinics.com
     NotifsComponent,
     MessagesComponent,
     AllClinicsComponent,
+    ClinicComponent,
+    ClinicAppointmentComponent,
+    ClinicInquiryComponent,
   ],
   imports: [
     BrowserModule
