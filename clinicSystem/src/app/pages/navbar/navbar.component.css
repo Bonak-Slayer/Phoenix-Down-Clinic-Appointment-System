@@ -1,0 +1,74 @@
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar {
+  height: 100%;
+  width: 20%;
+  background-color: #353535;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.user-content {
+  margin-top: 10%;
+}
+
+#user-profile {
+  margin: 0 35%;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.user-content h3 {
+  text-align: center;
+  font-family: Bahnschrift;
+  font-size: 20px;
+  font-weight: 700;
+
+  color: white;
+}
+
+.user-content hr {
+  margin: 0 10%;
+}
+
+.page-link {
+  list-style-type: none;
+  margin: 15% 0;
+}
+
+.page-link a {
+  text-decoration: none;
+  font-family: Bahnschrift;
+  font-weight: 700;
+
+  color: white;
+}
+
+.signout-container {
+  margin-top: 50%;
+  text-align: center;
+}
+
+#sign-out-button {
+  font-family: Bahnschrift;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #353535;
+  border: 3px solid #32D800;
+  border-radius: 10px;
+  padding: 1% 0;
+
+  color: white;
+  margin: 0 10%;
+  width: 70%;
+}
+
+
