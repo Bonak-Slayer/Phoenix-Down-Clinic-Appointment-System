@@ -10,13 +10,17 @@
     <button>SEARCH</button>
   </div>
 
-  <div class="clinics">
+  <div class="clinics" *ngFor="let clinic of clinicsService.clinics">
     <!-- SAMPLE CONTENT ONLY, CHANGE THIS ONCE API HAS BEEN FINISHED -->
     <div class="clinic">
       <div class="clinic-image"></div>
-      <div class="clinic-description"></div>
+      <div class="clinic-description-container">
+        <div class="clinic-description">
+          <h2>{{ clinic.name }}</h2>
+          <p>{{ clinic.description }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 <app-navbar></app-navbar>

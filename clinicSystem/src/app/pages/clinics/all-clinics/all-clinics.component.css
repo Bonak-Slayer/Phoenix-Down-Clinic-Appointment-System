@@ -40,6 +40,30 @@
 
 .clinic {
   border: 2px solid #707070;
-  height: 250px;
-  width: 25%;
+  height: 300px;
+  width: 35%;
+}
+
+.clinic-image {
+  margin-left: -2px;
+  margin-top: -2px;
+  height: 150px;
+  width: 100.5%;
+  border: 1px solid #707070;
+}
+
+.clinic-description-container {
+  margin-left: -1px;
+  background-color: #76BF69;
+  width: 100.7%;
+  height: 50%;
+  font-family: Bahnschrift;
+}
+
+.clinic-description {
+  padding: 2% 5%;
+}
+
+.clinic-description h2, p{
+  color: white;
 }
