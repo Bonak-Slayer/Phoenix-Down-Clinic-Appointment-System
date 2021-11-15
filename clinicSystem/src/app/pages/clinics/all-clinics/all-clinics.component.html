@@ -10,9 +10,9 @@
     <button>SEARCH</button>
   </div>
 
-  <div class="clinics" *ngFor="let clinic of clinicsService.clinics">
+  <div class="clinics">
     <!-- SAMPLE CONTENT ONLY, CHANGE THIS ONCE API HAS BEEN FINISHED -->
-    <div class="clinic">
+    <div class="clinic" *ngFor="let clinic of clinicsService.clinics">
       <div class="clinic-image"></div>
       <div class="clinic-description-container">
         <div class="clinic-description">
