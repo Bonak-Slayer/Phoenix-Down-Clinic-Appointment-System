@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
+import { Routes, RouterModule } from "@angular/router";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,13 @@ import { ClinicInquiryComponent } from "./pages/clinics/clinic-inquiry/clinic-in
 import { NotifsComponent } from "./pages/notifs/notifs.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { NavbarComponent } from "./pages/navbar/navbar.component";
+
+const routes: Routes = [
+  {path: '', component: MainComponent},
+  {path: 'clinics', component: AllClinicsComponent},
+  {path: 'clinic/:id', component: ClinicComponent},
+  {path: 'messages', component: MessagesComponent}
+]
 
 @NgModule({
   declarations: [
@@ -38,7 +46,8 @@ import { NavbarComponent } from "./pages/navbar/navbar.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    [RouterModule.forRoot(routes)]
   ],
   providers: [],
   bootstrap: [AppComponent]
