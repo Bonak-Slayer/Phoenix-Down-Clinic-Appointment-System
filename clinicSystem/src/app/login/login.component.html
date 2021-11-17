@@ -1,0 +1,18 @@
+<div class="container"></div>
+<div class="login-container">
+  <div class="fields">
+    <h1>{{ message }}</h1>
+    <label>Username: </label>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="username">
+    </div>
+
+    <label>Password: </label>
+    <div class="input-container">
+      <input type="password" [(ngModel)]="password">
+    </div>
+
+    <button (click)="checkValues()">Log In</button>
+    <p id="info">OLONGAPO CITY CLINICS APPOINTMENT SYSTEM</p>
+  </div>
+</div>

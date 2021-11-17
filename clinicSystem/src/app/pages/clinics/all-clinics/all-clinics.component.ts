@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ClinicsService} from "../clinics.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-all-clinics',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllClinicsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public clinicsService: ClinicsService, private router: Router) { }
 
   ngOnInit(): void {
+    this.clinicsService.getClinics()
   }
 
+  accessClinic(clinicId: string){
+    this.router.navigate([`/clinic/${clinicId}`]);
+  }
 }

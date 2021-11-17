@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
+import { Routes, RouterModule } from "@angular/router";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,16 @@ import { ClinicInquiryComponent } from "./pages/clinics/clinic-inquiry/clinic-in
 import { NotifsComponent } from "./pages/notifs/notifs.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { NavbarComponent } from "./pages/navbar/navbar.component";
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
+
+const routes: Routes = [
+  {path: '', component: MainComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'clinics', component: AllClinicsComponent},
+  {path: 'clinic/:id', component: ClinicComponent},
+  {path: 'messages', component: MessagesComponent}
+]
 
 @NgModule({
   declarations: [
@@ -33,10 +45,14 @@ import { NavbarComponent } from "./pages/navbar/navbar.component";
     NotifsComponent,
     MessagesComponent,
     NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    [RouterModule.forRoot(routes)],
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

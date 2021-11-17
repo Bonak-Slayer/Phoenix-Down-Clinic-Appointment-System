@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  username: string = 'JESUS CHRIST';
+  username: string = 'KARL RESULTAN';
   constructor() { }
 
   ngOnInit(): void {

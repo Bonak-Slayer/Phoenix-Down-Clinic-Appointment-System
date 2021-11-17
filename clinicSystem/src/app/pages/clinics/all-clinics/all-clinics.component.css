@@ -36,10 +36,38 @@
 .clinics {
   margin-top: 5%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .clinic {
-  border: 2px solid #707070;
-  height: 250px;
-  width: 25%;
+  height: 300px;
+  width: 35%;
+  margin: 3%;
+
+  flex: 1 0 30%;
+}
+
+.clinic-image {
+  margin-left: -2px;
+  margin-top: -2px;
+  height: 150px;
+  width: 100.5%;
+  border: 1px solid #707070;
+}
+
+.clinic-description-container {
+  margin-left: -2px;
+  background-color: #76BF69;
+  height: 50%;
+  width: 100.5%;
+  border: 1px solid #76BF69;
+  font-family: Bahnschrift;
+}
+
+.clinic-description {
+  padding: 2% 5%;
+}
+
+.clinic-description h2, p{
+  color: white;
 }
