@@ -7,5 +7,7 @@ export class ClinicModel {
               public email: string,
               public operationStart: string,
               public operationEnd: string,
+              public startDay: string,
+              public endDay: string,
               public description: string){}
 }

@@ -18,9 +18,12 @@ import { ClinicInquiryComponent } from "./pages/clinics/clinic-inquiry/clinic-in
 import { NotifsComponent } from "./pages/notifs/notifs.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { NavbarComponent } from "./pages/navbar/navbar.component";
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
 
 const routes: Routes = [
   {path: '', component: MainComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'clinics', component: AllClinicsComponent},
   {path: 'clinic/:id', component: ClinicComponent},
   {path: 'messages', component: MessagesComponent}
@@ -42,12 +45,14 @@ const routes: Routes = [
     NotifsComponent,
     MessagesComponent,
     NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    [RouterModule.forRoot(routes)]
+    [RouterModule.forRoot(routes)],
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

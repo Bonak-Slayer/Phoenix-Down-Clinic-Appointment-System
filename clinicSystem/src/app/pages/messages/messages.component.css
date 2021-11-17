@@ -32,8 +32,9 @@
 
 /* messages inbox container */
 .messages-inbox-container{
-    border: solid;
-    border-color: #353535;
+    border: 1px solid #707070;
+    height: 400px;
+    overflow: scroll;
 }
 
 

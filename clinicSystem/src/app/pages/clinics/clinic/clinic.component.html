@@ -1,16 +1,24 @@
 <div class="clinic-container">
   <div class="clinic-description">
     <h1>{{ clinicService.clinic.name }}</h1>
-    <h4>RETURN TO CLINICS PAGE</h4>
+    <a routerLink="/clinics"><h4>RETURN TO CLINICS PAGE</h4></a>
   </div>
 
   <div class="clinic-details">
     <div class="clinic-image"></div>
-    <div class="clinic-schedules"></div>
+    <div class="clinic-schedules">
+      <h2>OPERATING HOURS</h2>
+      <h3>{{ clinicService.clinic.operationStart }} - {{ clinicService.clinic.operationEnd }}</h3>
+      <h3>{{ clinicService.clinic.startDay }} - {{ clinicService.clinic.endDay }}</h3>
+      <hr>
+      <h2>CONTACT</h2>
+      <h3>{{ clinicService.clinic.contact }}</h3>
+      <h3>{{ clinicService.clinic.email }}</h3>
+    </div>
   </div>
 
   <div class="clinic-general-description">
-    <p></p>
+    <p>{{ clinicService.clinic.description }}</p>
   </div>
 
   <div class="clinic-interactions"></div>

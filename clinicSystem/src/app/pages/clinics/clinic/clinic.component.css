@@ -24,18 +24,49 @@
   font-weight: 500;
 }
 
+.clinic-description a {
+  text-decoration: none;
+}
+
 .clinic-details {
-  display: inline;
+  display: flex;
 }
 
 .clinic-image {
   border: 2px solid #707070;
-  height: 300px;
-  width: 60%;
+  height: 360px;
+  width: 70%;
 }
 
 .clinic-schedules {
   background-color: #353535;
-  height: 300px;
-  width: 20%;
+  height: 364px;
+  width: 25%;
+  margin: 0 1%;
+  text-align: center;
+}
+
+.clinic-schedules h2, h3{
+  font-family: Bahnschrift;
+}
+
+.clinic-schedules h2 {
+  color: #32D800;
+}
+
+.clinic-schedules h3 {
+  color: white;
+}
+
+.clinic-schedules hr {
+  margin: 0 10%;
+}
+
+.clinic-general-description {
+  width: 60%;
+}
+
+.clinic-general-description p {
+  font-family: Bahnschrift;
+  color: #707070;
 }

@@ -58,8 +58,9 @@
 .clinic-description-container {
   margin-left: -2px;
   background-color: #76BF69;
-  width: 100.9%;
   height: 50%;
+  width: 100.5%;
+  border: 1px solid #76BF69;
   font-family: Bahnschrift;
 }
 
