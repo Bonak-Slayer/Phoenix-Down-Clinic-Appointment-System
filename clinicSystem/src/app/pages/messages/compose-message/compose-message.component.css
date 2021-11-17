@@ -1,0 +1,48 @@
+.container{
+    font-family: Bahnschrift;
+    color: #707070;
+
+    margin-left: 25%;
+    margin-right: 5%;
+}
+
+/* header ang details */
+.header h1{
+    font-family: Bebas Neue;
+    font-size: 50px;
+}
+.details{
+    margin-top: 5%;
+}
+.details p{
+    font-weight: 700;
+}
+
+/* input message */
+#message-content{
+    height: 200px;
+    width: 100%;
+}
+
+/* send button */
+.btn{
+    float: right;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+.send-btn{
+    background-color: transparent;
+    border: 3px solid #32D800;
+    border-radius: 10px;
+    padding: 20% 50%;
+
+    font-family: Bahnschrift;
+    font-weight: 700;
+}
+
+/* mobile responsive design */
+@media (max-width: 768px) {
+    .messages-container{
+        margin: 0;
+    }
+}
