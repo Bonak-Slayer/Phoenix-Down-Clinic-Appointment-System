@@ -19,4 +19,12 @@ export class MessagesComponent implements OnInit {
       this.reroute.navigate(['/login']);
     }
   }
+
+  accessInbox(){
+
+  }
+
+  accessCompose(){
+
+  }
 }
