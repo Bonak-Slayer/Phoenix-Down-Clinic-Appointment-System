@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ClinicService} from "./clinic.service";
-import { ActivatedRoute } from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {LoginService} from "../../../login/login.service";
 
 @Component({
   selector: 'app-clinic',
@@ -9,11 +10,19 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class ClinicComponent implements OnInit {
 
-  constructor(public clinicService: ClinicService, private route: ActivatedRoute) { }
+  constructor(public clinicService: ClinicService,
+              private route: ActivatedRoute,
+              private loginService: LoginService,
+              private reroute: Router) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params['id'];
-    this.clinicService.getClinic(id);
+    if(this.loginService.isLoggedIn){
+      let id = this.route.snapshot.params['id'];
+      this.clinicService.getClinic(id);
+    }
+    else{
+      this.reroute.navigate(['/login']);
+    }
   }
 
 }

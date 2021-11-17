@@ -18,7 +18,7 @@ import { ClinicInquiryComponent } from "./pages/clinics/clinic-inquiry/clinic-in
 import { NotifsComponent } from "./pages/notifs/notifs.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { NavbarComponent } from "./pages/navbar/navbar.component";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from "./login/login.component";
 import {FormsModule} from "@angular/forms";
 
 const routes: Routes = [

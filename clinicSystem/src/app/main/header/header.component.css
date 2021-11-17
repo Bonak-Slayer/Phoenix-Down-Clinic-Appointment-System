@@ -21,6 +21,12 @@ li{
     padding-top: 2%;
     padding-left: 2%;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #navBarText{
     float: left;
     padding-left: 2%;
