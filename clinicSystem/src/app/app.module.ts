@@ -21,6 +21,7 @@ import { NavbarComponent } from "./pages/navbar/navbar.component";
 import { LoginComponent } from "./login/login.component";
 import {FormsModule} from "@angular/forms";
 import { ComposeMessageComponent } from './pages/messages/compose-message/compose-message.component';
+import { InquiryComponent } from './pages/clinics/clinic/inquiry/inquiry.component';
 import { AccountComponent } from './pages/account/account.component';
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
     NavbarComponent,
     LoginComponent,
     ComposeMessageComponent,
+    InquiryComponent,
     AccountComponent,
   ],
   imports: [

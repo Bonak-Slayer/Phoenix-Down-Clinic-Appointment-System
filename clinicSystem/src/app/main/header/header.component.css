@@ -1,19 +1,19 @@
-div{
+.container{
     font-family: Bahnschrift;
     color: #fff;
 
     margin: 0;
     background-color: transparent;
     position: relative;
-    top: -26em;
-    left: 0;
-
+    width: 101%;
+    margin: 0% -.6%;
 }
 
 ul{
     position: relative;
     text-align: right;
     margin: 0;
+    padding-bottom: 2%;
 }
 li{
     display: inline-block;
@@ -27,37 +27,14 @@ a {
   color: white;
 }
 
-#navBarText{
+#navbar-text{
     float: left;
     padding-left: 2%;
 }
 
 /* mobile responsive design */
 @media (max-width: 768px){
-    div{
-        font-family: Bahnschrift;
-        color: #fff;
-    
-        margin: 0;
-        background-color: transparent;
-        position: relative;
-        top: -56vh;
-        left: 0;
-    
-    }
-
-    ul{
-        position: relative;
-        text-align: right;
-        margin: 0;
-    }
-    li{
-        display: inline-block;
-        padding-right: 5%;
-        padding-top: 2%;
-        padding-left: 2%;
-    }
-    #navBarText{
+    #navbar-text{
         display: none;
     }
 }

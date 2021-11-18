@@ -29,6 +29,9 @@
     font-size: large;
     color: #707070;
 }
+.nav-button:hover{
+    border: solid;
+}
 
 /* messages inbox container */
 .messages-inbox-container{
