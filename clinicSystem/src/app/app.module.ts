@@ -21,6 +21,7 @@ import { NavbarComponent } from "./pages/navbar/navbar.component";
 import { LoginComponent } from "./login/login.component";
 import {FormsModule} from "@angular/forms";
 import { ComposeMessageComponent } from './pages/messages/compose-message/compose-message.component';
+import { AccountComponent } from './pages/account/account.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -48,6 +49,7 @@ const routes: Routes = [
     NavbarComponent,
     LoginComponent,
     ComposeMessageComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
