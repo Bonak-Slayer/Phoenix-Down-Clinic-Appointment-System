@@ -4,14 +4,26 @@
         <h1>COMPOSE MESSAGE</h1>
         <p>Type your message in the space provided below</p>
     </div>
-    <div class="details">
-        <p>RECIPIENT: </p>
-        <p>MESSAGE CONTENT:</p>
-    </div>
+
     <div class="content">
-        <input type="text" name="" id="message-content">
-    </div>
-    <div class="btn">
-        <button class="send-btn">SEND</button>
+      <form>
+        <div id="recipient-container">
+          <label>
+            RECIPIENT:
+            <input type="text" name="recipient" ngModel required>
+          </label>
+        </div>
+
+        <div id="message-content-header">
+          <label>
+            MESSAGE CONTENT:
+            <textarea name="" id="message-content-container" cols="30" rows="10" ngModel required #message></textarea>
+          </label>
+        </div>
+
+        <div class="btn">
+          <input type="submit" class="send-btn">
+        </div>
+      </form>
     </div>
 </div>

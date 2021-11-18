@@ -19,9 +19,23 @@
 }
 
 /* input message */
+#recipient-container {
+  margin-top: 5%;
+}
+
 #message-content{
-    height: 200px;
+    margin-top: 2%;
     width: 100%;
+}
+
+#message-content-header {
+  margin-top: 2%;
+  display: block;
+}
+
+#message-content-container {
+  width: 100%;
+  resize: none;
 }
 
 /* send button */
