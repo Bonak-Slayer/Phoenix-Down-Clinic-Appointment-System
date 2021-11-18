@@ -70,3 +70,23 @@
   font-family: Bahnschrift;
   color: #707070;
 }
+
+/* clinic interactions buttons */
+.clinic-interactions{
+  width: 70%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+.clinic-interactions button{
+  background-color: transparent;
+  border: 3px solid #32D800;
+  border-radius: 10px;
+
+  margin: 1% 5%;
+  padding: 1% 0;
+  width: 20%;
+
+  font-family: Bahnschrift;
+  font-weight: 700;
+}
