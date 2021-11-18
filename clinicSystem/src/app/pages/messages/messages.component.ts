@@ -26,5 +26,6 @@ export class MessagesComponent implements OnInit {
 
   accessCompose(){
     console.log("COMPOSE IS WORKING");
+    this.reroute.navigate(['/messages/compose']);
   }
 }
