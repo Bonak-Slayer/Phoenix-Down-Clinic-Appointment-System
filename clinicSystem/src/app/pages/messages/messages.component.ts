@@ -21,10 +21,10 @@ export class MessagesComponent implements OnInit {
   }
 
   accessInbox(){
-
+    console.log("INBOX IS WORKING");
   }
 
   accessCompose(){
-
+    console.log("COMPOSE IS WORKING");
   }
 }
