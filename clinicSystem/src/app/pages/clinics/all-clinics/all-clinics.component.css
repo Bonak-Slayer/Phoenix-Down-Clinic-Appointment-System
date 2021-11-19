@@ -4,7 +4,7 @@
   }
 
   .clinic {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -20,6 +20,10 @@
   .clinic {
     max-width: 35%;
   }
+}
+
+.clinics-container {
+  animation: entrance .3s ease-in;
 }
 
 .clinics-description h1{
@@ -80,4 +84,13 @@
 
 .clinic-description h2, p{
   color: white;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -41,7 +41,7 @@
 
 .page-link {
   list-style-type: none;
-  margin: 15% 0;
+  margin: 20% 0;
 }
 
 .page-link a {
@@ -74,6 +74,12 @@
   color: white;
   margin: 0 10%;
   width: 70%;
+  transition: background-color .3s, color .3s;
+}
+
+#sign-out-button:hover {
+  background-color: #32D800;
+  color: #232E21;
 }
 
 

@@ -12,6 +12,14 @@
   .clinic-description h1{
     font-size: 50px;
   }
+
+  .clinic-image {
+    width: 65%;
+  }
+}
+
+.clinic-container {
+  animation: entrance .3s ease-in;
 }
 
 .clinic-description h1, h4 {
@@ -35,7 +43,6 @@
 .clinic-image {
   border: 2px solid #707070;
   height: 360px;
-  width: 70%;
 }
 
 .clinic-schedules {
@@ -85,14 +92,14 @@
 }
 
 /* clinic interactions buttons */
-.clinic-interactions{
+.clinic-interactions {
   margin-top: 3%;
   width: 70%;
   position: relative;
   text-align: center;
   display: inline-block;
 }
-.clinic-interactions button{
+.clinic-interactions button {
   background-color: transparent;
   border: 3px solid #32D800;
   border-radius: 10px;
@@ -103,4 +110,19 @@
 
   font-family: Bahnschrift;
   font-weight: 700;
+  transition: background-color .3s, color .3s;
+}
+
+.clinic-interactions button:hover {
+  background-color: #32D800;
+  color: white;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

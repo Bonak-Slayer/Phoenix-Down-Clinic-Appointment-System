@@ -2,8 +2,9 @@
     font-family: Bahnschrift;
     color: #707070;
 
-    margin-left: 25%;
+    margin-left: 20%;
     margin-right: 5%;
+    animation: entrance .5s;
 }
 
 /* header ang details */
@@ -21,6 +22,10 @@
 /* input message */
 #recipient-container {
   margin-top: 5%;
+}
+
+#recipient {
+  width: 30%;
 }
 
 #message-content{
@@ -44,6 +49,7 @@
     margin-top: 2%;
     margin-right: 5%;
 }
+
 .send-btn{
     background-color: transparent;
     border: 3px solid #32D800;
@@ -52,6 +58,12 @@
 
     font-family: Bahnschrift;
     font-weight: 700;
+    transition: background-color .3s, color .3s;
+}
+
+.send-btn:hover{
+    background-color: #32D800;
+    color: white;
 }
 
 /* mobile responsive design */
@@ -59,4 +71,13 @@
     .messages-container{
         margin: 0;
     }
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

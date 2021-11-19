@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ClinicsService} from "../clinics.service";
 import { Router } from "@angular/router";
 import {LoginService} from "../../../login/login.service";
+import {NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-all-clinics',
@@ -24,4 +25,5 @@ export class AllClinicsComponent implements OnInit {
   accessClinic(clinicId: string){
     this.router.navigate([`/clinic/${clinicId}`]);
   }
+
 }
