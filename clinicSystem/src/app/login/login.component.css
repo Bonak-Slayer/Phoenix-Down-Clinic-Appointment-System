@@ -54,6 +54,16 @@
   margin-bottom: 3%;
 }
 
+#submit-button {
+  margin-top: 5%;
+  background-color: #232E21;
+  height: 5%;
+
+  color: white;
+  font-family: Bahnschrift;
+  font-weight: 700;
+}
+
 #info {
   margin-top: 100px;
 }

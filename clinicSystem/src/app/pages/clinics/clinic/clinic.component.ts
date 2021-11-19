@@ -10,6 +10,8 @@ import {LoginService} from "../../../login/login.service";
 })
 export class ClinicComponent implements OnInit {
 
+  clinicId: string = this.route.snapshot.params['id'];
+
   constructor(public clinicService: ClinicService,
               private route: ActivatedRoute,
               private loginService: LoginService,
@@ -17,12 +19,14 @@ export class ClinicComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.loginService.isLoggedIn){
-      let id = this.route.snapshot.params['id'];
-      this.clinicService.getClinic(id);
+      this.clinicService.getClinic(this.clinicId);
     }
     else{
-      this.reroute.navigate(['/login']);
+      this.reroute.navigate([`/login`]);
     }
   }
 
+  makeAppointment(){
+    this.reroute.navigate([`/clinic/${this.clinicId}/appointment`])
+  }
 }
