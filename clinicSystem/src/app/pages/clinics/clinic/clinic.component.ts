@@ -29,4 +29,8 @@ export class ClinicComponent implements OnInit {
   makeAppointment(){
     this.reroute.navigate([`/clinic/${this.clinicId}/appointment`])
   }
+
+  makeInquiry(){
+    this.reroute.navigate([`/clinic/${this.clinicId}/inquiry`])
+  }
 }
