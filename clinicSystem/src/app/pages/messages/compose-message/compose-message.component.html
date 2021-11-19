@@ -6,23 +6,21 @@
     </div>
 
     <div class="content">
-      <form>
+      <form (ngSubmit)="messageService.sendMessage(messageForm)" #messageForm="ngForm">
         <div id="recipient-container">
           <label>
             RECIPIENT:
             <input type="text" name="recipient" ngModel required>
           </label>
         </div>
-
         <div id="message-content-header">
           <label>
             MESSAGE CONTENT:
-            <textarea name="" id="message-content-container" cols="30" rows="10" ngModel required #message></textarea>
+            <textarea name="messagecontent" id="message-content-container" cols="30" rows="10" ngModel required></textarea>
           </label>
         </div>
-
         <div class="btn">
-          <input type="submit" class="send-btn">
+          <input type="submit" class="send-btn" value="SEND">
         </div>
       </form>
     </div>

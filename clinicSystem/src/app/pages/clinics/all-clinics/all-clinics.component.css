@@ -33,6 +33,10 @@
   width: 50%;
 }
 
+#submit-button {
+  width: 10%;
+}
+
 .clinics {
   margin-top: 5%;
   display: flex;
