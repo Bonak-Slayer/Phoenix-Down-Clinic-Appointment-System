@@ -20,7 +20,6 @@ export class MessageService {
       formData.append('content', form.value.messagecontent);
 
       this.httpService.post('http://127.0.0.1:8000/sendMessage', formData).subscribe((response: any) => {
-        console.log('message sent!');
         console.log(response.message);
       })
     }

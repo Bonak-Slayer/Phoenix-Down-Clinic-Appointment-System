@@ -6,7 +6,7 @@
 
 @media (min-width: 768px) {
   .clinic-container {
-    margin-left: 25%;
+    margin-left: 20%;
   }
 
   .clinic-description h1{
@@ -71,8 +71,22 @@
   color: #707070;
 }
 
+.clinic-additional-information {
+  margin: 5% 0;
+  font-family: Bahnschrift;
+}
+
+.clinic-additional-information h2, h3, p{
+  color: #707070;
+}
+
+.staff-container {
+  margin-top: 3%;
+}
+
 /* clinic interactions buttons */
 .clinic-interactions{
+  margin-top: 3%;
   width: 70%;
   position: relative;
   text-align: center;
@@ -85,7 +99,7 @@
 
   margin: 1% 5%;
   padding: 1% 0;
-  width: 20%;
+  width: 25%;
 
   font-family: Bahnschrift;
   font-weight: 700;

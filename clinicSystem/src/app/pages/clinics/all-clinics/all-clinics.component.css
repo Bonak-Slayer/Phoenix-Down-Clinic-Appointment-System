@@ -2,15 +2,23 @@
   .clinics-container {
     margin: 3% 3%;
   }
+
+  .clinic {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
   .clinics-container {
-    margin-left: 25%;
+    margin-left: 20%;
   }
 
   .clinics-description h1{
     font-size: 50px;
+  }
+
+  .clinic {
+    max-width: 35%;
   }
 }
 
@@ -45,9 +53,7 @@
 
 .clinic {
   height: 300px;
-  width: 35%;
   margin: 3%;
-
   flex: 1 0 30%;
 }
 

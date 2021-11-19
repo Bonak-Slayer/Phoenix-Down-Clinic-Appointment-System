@@ -6,7 +6,7 @@
 
 .navbar {
   height: 100%;
-  width: 20%;
+  width: 15%;
   background-color: #353535;
 
   position: fixed;
@@ -50,6 +50,11 @@
   font-weight: 700;
 
   color: white;
+  transition: color .3s;
+}
+
+.page-link a:hover {
+  color: #0BAC11;
 }
 
 .signout-container {
@@ -59,7 +64,7 @@
 
 #sign-out-button {
   font-family: Bahnschrift;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   background-color: #353535;
   border: 3px solid #32D800;

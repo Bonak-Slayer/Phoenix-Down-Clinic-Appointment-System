@@ -17,13 +17,29 @@
     </div>
   </div>
 
+  <div class="clinic-interactions">
+    <button class="interactions-btn" (click)="makeAppointment()">MAKE APPOINTMENT</button>
+    <button class="interactions-btn">MAKE INQUIRY</button>
+  </div>
+
   <div class="clinic-general-description">
     <p>{{ clinicService.clinic.description }}</p>
   </div>
 
-  <div class="clinic-interactions">
-    <button class="interactions-btn" (click)="makeAppointment()">MAKE APPOINTMENT</button>
-    <button class="interactions-btn">MAKE INQUIRY</button>
+  <div class="clinic-additional-information">
+    <h2>ADDITIONAL INFORMATION</h2>
+    <hr>
+    <div class="address-container">
+      <h3>ADDRESS</h3>
+      <p>{{ clinicService.clinic.address }}</p>
+    </div>
+
+    <div class="staff-container">
+      <h3>STAFF</h3>
+      <div *ngFor="let member of clinicService.staff">
+        <p>{{ member.role}} {{ member.user}}</p>
+      </div>
+    </div>
   </div>
 </div>
 <app-navbar></app-navbar>
