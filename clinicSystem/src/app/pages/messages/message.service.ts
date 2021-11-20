@@ -9,6 +9,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class MessageService {
 
+  composeMessageStatus: string = 'COMPOSE MESSAGE';
   userEmail: string = this.loginService.user_data.email;
   constructor(private httpService: HttpClient, private reroute: Router, private loginService: LoginService) { }
 
@@ -20,7 +21,13 @@ export class MessageService {
       formData.append('content', form.value.messagecontent);
 
       this.httpService.post('http://127.0.0.1:8000/sendMessage', formData).subscribe((response: any) => {
-        console.log(response.message);
+        if(response.message == 'message received'){
+          this.composeMessageStatus = 'MESSAGE SENT';
+
+          setTimeout(() => {
+            this.reroute.navigate(['/messages']);
+          }, 1000);
+        }
       })
     }
   }
