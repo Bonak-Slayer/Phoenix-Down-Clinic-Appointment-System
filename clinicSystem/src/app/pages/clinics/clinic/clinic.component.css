@@ -30,6 +30,11 @@
 .clinic-description h4 {
   font-size: 20px;
   font-weight: 500;
+  transition: color .3s;
+}
+
+.clinic-description h4:hover {
+  color: #32D800;
 }
 
 .clinic-description a {
@@ -79,7 +84,8 @@
 }
 
 .clinic-additional-information {
-  margin: 5% 0;
+  margin-top: 5%;
+  margin-bottom: 10%;
   font-family: Bahnschrift;
 }
 
@@ -87,8 +93,20 @@
   color: #707070;
 }
 
+.clinic-additional-information hr {
+  margin-right: 10%;
+}
+
 .staff-container {
   margin-top: 3%;
+}
+
+.staff-list-container {
+
+}
+
+.staff-info {
+  margin-bottom: 3%;
 }
 
 /* clinic interactions buttons */

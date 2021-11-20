@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) {
+  .clinic-appointment-container {
+    margin-left: 20%;
+  }
+}
+

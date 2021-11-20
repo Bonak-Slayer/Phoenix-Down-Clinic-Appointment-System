@@ -36,8 +36,11 @@
 
     <div class="staff-container">
       <h3>STAFF</h3>
-      <div *ngFor="let member of clinicService.staff">
+      <div *ngFor="let member of clinicService.staff" class="staff-info">
         <p>{{ member.role}} {{ member.user}}</p>
+        <ul *ngFor="let specialty of member.specialization">
+          <li>{{ specialty }}</li>
+        </ul>
       </div>
     </div>
   </div>
