@@ -1,0 +1,63 @@
+.container{
+  margin-left: 25%;
+  margin-right: 5%;
+
+  font-family: Bahnschrift;
+}
+
+/* header styling */
+.clinic-name h1{
+  font-family: Bebas Neue;
+  font-size: 50px;
+}
+.header-details{
+  margin-top: 8%;
+}
+
+/* templates */
+#templates-selection{
+  text-align: center;
+  width: 75%;
+  border: 3px solid #32D800;
+  padding: .5% 0;
+}
+.use-template-btn{
+  float: right;
+  width: 20%;
+  padding: .5% 0;
+}
+
+/* inquiry content */
+.inquiry-content{
+  margin-top: 3%;
+}
+#input-area{
+  width: 100%;
+  height: 300px;
+}
+.submit{
+  width: 100%;
+  margin-top: 2%;
+}
+.submit-btn{
+  padding: .5% 0;
+  width: 20%;
+  float: right;
+}
+
+/* buttons general styling */
+button{
+  font-family: Bahnschrift;
+  font-weight: 700;
+
+  background-color: transparent;
+  border: 3px solid #32D800;
+  border-radius: 10px;
+}
+
+/* mobile responsive */
+@media (max-width: 768px){
+  .container{
+    margin: 0;
+  }
+}

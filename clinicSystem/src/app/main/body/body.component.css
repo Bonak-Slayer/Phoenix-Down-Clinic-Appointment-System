@@ -1,7 +1,13 @@
 /* body styling for full screen(no white spaces on the sides) */
 .container{
-    width: 101%;
-    margin: 0 -.6%;
+    position: relative;
+    width: 100.6%;
+    height: 100.6%;
+    margin: -.6% -.6%;
+}
+
+button{
+    transition: 0.3s;
 }
 
 /* First content of main page before login */
@@ -103,7 +109,7 @@
     }
 
     /* Second Cotent of main page before login */
-    .content-2-details{
+    .content-2-image{
         display: none;
     }
 }
