@@ -18,7 +18,8 @@
       <div class="clinic-description-container {{ clinic.name }}">
         <div class="clinic-description">
           <h2>{{ clinic.name }}</h2>
-          <p>{{ clinic.description }}</p>
+          <p *ngIf="clinic.description.length > 80">{{ clinic.description.substring(0, 80)}}...</p>
+          <p *ngIf="clinic.description.length <= 80">{{ clinic.description }}</p>
         </div>
       </div>
     </div>

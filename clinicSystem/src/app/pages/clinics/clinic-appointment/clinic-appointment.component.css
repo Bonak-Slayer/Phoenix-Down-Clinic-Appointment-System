@@ -6,5 +6,112 @@
   .clinic-appointment-container {
     margin-left: 20%;
   }
+
+  .clinic-appointment-container h1 {
+    font-size: 50px;
+  }
+
+  .submission {
+    margin-left: -3%;
+  }
 }
 
+.clinic-appointment-container {
+  animation: entrance .5s;
+}
+
+.clinic-appointment-container h1, h4{
+  font-family: "Bebas Neue";
+  color: #707070;
+}
+
+#return-button {
+  font-size: 20px;
+  font-weight: 500;
+  transition: color .3s;
+}
+
+#return-button:hover {
+  color: #32D800;
+}
+
+.clinic-appointment-container a {
+  text-decoration: none;
+}
+
+.form-container {
+  margin-top: 3%;
+  margin-bottom: 10%;
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.form-container h4 {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.form {
+  margin-left: 3%;
+}
+
+.category-container {
+  margin-bottom: 3%;
+}
+
+.radio-button {
+  margin: 2% 2%;
+  transition: color .3s;
+}
+
+.radio-button:hover {
+  color: #32D800;
+}
+
+.physician-field {
+  margin-bottom: 3%;
+}
+
+.health-check-field {
+  margin-bottom: 3%;
+}
+
+.vaccination-check {
+  margin-bottom: 3%;
+}
+
+.submission {
+  text-align: center;
+}
+
+.submission a {
+  text-decoration: underline;
+}
+
+
+#submit-button {
+  background-color: transparent;
+  border: 3px solid #32D800;
+  border-radius: 10px;
+
+  padding: 1% 0;
+  width: 25%;
+
+  font-family: Bahnschrift;
+  font-weight: 700;
+  transition: background-color .3s, color .3s;
+}
+
+#submit-button:hover {
+  background-color: #32D800;
+  color: white;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

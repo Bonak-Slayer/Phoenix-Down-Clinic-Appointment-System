@@ -28,6 +28,13 @@ export class MessageService {
             this.reroute.navigate(['/messages']);
           }, 1000);
         }
+        else if(response.message == 'message failed'){
+          this.composeMessageStatus = 'MESSAGE NOT SENT';
+
+          setTimeout(() => {
+            this.composeMessageStatus = 'COMPOSE MESSAGE';
+          }, 2000);
+        }
       })
     }
   }

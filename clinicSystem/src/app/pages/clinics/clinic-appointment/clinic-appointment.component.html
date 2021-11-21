@@ -1,9 +1,63 @@
 <div class="clinic-appointment-container">
-  <h1>{{ clinicService.clinic.name }}</h1>
-  <p>Please fill out the form below.</p>
+  <h1>{{ clinicService.clinic.name }} - APPOINTMENT</h1>
+  <a routerLink="/clinic/{{ clinicService.clinic.id }}"><h4 id="return-button">RETURN TO CLINIC PAGE</h4></a>
+  <hr>
 
   <div class="form-container">
-    <form></form>
+    <h2>PLEASE FILL OUT THE FORM BELOW.</h2>
+
+    <form class="form" (ngSubmit)="appointmentService.submitAppointment(appointmentForm)" #appointmentForm="ngForm">
+      <div class="category-container">
+        <h4>SELECT WHICH OF THE FOLLOWING APPLIES TO YOU:</h4>
+        <div class="radio-button">
+          <label><input type="radio" name="patientCategory" value="New Patient" ngModel required>NEW PATIENT</label>
+        </div>
+        <div class="radio-button">
+          <label><input type="radio" name="patientCategory" value="Follow-Up Patient" ngModel required>FOLLOW-UP PATIENT</label>
+        </div>
+        <div class="radio-button">
+          <label><input type="radio" name="patientCategory" value="Return Patient" ngModel required>RETURN PATIENT</label>
+        </div>
+        <div class="radio-button">
+          <label><input type="radio" name="patientCategory" value="Referral" ngModel required>REFERRAL</label>
+        </div>
+      </div>
+
+      <div class="physician-field">
+        <h4>SELECT THE PHYSICIAN FOR THE APPOINTMENT:</h4>
+        <div class="radio-button" *ngFor="let doctor of clinicService.staff">
+          <div *ngIf="doctor.role == 'Doctor'">
+            <label><input type="radio" name="doctor" value="{{ doctor.user }}" ngModel required>Dr. {{ doctor.user }}</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="health-check-field">
+        <h4>HAVE YOU EXHIBITED SYMPTOMS OF COVID-19 THE PAST WEEK?</h4>
+        <div class="radio-button">
+          <label><input type="radio" name="healthCheck" value="yes" ngModel required>YES</label>
+        </div>
+        <div class="radio-button">
+          <label><input type="radio" name="healthCheck" value="no" ngModel required>NO</label>
+        </div>
+      </div>
+
+      <div class="vaccination-check">
+        <h4>ARE YOU FULLY VACCINATED?</h4>
+        <div class="radio-button">
+          <label><input type="radio" name="vaccinationCheck" value="yes" ngModel required>YES</label>
+        </div>
+        <div class="radio-button">
+          <label><input type="radio" name="vaccinationCheck" value="no" ngModel required>NO</label>
+        </div>
+        <hr>
+      </div>
+
+      <div class="submission">
+        <h3>By clicking submit, you agree to our <a>Terms and Conditions.</a></h3>
+        <input type="submit" value="SUBMIT APPOINTMENT FORM" id="submit-button">
+      </div>
+    </form>
   </div>
 </div>
 <app-navbar></app-navbar>

@@ -70,7 +70,7 @@
   color: white;
 }
 
-.clinic-schedules hr {
+#detail-divider {
   margin: 0 10%;
 }
 
@@ -93,7 +93,7 @@
   color: #707070;
 }
 
-.clinic-additional-information hr {
+#info-divider {
   margin-right: 10%;
 }
 
@@ -101,12 +101,12 @@
   margin-top: 3%;
 }
 
-.staff-list-container {
-
-}
-
 .staff-info {
   margin-bottom: 3%;
+}
+
+.staff-info li {
+  color: #707070;
 }
 
 /* clinic interactions buttons */

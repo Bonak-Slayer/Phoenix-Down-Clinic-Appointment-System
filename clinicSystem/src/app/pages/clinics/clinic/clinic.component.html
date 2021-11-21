@@ -10,7 +10,7 @@
       <h2>OPERATING HOURS</h2>
       <h3>{{ clinicService.clinic.operationStart }} - {{ clinicService.clinic.operationEnd }}</h3>
       <h3>{{ clinicService.clinic.startDay }} - {{ clinicService.clinic.endDay }}</h3>
-      <hr>
+      <hr id="detail-divider">
       <h2>CONTACT</h2>
       <h3>{{ clinicService.clinic.contact }}</h3>
       <h3>{{ clinicService.clinic.email }}</h3>
@@ -28,7 +28,7 @@
 
   <div class="clinic-additional-information">
     <h2>ADDITIONAL INFORMATION</h2>
-    <hr>
+    <hr id="info-divider">
     <div class="address-container">
       <h3>ADDRESS</h3>
       <p>{{ clinicService.clinic.address }}</p>

@@ -27,9 +27,14 @@ export class LoginService {
         //SETTING NECESSARY VARIABLES
         this.user_data = new LoginModel(response.user_data.id,
                                         response.user_data.first_name,
+                                        response.user_data.middle_name,
                                         response.user_data.last_name,
-                                        response.user_data.email);
-        this.currentUser = `${this.user_data.first_name} ${this.user_data.last_name}`;
+                                        response.user_data.email,
+                                        response.user_data.address,
+                                        response.user_data.contact,
+                                        response.user_data.sex,);
+
+        this.currentUser = `${this.user_data.first_name}`;
         this.isLoggedIn = true;
 
         setTimeout( () => {
@@ -37,6 +42,7 @@ export class LoginService {
         }, 1000)
       }
       else{
+        console.log(response.message);
         setTimeout(() => {this.loginStatus = 'LOGIN'}, 1000)
       }
     })
