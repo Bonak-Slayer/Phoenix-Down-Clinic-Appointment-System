@@ -6,9 +6,10 @@
 
   <div class="all-appointments-container">
     <div class="appointment" *ngFor="let appointment of appointmentService.appointments">
-      <a routerLink="">
+      <a routerLink="/appointments/{{ appointment.id }}">
         <div class="appointment-details">
-          <h4>APPOINTMENT WITH: {{ appointment.doctor }}</h4>
+          <h4 *ngIf="appointment.date == null">PENDING APPOINTMENT: {{ appointment.doctor }}</h4>
+          <h4 *ngIf="appointment.date != null">APPOINTMENT WITH: {{ appointment.doctor }}</h4>
         </div>
       </a>
     </div>

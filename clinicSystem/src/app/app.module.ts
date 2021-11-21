@@ -22,6 +22,7 @@ import { LoginComponent } from "./login/login.component";
 import {FormsModule} from "@angular/forms";
 import { ComposeMessageComponent } from './pages/messages/compose-message/compose-message.component';
 import { AccountComponent } from './pages/account/account.component';
+import { AppointmentComponent } from './pages/appointments/appointment/appointment.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'clinic/:id/appointment', component: ClinicAppointmentComponent},
   {path: 'clinic/:id/inquiry', component: ClinicInquiryComponent},
   {path: 'appointments', component: AppointmentsComponent},
+  {path: 'appointments/:id', component: AppointmentComponent},
   {path: 'messages', component: MessagesComponent},
   {path: 'messages/compose', component: ComposeMessageComponent}
 ]
@@ -54,6 +56,7 @@ const routes: Routes = [
     LoginComponent,
     ComposeMessageComponent,
     AccountComponent,
+    AppointmentComponent,
   ],
   imports: [
     BrowserModule,

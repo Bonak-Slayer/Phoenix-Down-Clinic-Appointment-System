@@ -21,6 +21,7 @@
 .appointments-container {
   font-family: Bahnschrift;
   color: #707070;
+  animation: entrance .5s;
 }
 
 .appointments-header h1{
@@ -33,9 +34,23 @@
   border: solid 1px #707070
 }
 
+.all-appointments-container a {
+  color: #707070;
+  text-decoration: none;
+}
+
 .appointment {
   width: 100%;
   border-bottom: solid 1px #707070;
   transition: color .3s;
   text-align: center;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

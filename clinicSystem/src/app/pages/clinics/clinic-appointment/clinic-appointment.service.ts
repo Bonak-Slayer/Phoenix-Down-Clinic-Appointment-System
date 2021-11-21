@@ -36,7 +36,7 @@ export class ClinicAppointmentService {
 
       this.http.post('http://127.0.0.1:8000/appointment', appointmentForm).subscribe((response: any) => {
         if(response.message == 'appointment created'){
-          this.reroute.navigate(['/clinics']);
+          this.reroute.navigate(['/appointments']);
         }
         else{
           alert('Form data was invalid.');

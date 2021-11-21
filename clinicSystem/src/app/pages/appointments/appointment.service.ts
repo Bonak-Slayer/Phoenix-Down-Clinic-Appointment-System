@@ -9,6 +9,7 @@ import {AppointmentModel} from "./appointment.model";
 })
 export class AppointmentService {
 
+  appointment: any;
   appointments: AppointmentModel[] = [];
   constructor(private loginService: LoginService, private http: HttpClient, private reroute: Router) { }
 
@@ -27,6 +28,11 @@ export class AppointmentService {
 
         this.appointments.push(newAppointment);
       }
+      this.appointments.reverse();
     })
+  }
+
+  getAppointment(id: string){
+    this.appointment = this.appointments.find(appointment => appointment.id == `${id}`);
   }
 }

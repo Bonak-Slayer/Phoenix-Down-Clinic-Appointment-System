@@ -1,0 +1,33 @@
+<div class="appointment-container">
+  <h1>APPOINTMENT</h1>
+
+  <div class="information-container">
+    <div class="clinic-container"></div>
+
+    <div class="appointment-details">
+      <div class="appointment-status">
+        <div *ngIf="appointmentService.appointment.status == 'Approved'; else alternative">
+          <h2>YOU HAVE SCHEDULED YOUR APPOINTMENT FOR</h2>
+          <h2><span class="highlight">{{ appointmentService.appointment.date.substring(0, 10) }}</span></h2>
+        </div>
+
+        <ng-template #alternative>
+          <h2>YOUR APPOINTMENT IS <span class="highlight">PENDING FOR APPROVAL.</span></h2>
+          <h2>YOU WILL RECEIVE A <span class="highlight">NOTIFICATION</span> ONCE IT HAS BEEN APPROVED.</h2>
+        </ng-template>
+      </div>
+
+      <div class="user-details">
+        <h2><span class="highlight">APPOINTMENT DETAILS:</span></h2>
+
+        <div class="information">
+          <h3>{{ appointmentService.appointment.category}}</h3>
+          <h3>{{ appointmentService.appointment.doctor}}</h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<app-navbar></app-navbar>
