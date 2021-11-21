@@ -11,6 +11,7 @@ import { MessageModel } from './message.model';
 export class MessageService {
 
   messages: MessageModel[] = [];
+  message: any;
   
   composeMessageStatus: string = 'COMPOSE MESSAGE';
   constructor(private httpService: HttpClient, private reroute: Router, private loginService: LoginService) { }
@@ -19,11 +20,16 @@ export class MessageService {
     this.messages = [];
     this.httpService.get(`http://127.0.0.1:8000/messages/${this.loginService.user_data.id}`).subscribe((response:any) => {
       for(let message of response.inbox){
-        let newMessage = new MessageModel(message.content, message.date, message.sender, message.recipient);
+        let newMessage = new MessageModel(message.id, message.content, message.date, message.sender, message.recipient);
         this.messages.push(newMessage);
       }
       this.messages.reverse();
     })
+  }
+
+  getMessageId(id: string){
+    this.message = this.messages.find(message => message.id == id);
+    this.reroute.navigate(['/messages/message'])
   }
 
   sendMessage(form: NgForm){

@@ -24,6 +24,7 @@ import { ComposeMessageComponent } from './pages/messages/compose-message/compos
 import { AccountComponent } from './pages/account/account.component';
 import { AppointmentComponent } from './pages/appointments/appointment/appointment.component';
 import { SentMessagesComponent } from './pages/messages/sent-messages/sent-messages.component';
+import { MessageComponent } from './pages/messages/message/message.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path: 'appointments/:id', component: AppointmentComponent},
   {path: 'messages', component: MessagesComponent},
   {path: 'messages/sent', component: SentMessagesComponent},
-  {path: 'messages/compose', component: ComposeMessageComponent}
+  {path: 'messages/compose', component: ComposeMessageComponent},
+  {path: 'messages/message', component: MessageComponent}
 ]
 
 @NgModule({
@@ -60,6 +62,7 @@ const routes: Routes = [
     AccountComponent,
     AppointmentComponent,
     SentMessagesComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,

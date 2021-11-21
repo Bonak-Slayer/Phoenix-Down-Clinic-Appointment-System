@@ -62,12 +62,20 @@ a{
 
     text-decoration: none;
 }
+a:hover{
+    cursor: pointer;
+}
+
 li{
     display: inline-block;
     text-decoration: none;
 }
 .message-info{
     color: #707070;
+    transition: .3s;
+}
+.message-info:hover{
+    color: #32d800;
 }
 #message-sender{
     font-size: 15px;
