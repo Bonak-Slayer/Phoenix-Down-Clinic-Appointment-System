@@ -24,7 +24,7 @@
       </div>
 
       <div class="physician-field">
-        <h4>SELECT THE PHYSICIAN FOR THE APPOINTMENT:</h4>
+        <h4>SELECT THE PHYSICIAN/DOCTOR FOR THE APPOINTMENT:</h4>
         <div class="radio-button" *ngFor="let doctor of clinicService.staff">
           <div *ngIf="doctor.role == 'Doctor'">
             <label><input type="radio" name="doctor" value="{{ doctor.user }}" ngModel required>Dr. {{ doctor.user }}</label>
