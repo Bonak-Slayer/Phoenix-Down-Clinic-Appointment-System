@@ -2,28 +2,28 @@
 <div class="messages-container">
     <div class="messages-header">
         <div class="messages-header-title">
-            <h1>MESSAGES</h1>
+          <h1>MESSAGES</h1>
         </div>
         <div class="messages-header-text">
-            <p>Your most recent messages are listed below.</p>
+          <p>Your most recent messages are listed below.</p>
         </div>
     </div>
     <div class="messages-navigation">
-        <button class="nav-button">INBOX</button>
+        <button class="nav-button" routerLink="/messages">INBOX</button>
         <button class="nav-button" routerLink="/messages/sent">SENT</button>
-        <button class="nav-button" (click)="accessCompose()">COMPOSE</button>
+        <button class="nav-button" routerLink="/messages/compose">COMPOSE</button>
     </div>
     <div class="inbox-container">
-        <div class="message" *ngFor="let message of messageService.messages">
+        <div class="message" *ngFor="let message of sentMessagesService.messages">
             <a routerLink="/clinics">
                 <div class="div-width-100">
                     <ul>
                         <li class="message-info">
-                            <span id="message-sender">{{ message.sender }}</span><br>
-                            <span id="message-content">"{{ message.content.substring(0-30) }}"</span>
+                          <span id="message-recipient">{{ message.recipient }}</span><br>
+                          <span id="message-content">"{{ message.content.substring(0-30) }}"</span>
                         </li>
                         <li class="message-date">
-                            <span id="message-date">{{ message.date.substring(0,10) }}</span>
+                          <span id="message-date">{{ message.date.substring(0,10) }}</span>
                         </li>
                     </ul>
                 </div>
