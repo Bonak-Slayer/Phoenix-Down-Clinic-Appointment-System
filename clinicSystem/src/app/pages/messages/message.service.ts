@@ -3,15 +3,30 @@ import {Router} from "@angular/router";
 import {LoginService} from "../../login/login.service";
 import {NgForm} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
+import { MessageModel } from './message.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
 
+  messages: MessageModel[] = []
+  
   composeMessageStatus: string = 'COMPOSE MESSAGE';
   userEmail: string = this.loginService.user_data.email;
   constructor(private httpService: HttpClient, private reroute: Router, private loginService: LoginService) { }
+
+  getMessages(){
+    this.messages = [];
+    this.httpService.get(`http://127.0.0.1:8000/messages/${this.loginService.user_data.id}`).subscribe((response:any) => {
+      console.log(response.inbox);
+      for(let message of response.inbox){
+        let newMessage = new MessageModel(message.content, message.date, message.sender, message.recipient);
+        this.messages.push(newMessage);
+      }
+      this.messages.reverse();
+    })
+  }
 
   sendMessage(form: NgForm){
     if(form.valid){
