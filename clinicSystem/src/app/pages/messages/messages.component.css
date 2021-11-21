@@ -79,6 +79,7 @@ li{
 .message-date{
     float: right;
     margin-right: 2%;
+    margin-top: 1%;
 
     color: #32D800;
 }

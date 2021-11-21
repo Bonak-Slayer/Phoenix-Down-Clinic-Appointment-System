@@ -23,6 +23,7 @@ import {FormsModule} from "@angular/forms";
 import { ComposeMessageComponent } from './pages/messages/compose-message/compose-message.component';
 import { AccountComponent } from './pages/account/account.component';
 import { AppointmentComponent } from './pages/appointments/appointment/appointment.component';
+import { SentMessagesComponent } from './pages/messages/sent-messages/sent-messages.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'appointments', component: AppointmentsComponent},
   {path: 'appointments/:id', component: AppointmentComponent},
   {path: 'messages', component: MessagesComponent},
+  {path: 'messages/sent', component: SentMessagesComponent},
   {path: 'messages/compose', component: ComposeMessageComponent}
 ]
 
@@ -57,6 +59,7 @@ const routes: Routes = [
     ComposeMessageComponent,
     AccountComponent,
     AppointmentComponent,
+    SentMessagesComponent,
   ],
   imports: [
     BrowserModule,
