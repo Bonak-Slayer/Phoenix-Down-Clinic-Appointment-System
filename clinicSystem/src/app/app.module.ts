@@ -31,6 +31,7 @@ const routes: Routes = [
   {path: 'clinic/:id', component: ClinicComponent},
   {path: 'clinic/:id/appointment', component: ClinicAppointmentComponent},
   {path: 'clinic/:id/inquiry', component: ClinicInquiryComponent},
+  {path: 'appointments', component: AppointmentsComponent},
   {path: 'messages', component: MessagesComponent},
   {path: 'messages/compose', component: ComposeMessageComponent}
 ]
