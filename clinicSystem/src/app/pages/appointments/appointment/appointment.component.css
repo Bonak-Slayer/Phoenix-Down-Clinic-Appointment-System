@@ -69,6 +69,17 @@
   margin-top: 3%;
 }
 
+.image-container {
+  border-bottom: 1px solid #353535;
+  height: 40%;
+  width: 100%;
+}
+
+.clinic-details {
+  height: 60%;
+  width: 100%;
+}
+
 .appointment-status {
   text-align: center;
   padding: 5%;
@@ -87,5 +98,31 @@
 }
 
 .information h3 {
+  color: white;
+}
+
+.buttons-container {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.buttons-container button {
+  width: 30%;
+  max-width: 30%;
+  margin: 2%;
+  font-family: Bahnschrift;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+  padding: 2%;
+
+  background-color: transparent;
+  border: 2px solid #32d800;
+  border-radius: 10px;
+  transition: background-color .3s, color .3s;
+}
+
+.buttons-container button:hover {
+  background-color: #32d800;
   color: white;
 }

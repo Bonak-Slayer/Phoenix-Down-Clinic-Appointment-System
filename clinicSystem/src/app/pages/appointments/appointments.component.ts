@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AppointmentService} from "./appointment.service";
+import {LoginService} from "../../login/login.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-appointments',
@@ -8,10 +10,15 @@ import {AppointmentService} from "./appointment.service";
 })
 export class AppointmentsComponent implements OnInit {
 
-  constructor(public appointmentService: AppointmentService) { }
+  constructor(private loginService: LoginService, public appointmentService: AppointmentService, private reroute: Router) { }
 
   ngOnInit(): void {
-    this.appointmentService.getAppointments();
+    if(this.loginService.isLoggedIn){
+      this.appointmentService.getAppointments();
+    }
+    else{
+      this.reroute.navigate(['/login']);
+    }
   }
 
 }
