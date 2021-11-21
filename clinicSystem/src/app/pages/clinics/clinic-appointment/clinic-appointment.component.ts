@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from "../../../login/login.service";
+import {ClinicService} from "../clinic/clinic.service";
+import {Router} from "@angular/router";
+import {ClinicAppointmentService} from "./clinic-appointment.service";
 
 @Component({
   selector: 'app-clinic-appointment',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClinicAppointmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public loginService: LoginService,
+              public clinicService: ClinicService,
+              private reroute: Router,
+              public appointmentService: ClinicAppointmentService) { }
 
   ngOnInit(): void {
+    if (!this.loginService.isLoggedIn){
+      this.reroute.navigate(['/login']);
+    }
   }
 
 }

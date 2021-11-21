@@ -1,43 +1,42 @@
 /* body styling for full screen(no white spaces on the sides) */
-body{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.container{
+    position: relative;
+    width: 100.6%;
+    height: 100.6%;
+    margin: -.6% -.6%;
+}
+
+button{
+    transition: 0.3s;
 }
 
 /* First content of main page before login */
-div.div1{
+.content-1{
     position: relative;
     font-family: Bahnschrift;
     background-image: url(./homeDiv1Background.png);
     background-size: cover;
 
-    margin: -.6%;
-    left: 0;
-    top: 0;
-
     padding-bottom: 15%;
-    margin-top: -5%;
 }
 
-div.div1Content{
+.content-1-details{
     padding-top: 15%;
     padding-left: 7%;
     color: #fff;
 }
-h1.div1Content1{
+.content-1 h1{
     font-family: Bebas Neue;
     font-size: 5em;
 }
-h3.div1Content2{
+.content-1 h3{
     position: relative;
     bottom: 4vw;
 }
-span.now{
+.now{
     color: #32D800;
 }
-button.signUpButton{
+.signup-btn{
     position: relative;
     bottom: 3vw;
     padding: .5em 4.5em;
@@ -52,13 +51,13 @@ button.signUpButton{
     border-color: #32D800;
     background-color: transparent;
 }
-button.signUpButton:hover{
+.signup-btn:hover{
     background-color: #32D800;
 }
 
 
 /* Second Cotent of main page before login */
-div.div2{
+.content-2{
     position: relative;
     margin: -.6%;
     display: flex;
@@ -69,17 +68,17 @@ div.div2{
 
     color: #707070;
 }
-div.div2 > * {
+.content-2 > * {
     flex-basis: 100%;
     padding: 5%;
 }
-div.div2TextTitle{
+.content-2-title{
     font-family: Bebas Neue;
 }
-div.div2TextContent{
+.content-2-subtitle{
     font-family: Poppins;
 }
-div.div2Content{
+.content-2-image{
     text-align: center;
     border: solid;
     border-color: #353535;
@@ -98,19 +97,19 @@ div.div2Content{
     }
 
     /* First content of main page before login */
-    div.div1{
+    .content-1{
         background-position: right;
     }
-    h1.div1Content1{
+    .content-1 h1{
         font-size: 4em;
     }
-    h3.div1Content2{
+    .content-2 h3{
         font-size: small;
         font-weight: lighter;
     }
 
     /* Second Cotent of main page before login */
-    div.div2Content{
+    .content-2-image{
         display: none;
     }
 }

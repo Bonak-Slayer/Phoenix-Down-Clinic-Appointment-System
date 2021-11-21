@@ -18,15 +18,25 @@ import { ClinicInquiryComponent } from "./pages/clinics/clinic-inquiry/clinic-in
 import { NotifsComponent } from "./pages/notifs/notifs.component";
 import { MessagesComponent } from "./pages/messages/messages.component";
 import { NavbarComponent } from "./pages/navbar/navbar.component";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from "./login/login.component";
 import {FormsModule} from "@angular/forms";
+import { ComposeMessageComponent } from './pages/messages/compose-message/compose-message.component';
+import { AccountComponent } from './pages/account/account.component';
+import { AppointmentComponent } from './pages/appointments/appointment/appointment.component';
+import { SentMessagesComponent } from './pages/messages/sent-messages/sent-messages.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'login', component: LoginComponent},
   {path: 'clinics', component: AllClinicsComponent},
   {path: 'clinic/:id', component: ClinicComponent},
-  {path: 'messages', component: MessagesComponent}
+  {path: 'clinic/:id/appointment', component: ClinicAppointmentComponent},
+  {path: 'clinic/:id/inquiry', component: ClinicInquiryComponent},
+  {path: 'appointments', component: AppointmentsComponent},
+  {path: 'appointments/:id', component: AppointmentComponent},
+  {path: 'messages', component: MessagesComponent},
+  {path: 'messages/sent', component: SentMessagesComponent},
+  {path: 'messages/compose', component: ComposeMessageComponent}
 ]
 
 @NgModule({
@@ -46,6 +56,10 @@ const routes: Routes = [
     MessagesComponent,
     NavbarComponent,
     LoginComponent,
+    ComposeMessageComponent,
+    AccountComponent,
+    AppointmentComponent,
+    SentMessagesComponent,
   ],
   imports: [
     BrowserModule,

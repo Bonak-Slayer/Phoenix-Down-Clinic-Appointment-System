@@ -1,1 +1,23 @@
-<p>appointments works!</p>
+<div class="appointments-container">
+  <div class="appointments-header">
+    <h1>MY APPOINTMENTS</h1>
+    <p>Your appointments are listed below.</p>
+  </div>
+
+  <div class="all-appointments-container">
+    <div class="appointment" *ngFor="let appointment of appointmentService.appointments">
+      <a routerLink="/appointments/{{ appointment.id }}">
+        <div class="appointment-details">
+          <h4 *ngIf="appointment.date == null">
+            <span id="pending">PENDING APPOINTMENT:</span> {{ appointment.doctor }}
+          </h4>
+
+          <h4 *ngIf="appointment.date != null">
+            <span id="approved">APPOINTMENT WITH:</span> Dr. {{ appointment.doctor }}
+          </h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<app-navbar></app-navbar>

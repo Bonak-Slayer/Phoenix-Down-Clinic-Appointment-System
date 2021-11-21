@@ -6,18 +6,20 @@
   </div>
 
   <div class="search">
-    <input type="text" placeholder="ENTER CLINIC NAME HERE...">
-    <button>SEARCH</button>
+    <form (ngSubmit)="clinicsService.searchClinic(searchForm)" #searchForm="ngForm">
+      <input type="text" name="searchClinic" placeholder="ENTER CLINIC NAME HERE..." ngModel required>
+      <input type="submit" value="SEARCH" id="submit-button">
+    </form>
   </div>
 
   <div class="clinics">
-    <!-- SAMPLE CONTENT ONLY, CHANGE THIS ONCE API HAS BEEN FINISHED -->
     <div class="clinic" *ngFor="let clinic of clinicsService.clinics" (click)="accessClinic(clinic.id)">
       <div class="clinic-image"></div>
-      <div class="clinic-description-container">
+      <div class="clinic-description-container {{ clinic.name }}">
         <div class="clinic-description">
           <h2>{{ clinic.name }}</h2>
-          <p>{{ clinic.description }}</p>
+          <p *ngIf="clinic.description.length > 80">{{ clinic.description.substring(0, 80)}}...</p>
+          <p *ngIf="clinic.description.length <= 80">{{ clinic.description }}</p>
         </div>
       </div>
     </div>

@@ -2,8 +2,9 @@
     font-family: Bahnschrift;
     color: #707070;
 
-    margin-left: 25%;
+    margin-left: 20%;
     margin-right: 5%;
+    animation: entrance .5s;
 }
 
 /* messages header contents */
@@ -17,7 +18,12 @@
     display: flex;
     flex: row;
 }
+
 .messages-navigation button{
+    margin: 2% 2%;
+}
+
+.nav-button{
     background-color: transparent;
     border: none;
 
@@ -25,22 +31,74 @@
     font-weight: 600;
     font-size: large;
     color: #707070;
+    transition: color .3s;
 }
-.messages-navigation div{
-    padding: 1% 4% 1% 0%;
+
+.nav-button:hover{
+    color: #32D800;
 }
 
 /* messages inbox container */
-.messages-inbox-container{
+.inbox-container{
     border: 1px solid #707070;
     height: 400px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
+/* messages preview */
+.div-width-100{
+    width: 100%;
+    margin: 0;
+}
+.message{
+    position: relative;
+    width: 100%;
+    border-bottom: solid 1px #707070;
 
+    font-family: Bahnschrift;
+}
+a{
+    display: flex;
+    flex-flow: row;
+
+    text-decoration: none;
+}
+li{
+    display: inline-block;
+    text-decoration: none;
+}
+.message-info{
+    color: #707070;
+}
+#message-sender{
+    font-size: 15px;
+}
+#message-content{
+    font-size: 20px;
+    font-weight: 600;
+}
+.message-date{
+    float: right;
+    margin-right: 2%;
+    margin-top: 1%;
+
+    color: #32D800;
+}
+#message-date{
+    font-size: 20px;
+}
 
 /* mobile responsive design */
 @media (max-width: 768px) {
     .messages-container{
         margin: 0;
     }
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

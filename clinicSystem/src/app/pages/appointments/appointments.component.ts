@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AppointmentService} from "./appointment.service";
+import {LoginService} from "../../login/login.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-appointments',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService: LoginService, public appointmentService: AppointmentService, private reroute: Router) { }
 
   ngOnInit(): void {
+    if(this.loginService.isLoggedIn){
+      this.appointmentService.getAppointments();
+    }
+    else{
+      this.reroute.navigate(['/login']);
+    }
   }
 
 }

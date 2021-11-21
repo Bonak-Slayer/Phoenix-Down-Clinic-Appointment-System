@@ -1,18 +1,23 @@
 <div class="container"></div>
 <div class="login-container">
   <div class="fields">
-    <h1>{{ message }}</h1>
-    <label>Username: </label>
-    <div class="input-container">
-      <input type="text" [(ngModel)]="username">
-    </div>
+    <h1>{{ loginService.loginStatus }}</h1>
+    <form (ngSubmit)="checkValues(loginForm)" #loginForm="ngForm">
+      <label>Email: </label>
+      <div class="input-container">
+        <input type="email" name="email" ngModel required email>
+      </div>
 
-    <label>Password: </label>
-    <div class="input-container">
-      <input type="password" [(ngModel)]="password">
-    </div>
+      <label>Password: </label>
+      <div class="input-container">
+        <input type="password" name="password" ngModel required>
+      </div>
 
-    <button (click)="checkValues()">Log In</button>
+      <div class="input-container">
+        <input type="submit" value="LOG IN" id="submit-button">
+      </div>
+    </form>
+    
     <p id="info">OLONGAPO CITY CLINICS APPOINTMENT SYSTEM</p>
   </div>
 </div>

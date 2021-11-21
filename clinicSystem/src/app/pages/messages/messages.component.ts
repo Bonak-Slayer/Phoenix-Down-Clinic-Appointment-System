@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from "../../login/login.service";
+import {Router} from "@angular/router";
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-messages',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService: LoginService, private reroute: Router, public messageService: MessageService) { }
 
   ngOnInit(): void {
+    if(this.loginService.isLoggedIn){
+      this.messageService.getMessages();
+    }
+    else {
+      this.reroute.navigate(['/login']);
+    }
+  }
+
+  accessCompose(){
+    this.reroute.navigate(['/messages/compose']);
   }
 
 }

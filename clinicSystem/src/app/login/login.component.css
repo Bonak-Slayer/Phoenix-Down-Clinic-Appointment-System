@@ -30,6 +30,7 @@
 }
 
 .fields {
+  margin-top: 10%;
   text-align: center;
   padding: 10%;
 
@@ -52,6 +53,22 @@
   display: block;
   margin-top: 2%;
   margin-bottom: 3%;
+}
+
+#submit-button {
+  margin-top: 5%;
+  background-color: #232E21;
+  height: 8%;
+
+  color: white;
+  font-family: Bahnschrift;
+  font-weight: 700;
+  transition: background-color .3s, border .3s;
+}
+
+#submit-button:hover {
+  background-color: #32d800;
+  border: 2px solid #32d800;
 }
 
 #info {

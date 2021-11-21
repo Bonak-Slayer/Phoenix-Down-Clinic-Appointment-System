@@ -1,0 +1,83 @@
+.container{
+    font-family: Bahnschrift;
+    color: #707070;
+
+    margin-left: 20%;
+    margin-right: 5%;
+    animation: entrance .5s;
+}
+
+/* header ang details */
+.header h1{
+    font-family: Bebas Neue;
+    font-size: 50px;
+}
+.details{
+    margin-top: 5%;
+}
+.details p{
+    font-weight: 700;
+}
+
+/* input message */
+#recipient-container {
+  margin-top: 5%;
+}
+
+#recipient {
+  width: 30%;
+}
+
+#message-content{
+    margin-top: 2%;
+    width: 100%;
+}
+
+#message-content-header {
+  margin-top: 2%;
+  display: block;
+}
+
+#message-content-container {
+  width: 100%;
+  resize: none;
+}
+
+/* send button */
+.btn{
+    float: right;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+.send-btn{
+    background-color: transparent;
+    border: 3px solid #32D800;
+    border-radius: 10px;
+    padding: 20% 50%;
+
+    font-family: Bahnschrift;
+    font-weight: 700;
+    transition: background-color .3s, color .3s;
+}
+
+.send-btn:hover{
+    background-color: #32D800;
+    color: white;
+}
+
+/* mobile responsive design */
+@media (max-width: 768px) {
+    .messages-container{
+        margin: 0;
+    }
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -7,15 +7,15 @@
 
   <div class="pages">
     <ul class="page-links">
-      <li class="page-link"><a routerLink="">MY APPOINTMENTS</a></li>
+      <li class="page-link"><a routerLink="/appointments">MY APPOINTMENTS</a></li>
       <li class="page-link"><a routerLink="">NOTIFICATIONS</a></li>
       <li class="page-link"><a routerLink="/clinics">CLINICS</a></li>
       <li class="page-link"><a routerLink="/messages">MESSAGES</a></li>
-      <li class="page-link"><a href="">ACCOUNT</a></li>
+      <li class="page-link"><a routerLink="">ACCOUNT</a></li>
     </ul>
   </div>
 
   <div class="signout-container">
-    <button id="sign-out-button">SIGN OUT</button>
+    <button id="sign-out-button" (click)="loginService.signOut()">SIGN OUT</button>
   </div>
 </div>

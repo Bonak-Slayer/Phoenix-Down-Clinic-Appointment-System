@@ -1,0 +1,65 @@
+@media (max-width: 768px) {
+  .all-appointments-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .appointments-container {
+    margin-left: 20%;
+  }
+
+  .appointments-header h1 {
+    font-size: 50px;
+  }
+
+  .all-appointments-container {
+    width: 80%;
+  }
+}
+
+.appointments-container {
+  font-family: Bahnschrift;
+  color: #707070;
+  animation: entrance .5s;
+}
+
+.appointments-header h1{
+  font-family: "Bebas Neue";
+}
+
+.all-appointments-container {
+  margin-top: 3%;
+  height: 450px;
+  border: solid 1px #707070;
+  overflow-y: scroll;
+}
+
+.all-appointments-container a {
+  color: #707070;
+  text-decoration: none;
+}
+
+.appointment {
+  width: 100%;
+  border-bottom: solid 1px #707070;
+  transition: color .3s;
+  text-align: center;
+}
+
+#pending {
+  color: #EF9400;
+}
+
+#approved {
+  color: #0BAC11;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
