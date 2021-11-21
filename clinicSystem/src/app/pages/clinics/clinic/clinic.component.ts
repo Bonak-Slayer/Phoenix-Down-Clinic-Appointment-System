@@ -11,6 +11,8 @@ import {LoginService} from "../../../login/login.service";
 export class ClinicComponent implements OnInit {
 
   clinicId: string = this.route.snapshot.params['id'];
+  operationStart: string = 'AM';
+  operationEnd: string = 'AM';
 
   constructor(public clinicService: ClinicService,
               private route: ActivatedRoute,

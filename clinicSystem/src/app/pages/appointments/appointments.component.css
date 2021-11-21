@@ -31,7 +31,8 @@
 .all-appointments-container {
   margin-top: 3%;
   height: 450px;
-  border: solid 1px #707070
+  border: solid 1px #707070;
+  overflow-y: scroll;
 }
 
 .all-appointments-container a {

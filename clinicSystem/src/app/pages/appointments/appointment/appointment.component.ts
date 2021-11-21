@@ -9,11 +9,18 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class AppointmentComponent implements OnInit {
 
+  verifyTime: string = 'AM';
+
   constructor(public appointmentService: AppointmentService, private pathService: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.appointmentService.getAppointment(this.pathService.snapshot.params['id']);
-    console.log(this.appointmentService.appointment.status);
+    this.timeValidation(this.appointmentService.appointment.date.substring(11, 12));
   }
 
+  timeValidation(time: string){
+    if(+time >= 13 && +time < 24){
+      this.verifyTime = 'PM';
+    }
+  }
 }

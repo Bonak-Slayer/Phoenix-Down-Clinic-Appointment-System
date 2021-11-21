@@ -79,6 +79,7 @@
 .clinic-details {
   height: 60%;
   width: 100%;
+  text-align: center;
 }
 
 .appointment-status {
