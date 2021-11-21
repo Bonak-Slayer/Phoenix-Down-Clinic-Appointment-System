@@ -5,7 +5,13 @@
   </div>
 
   <div class="all-appointments-container">
-
+    <div class="appointment" *ngFor="let appointment of appointmentService.appointments">
+      <a routerLink="">
+        <div class="appointment-details">
+          <h4>APPOINTMENT WITH: {{ appointment.doctor }}</h4>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
 <app-navbar></app-navbar>

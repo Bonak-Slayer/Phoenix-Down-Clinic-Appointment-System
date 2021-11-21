@@ -32,3 +32,10 @@
   height: 450px;
   border: solid 1px #707070
 }
+
+.appointment {
+  width: 100%;
+  border-bottom: solid 1px #707070;
+  transition: color .3s;
+  text-align: center;
+}
