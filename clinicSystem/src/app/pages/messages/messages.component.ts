@@ -24,5 +24,4 @@ export class MessagesComponent implements OnInit {
   accessCompose(){
     this.reroute.navigate(['/messages/compose']);
   }
-
 }

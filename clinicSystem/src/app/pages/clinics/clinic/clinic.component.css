@@ -2,6 +2,24 @@
   .clinic-container {
     margin: 3% 3%;
   }
+
+  .clinic-details {
+    display: block;
+  }
+
+  .clinic-schedules {
+    width: 100%;
+    margin: 1% 0;
+    padding-top: 3%;
+  }
+
+  .clinic-interactions button {
+    width: 40%;
+  }
+
+  .clinic-general-description {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -15,6 +33,23 @@
 
   .clinic-image {
     width: 65%;
+  }
+
+  .clinic-details {
+    display: flex;
+  }
+
+  .clinic-schedules {
+    width: 25%;
+    margin: 0 1%;
+  }
+
+  .clinic-interactions button {
+    width: 25%;
+  }
+
+  .clinic-general-description {
+    width: 60%;
   }
 }
 
@@ -41,10 +76,6 @@
   text-decoration: none;
 }
 
-.clinic-details {
-  display: flex;
-}
-
 .clinic-image {
   border: 2px solid #707070;
   height: 360px;
@@ -53,8 +84,6 @@
 .clinic-schedules {
   background-color: #353535;
   height: 364px;
-  width: 25%;
-  margin: 0 1%;
   text-align: center;
 }
 
@@ -72,10 +101,6 @@
 
 #detail-divider {
   margin: 0 10%;
-}
-
-.clinic-general-description {
-  width: 60%;
 }
 
 .clinic-general-description p {
@@ -124,7 +149,6 @@
 
   margin: 1% 5%;
   padding: 1% 0;
-  width: 25%;
 
   font-family: Bahnschrift;
   font-weight: 700;

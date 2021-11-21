@@ -10,10 +10,9 @@ import { MessageModel } from './message.model';
 })
 export class MessageService {
 
-  messages: MessageModel[] = []
+  messages: MessageModel[] = [];
   
   composeMessageStatus: string = 'COMPOSE MESSAGE';
-  userEmail: string = this.loginService.user_data.email;
   constructor(private httpService: HttpClient, private reroute: Router, private loginService: LoginService) { }
 
   getMessages(){
@@ -30,7 +29,7 @@ export class MessageService {
   sendMessage(form: NgForm){
     if(form.valid){
       let formData = new FormData();
-      formData.append('sender', this.userEmail);
+      formData.append('sender', this.loginService.user_data.email);
       formData.append('recipient', form.value.recipient);
       formData.append('content', form.value.messagecontent);
 
