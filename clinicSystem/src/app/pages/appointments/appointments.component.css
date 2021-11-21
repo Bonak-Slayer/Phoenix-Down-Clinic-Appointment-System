@@ -46,6 +46,14 @@
   text-align: center;
 }
 
+#pending {
+  color: #EF9400;
+}
+
+#approved {
+  color: #0BAC11;
+}
+
 @keyframes entrance {
   0% {
     opacity: 0;

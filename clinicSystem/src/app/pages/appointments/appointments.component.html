@@ -8,8 +8,13 @@
     <div class="appointment" *ngFor="let appointment of appointmentService.appointments">
       <a routerLink="/appointments/{{ appointment.id }}">
         <div class="appointment-details">
-          <h4 *ngIf="appointment.date == null">PENDING APPOINTMENT: {{ appointment.doctor }}</h4>
-          <h4 *ngIf="appointment.date != null">APPOINTMENT WITH: {{ appointment.doctor }}</h4>
+          <h4 *ngIf="appointment.date == null">
+            <span id="pending">PENDING APPOINTMENT:</span> {{ appointment.doctor }}
+          </h4>
+
+          <h4 *ngIf="appointment.date != null">
+            <span id="approved">APPOINTMENT WITH:</span> Dr. {{ appointment.doctor }}
+          </h4>
         </div>
       </a>
     </div>
