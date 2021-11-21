@@ -2,7 +2,10 @@
   <h1>APPOINTMENT</h1>
 
   <div class="information-container">
-    <div class="clinic-container"></div>
+    <div class="clinic-container">
+      <div class="image-container"></div>
+      <div class="clinic-details"></div>
+    </div>
 
     <div class="appointment-details">
       <div class="appointment-status">
@@ -25,9 +28,13 @@
           <h3>{{ appointmentService.appointment.doctor}}</h3>
         </div>
       </div>
+
+      <div class="buttons-container">
+        <button class="request-change">RESCHEDULE APPOINTMENT</button>
+        <button class="request-change">CANCEL APPOINTMENT</button>
+      </div>
     </div>
 
   </div>
-
 </div>
 <app-navbar></app-navbar>
