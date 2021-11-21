@@ -1,4 +1,4 @@
-div.footer{
+.container{
     position: relative;
     bottom: 0;
     margin: -.6%;
@@ -16,10 +16,18 @@ div.footer{
 
     font-family: Bahnschrift;
 }
-div.contactInfo{
+
+.contact-info{
     padding-top: 5%;
     display: flex;
+    margin: 0 20%;
 }
-div.contactInfo > * {
+.contact-info > * {
     flex-basis: 100%;
+}
+
+@media (max-width: 768px){
+    .contact-info{
+        margin: 0;
+    }
 }

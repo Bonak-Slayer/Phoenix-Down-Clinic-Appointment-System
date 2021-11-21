@@ -6,6 +6,10 @@
     margin: -.6% -.6%;
 }
 
+button{
+    transition: 0.3s;
+}
+
 /* First content of main page before login */
 .content-1{
     position: relative;
