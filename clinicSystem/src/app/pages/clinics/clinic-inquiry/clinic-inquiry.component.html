@@ -12,13 +12,15 @@
       <option value="" disabled selected hidden>--TEMPLATES--</option>
       <option value="{{ template.id }}" *ngFor="let template of templates">{{ template.content }}</option>
     </select>
-    <button class="use-template-btn" (click)="useTemplate(templateSelecton.value)">USE TEMPLATE</button>
+    <button class="use-template-btn buttons" (click)="useTemplate(templateSelecton.value)">USE TEMPLATE</button>
   </div>
 
-  <div class="inquiry-content">
-    <textarea name="text-input" id="input-area" [(ngModel)]="templateFill"></textarea>
-  </div>
-  <div class="submit">
-    <button class="submit-btn">SUBMIT INQUIRY</button>
-  </div>
+  <form>
+    <div class="inquiry-content">
+      <textarea name="text-input" id="input-area" [(ngModel)]="templateFill"></textarea>
+    </div>
+    <div class="submit">
+      <input type="submit" value="SUBMIT INQUIRY" class="submit-btn buttons">
+    </div>
+  </form>
 </div>
