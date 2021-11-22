@@ -1,8 +1,23 @@
+@media (min-width: 768px) {
+  .container {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+
+  .messages-container{
+    margin: 0;
+  }
+}
+
 .container{
     font-family: Bahnschrift;
     color: #707070;
 
-    margin-left: 20%;
     margin-right: 5%;
     animation: entrance .5s;
 }
@@ -64,13 +79,6 @@
 .send-btn:hover{
     background-color: #32D800;
     color: white;
-}
-
-/* mobile responsive design */
-@media (max-width: 768px) {
-    .messages-container{
-        margin: 0;
-    }
 }
 
 @keyframes entrance {

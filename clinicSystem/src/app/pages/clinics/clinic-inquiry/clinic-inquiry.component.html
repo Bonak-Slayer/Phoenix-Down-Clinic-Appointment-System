@@ -6,17 +6,17 @@
   <div class="header-details">
     <h3>CREATE AN INQUIRY</h3>
   </div>
+
   <div class="templates">
-    <select name="templates" id="templates-selection">
-      <option value="placeholder">--TEMPLATES--</option>
-      <option value="">Who are the doctors?</option>
-      <option value="">What machines do you have?</option>
-      <option value="">Do you offer laboratory tests?</option>
+    <select name="templates" id="templates-selection" #templateSelecton>
+      <option value="" disabled selected hidden>--TEMPLATES--</option>
+      <option value="{{ template.id }}" *ngFor="let template of templates">{{ template.content }}</option>
     </select>
-    <button class="use-template-btn">Use Template</button>
+    <button class="use-template-btn" (click)="useTemplate(templateSelecton.value)">USE TEMPLATE</button>
   </div>
+
   <div class="inquiry-content">
-    <textarea name="text-input" id="input-area"></textarea>
+    <textarea name="text-input" id="input-area" [(ngModel)]="templateFill"></textarea>
   </div>
   <div class="submit">
     <button class="submit-btn">SUBMIT INQUIRY</button>

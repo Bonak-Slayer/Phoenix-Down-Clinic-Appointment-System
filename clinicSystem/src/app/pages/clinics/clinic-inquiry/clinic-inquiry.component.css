@@ -1,8 +1,18 @@
-.container{
-  margin-left: 25%;
-  margin-right: 5%;
+@media (min-width: 768px) {
+  .container {
+    margin-left: 20%;
+  }
+}
 
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+}
+
+.container{
   font-family: Bahnschrift;
+  color: #707070;
 }
 
 /* header styling */
@@ -11,19 +21,26 @@
   font-size: 50px;
 }
 .header-details{
-  margin-top: 8%;
+  margin-top: 3%;
 }
 
 /* templates */
+.templates {
+  margin-top: 3%;
+}
+
 #templates-selection{
   text-align: center;
-  width: 75%;
-  border: 3px solid #32D800;
+  width: 40%;
+  border: 1px solid #707070;
   padding: .5% 0;
 }
 .use-template-btn{
-  float: right;
-  width: 20%;
+  border: 1px solid #32d800;
+  border-radius: 0;
+  width: 15%;
+
+  margin-left: 1%;
   padding: .5% 0;
 }
 
@@ -31,33 +48,37 @@
 .inquiry-content{
   margin-top: 3%;
 }
+
 #input-area{
-  width: 100%;
+  width: 80%;
   height: 300px;
+  overflow-y: scroll;
+  resize: none;
 }
+
 .submit{
-  width: 100%;
+  width: 60%;
   margin-top: 2%;
+  text-align: center;
 }
 .submit-btn{
-  padding: .5% 0;
-  width: 20%;
-  float: right;
+  padding: 1% 0;
+  width: 40%;
 }
 
 /* buttons general styling */
 button{
   font-family: Bahnschrift;
+  font-size: 15px;
   font-weight: 700;
 
   background-color: transparent;
   border: 3px solid #32D800;
   border-radius: 10px;
+  transition: background-color .3s, color .3s;
 }
 
-/* mobile responsive */
-@media (max-width: 768px){
-  .container{
-    margin: 0;
-  }
+button:hover{
+  background-color: #32d800;
+  color: white;
 }

@@ -5,10 +5,19 @@
 
   .clinic {
     width: 100%;
+    margin: 3% 0;
   }
 
   .clinics {
     display: block;
+  }
+
+  .search input {
+    width: 60%;
+  }
+
+  #submit-button {
+    width: 20%;
   }
 }
 
@@ -23,11 +32,20 @@
 
   .clinic {
     max-width: 35%;
+    margin: 3%;
   }
 
   .clinics {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .search input {
+    width: 50%;
+  }
+
+  #submit-button {
+    width: 10%;
   }
 }
 
@@ -51,11 +69,23 @@
 }
 
 .search input {
-  width: 50%;
+  height: 40px;
 }
 
 #submit-button {
-  width: 10%;
+  font-family: Bahnschrift;
+  font-weight: 700;
+
+  height: 46px;
+  background: #232E21;
+  color: white;
+  border: 1px solid #232E21;
+  transition: background-color .3s, color .3s, border .3s;
+}
+
+#submit-button:hover {
+  background-color: #32d800;
+  border: 1px solid #32d800;
 }
 
 .clinics {
@@ -64,7 +94,6 @@
 
 .clinic {
   height: 300px;
-  margin: 3%;
   flex: 1 0 30%;
 }
 
