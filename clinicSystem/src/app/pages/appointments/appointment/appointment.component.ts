@@ -18,7 +18,7 @@ export class AppointmentComponent implements OnInit {
   ngOnInit(): void {
     if(this.loginService.isLoggedIn){
       this.appointmentService.getAppointment(this.pathService.snapshot.params['id']);
-      this.timeValidation(this.appointmentService.appointment.date.substring(11, 12));
+      this.timeValidation(this.appointmentService.appointment.date);
     }
     else{
       this.reroute.navigate(['/login']);
@@ -26,8 +26,10 @@ export class AppointmentComponent implements OnInit {
   }
 
   timeValidation(time: string){
-    if(+time >= 13 && +time < 24){
-      this.verifyTime = 'PM';
+    if(time != null){
+      if(+time.substring(11, 12) >= 13 && +time.substring(11, 12) < 24){
+        this.verifyTime = 'PM';
+      }
     }
   }
 }

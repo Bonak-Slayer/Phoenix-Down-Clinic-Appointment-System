@@ -95,6 +95,10 @@
   color: #32d800;
 }
 
+.rejected {
+  color: #EF0000;
+}
+
 .user-details {
     text-align: center;
 }

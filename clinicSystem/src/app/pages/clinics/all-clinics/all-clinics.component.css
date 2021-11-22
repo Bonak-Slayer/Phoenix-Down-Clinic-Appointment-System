@@ -6,6 +6,10 @@
   .clinic {
     width: 100%;
   }
+
+  .clinics {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -19,6 +23,11 @@
 
   .clinic {
     max-width: 35%;
+  }
+
+  .clinics {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -51,8 +60,6 @@
 
 .clinics {
   margin-top: 5%;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .clinic {

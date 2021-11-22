@@ -10,7 +10,10 @@ import { MessageService } from '../message.service';
 })
 export class MessageComponent implements OnInit {
 
-  constructor(public messageService: MessageService, private pathService: ActivatedRoute, private loginService: LoginService, private reroute: Router) { }
+  constructor(public messageService: MessageService,
+              private pathService: ActivatedRoute,
+              private loginService: LoginService,
+              private reroute: Router) { }
 
   ngOnInit(): void {
     if(!this.loginService.isLoggedIn){
@@ -18,4 +21,7 @@ export class MessageComponent implements OnInit {
     }
   }
 
+  reply(){
+    this.reroute.navigate(['/messages/compose']);
+  }
 }
