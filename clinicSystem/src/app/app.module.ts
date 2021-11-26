@@ -25,6 +25,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { AppointmentComponent } from './pages/appointments/appointment/appointment.component';
 import { SentMessagesComponent } from './pages/messages/sent-messages/sent-messages.component';
 import { MessageComponent } from './pages/messages/message/message.component';
+import { MobileNavbarComponent } from './pages/mobile-navbar/mobile-navbar.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -63,6 +64,7 @@ const routes: Routes = [
     AppointmentComponent,
     SentMessagesComponent,
     MessageComponent,
+    MobileNavbarComponent,
   ],
   imports: [
     BrowserModule,

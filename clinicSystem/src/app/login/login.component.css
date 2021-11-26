@@ -111,3 +111,13 @@ button {
     opacity: 1;
   }
 }
+
+
+/* mobile responsive styling */
+@media(max-width:768px){
+  .login-container{
+    left: 10%;
+    top: 5%;
+    width: 80%;
+  }
+}
