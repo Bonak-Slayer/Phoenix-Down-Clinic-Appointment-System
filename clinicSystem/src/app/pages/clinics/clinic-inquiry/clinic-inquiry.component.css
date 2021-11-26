@@ -2,11 +2,48 @@
   .container {
     margin-left: 20%;
   }
+
+  #templates-selection{
+    width: 40%;
+  }
+  .use-template-btn{
+    width: 15%;
+  }
+
+  #input-area{
+    width: 80%;
+  }
+  .submit{
+    width: 60%;
+  }
+  .submit-btn{
+    width: 40%;
+    margin-left: 45%;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    margin: 0;
+    margin: 3% 3% 10% 3%;
+  }
+
+  #templates-selection{
+    width: 65%;
+  }
+  .use-template-btn{
+    width: 30%;
+    margin-left: 1%;
+  }
+
+  #input-area{
+    width: 95%;
+  }
+  .submit{
+    text-align: center;
+    width: 100%;
+  }
+  .submit-btn{
+    width: 60%;
   }
 }
 
@@ -31,14 +68,12 @@
 
 #templates-selection{
   text-align: center;
-  width: 40%;
   border: 1px solid #707070;
   padding: .5% 0;
 }
 .use-template-btn{
   border: 1px solid #32d800;
   border-radius: 0;
-  width: 15%;
 
   margin-left: 1%;
   padding: .5% 0;
@@ -52,7 +87,6 @@
 #input-area{
   font-family: Calibri;
   font-size: 16px;
-  width: 80%;
   height: 300px;
   padding: 1%;
 
@@ -61,14 +95,11 @@
 }
 
 .submit{
-  width: 60%;
   margin-top: 2%;
 }
 
 .submit-btn{
   padding: 1% 0;
-  width: 40%;
-  margin-left: 45%;
 }
 
 /* buttons general styling */

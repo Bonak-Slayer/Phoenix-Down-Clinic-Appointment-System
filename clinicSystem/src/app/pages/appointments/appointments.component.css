@@ -2,12 +2,15 @@
   .all-appointments-container {
     width: 100%;
   }
+  .appointments-container{
+    margin: 3% 3% 10% 3%;
+  }
 }
 
 @media (min-width: 768px) {
   .appointments-container {
     margin-left: 20%;
-  }
+  } 
 
   .appointments-header h1 {
     font-size: 50px;

@@ -1,26 +1,3 @@
-@media (max-width: 768px) {
-  .clinics-container {
-    margin: 3% 3%;
-  }
-
-  .clinic {
-    width: 100%;
-    margin: 3% 0;
-  }
-
-  .clinics {
-    display: block;
-  }
-
-  .search input {
-    width: 60%;
-  }
-
-  #submit-button {
-    width: 20%;
-  }
-}
-
 @media (min-width: 768px) {
   .clinics-container {
     margin-left: 20%;
@@ -128,5 +105,28 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinics-container {
+    margin: 3% 3% 10% 3%;
+  }
+
+  .clinic {
+    width: 100%;
+    margin: 3% 0;
+  }
+
+  .clinics {
+    display: block;
+  }
+
+  .search input {
+    width: 60%;
+  }
+
+  #submit-button {
+    width: 20%;
   }
 }

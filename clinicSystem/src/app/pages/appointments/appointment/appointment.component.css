@@ -27,8 +27,8 @@
 }
 
 @media (max-width: 768px) {
-  appointment-container {
-    margin-left: 20%;
+  .appointment-container {
+    margin: 3% 3% 10% 3%;
   }
 
   .appointment-container h1 {
