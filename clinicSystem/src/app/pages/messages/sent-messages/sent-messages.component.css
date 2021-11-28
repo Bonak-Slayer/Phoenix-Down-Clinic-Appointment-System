@@ -1,9 +1,48 @@
+@media (min-width: 768px) {
+  .messages-container{
+      margin-left: 20%;
+      margin-right: 5%;
+  }
+
+  #message-recipient{
+      font-size: 15px;
+  }
+  #message-content{
+      font-size: 20px;
+  }
+  .message-date{
+      margin-right: 2%;
+      margin-top: 1%;
+  }
+  #message-date{
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .messages-container{
+      margin: 3% 3% 10% 3%;
+  }
+
+  #message-recipient{
+      font-size: 13px;
+  }
+  #message-content{
+      font-size: 16px;
+  }
+  .message-date{
+      margin-right: 2%;
+      margin-top: 2%;
+  }
+  #message-date{
+      font-size: 15px;
+  }
+}
+
 .messages-container{
   font-family: Bahnschrift;
   color: #707070;
 
-  margin-left: 20%;
-  margin-right: 5%;
   animation: entrance .5s;
 }
 
@@ -36,6 +75,7 @@
 
 .nav-button:hover{
   color: #32D800;
+  cursor: pointer;
 }
 
 /* messages inbox container */
@@ -62,36 +102,28 @@ a{
 
   text-decoration: none;
 }
+a:hover{
+  cursor: pointer;
+}
+
 li{
   display: inline-block;
   text-decoration: none;
 }
 .message-info{
   color: #707070;
+  transition: .3s;
 }
-#message-recipient{
-  font-size: 15px;
+.message-info:hover{
+  color: #32d800;
 }
 #message-content{
-  font-size: 20px;
   font-weight: 600;
 }
 .message-date{
   float: right;
-  margin-right: 2%;
-  margin-top: 1%;
 
   color: #32D800;
-}
-#message-date{
-  font-size: 20px;
-}
-
-/* mobile responsive design */
-@media (max-width: 768px) {
-  .messages-container{
-      margin: 0;
-  }
 }
 
 @keyframes entrance {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/login/login.service';
+import { MessageService } from '../message.service';
 import { SentMessagesService } from './sent-messages.service';
 
 @Component({
@@ -10,7 +11,12 @@ import { SentMessagesService } from './sent-messages.service';
 })
 export class SentMessagesComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private reroute: Router, public sentMessagesService: SentMessagesService) { }
+  constructor(
+    private loginService: LoginService, 
+    private reroute: Router,
+    public messageService: MessageService,
+    public sentMessagesService: SentMessagesService,
+    ) { }
 
   ngOnInit(): void {
     if(this.loginService.isLoggedIn){

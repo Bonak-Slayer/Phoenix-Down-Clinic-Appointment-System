@@ -1,5 +1,15 @@
 @media (max-width: 768px) {
+  .clinic-appointment-container{
+    margin: 3% 3% 15% 3%;
+  }
 
+  .radio-button{
+    margin: 5% 2%;
+  }
+
+  #submit-button{
+    width: 75%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -11,8 +21,16 @@
     font-size: 50px;
   }
 
+  .radio-button{
+    margin: 2% 2%;
+  }
+
   .submission {
     margin-left: -3%;
+  }
+
+  #submit-button{
+    width: 25%;
   }
 }
 
@@ -60,7 +78,6 @@
 }
 
 .radio-button {
-  margin: 2% 2%;
   transition: color .3s;
 }
 
@@ -95,7 +112,6 @@
   border-radius: 10px;
 
   padding: 1% 0;
-  width: 25%;
 
   font-family: Bahnschrift;
   font-weight: 700;

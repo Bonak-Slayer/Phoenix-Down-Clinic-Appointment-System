@@ -7,7 +7,7 @@
 }
 
 button{
-    transition: 0.3s;
+    transition: background .3s, color .3s;
 }
 
 /* First content of main page before login */
@@ -53,6 +53,7 @@ button{
 }
 .signup-btn:hover{
     background-color: #32D800;
+    color: black;
 }
 
 

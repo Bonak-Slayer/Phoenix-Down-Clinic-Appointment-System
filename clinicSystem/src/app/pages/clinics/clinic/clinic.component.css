@@ -13,6 +13,10 @@
     padding-top: 3%;
   }
 
+  .clinic-interactions{
+    width: 100%;
+  }
+
   .clinic-interactions button {
     width: 40%;
   }
@@ -42,6 +46,10 @@
   .clinic-schedules {
     width: 25%;
     margin: 0 1%;
+  }
+
+  .clinic-interactions{
+    width: 70%;
   }
 
   .clinic-interactions button {
@@ -137,7 +145,6 @@
 /* clinic interactions buttons */
 .clinic-interactions {
   margin-top: 3%;
-  width: 70%;
   position: relative;
   text-align: center;
   display: inline-block;
