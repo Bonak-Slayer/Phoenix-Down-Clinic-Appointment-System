@@ -9,7 +9,7 @@
     <form class="form" (ngSubmit)="appointmentService.submitAppointment(appointmentForm)" #appointmentForm="ngForm">
       <div class="category-container">
         <h4>PLEASE SPECIFY THE DATE OF YOUR APPOINTMENT:</h4>
-        <input type="date">
+        <input type="date" name="appointmentDate" ngModel required>
       </div>
       
       <div class="category-container">

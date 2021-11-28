@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+  .mobile-navbar-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-navbar-container {
+    display: none;
+  }
+}
+
+.mobile-navbar-container {
+  width: 100%;
+  background-color: #232E21;
+  height: 50px;
+
+  font-family: Bahnschrift;
+  font-weight: 700;
+  color: white;
+}

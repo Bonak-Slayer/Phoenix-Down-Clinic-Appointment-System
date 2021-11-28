@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+  .clinics-description {
+    margin-top: 15%;
+  }
+}
+
 @media (min-width: 768px) {
   .clinics-container {
     margin-left: 20%;

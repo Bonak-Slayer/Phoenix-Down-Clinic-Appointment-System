@@ -26,6 +26,7 @@ export class ClinicAppointmentService {
       }
 
       let appointmentForm = new FormData();
+      appointmentForm.append('appointmentDate', form.value.appointmentDate);
       appointmentForm.append('patientCategory', form.value.patientCategory);
       appointmentForm.append('doctor', selectedDoctor);
       appointmentForm.append('healthCheck', form.value.healthCheck);

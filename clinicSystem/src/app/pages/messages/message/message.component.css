@@ -21,7 +21,6 @@
 
 /* message content */
 .message-content{
-  overflow-y: scroll;
   height: 300px;
 }
 
