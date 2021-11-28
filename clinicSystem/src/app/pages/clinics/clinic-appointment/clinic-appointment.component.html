@@ -8,6 +8,11 @@
 
     <form class="form" (ngSubmit)="appointmentService.submitAppointment(appointmentForm)" #appointmentForm="ngForm">
       <div class="category-container">
+        <h4>PLEASE SPECIFY THE DATE OF YOUR APPOINTMENT:</h4>
+        <input type="date">
+      </div>
+      
+      <div class="category-container">
         <h4>SELECT WHICH OF THE FOLLOWING APPLIES TO YOU:</h4>
         <div class="radio-button">
           <label><input type="radio" name="patientCategory" value="New Patient" ngModel required>NEW PATIENT</label>

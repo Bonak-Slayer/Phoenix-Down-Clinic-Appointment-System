@@ -44,7 +44,7 @@ export class MessageService {
           this.composeMessageStatus = 'MESSAGE SENT';
 
           setTimeout(() => {
-            this.reroute.navigate(['/messages']);
+            this.reroute.navigate(['/messages/sent']);
           }, 1000);
         }
         else if(response.message == 'message failed'){

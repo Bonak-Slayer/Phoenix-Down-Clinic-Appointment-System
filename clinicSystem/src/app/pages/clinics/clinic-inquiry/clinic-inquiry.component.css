@@ -13,6 +13,7 @@
 .container{
   font-family: Bahnschrift;
   color: #707070;
+  animation: entrance .5s;
 }
 
 /* header styling */
@@ -86,4 +87,13 @@
 .buttons:hover{
   background-color: #32d800;
   color: white;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
