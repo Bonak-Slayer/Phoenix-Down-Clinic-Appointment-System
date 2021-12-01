@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+  .account-details {
+    margin-top: 10%;
+  }
+
+  .account-details h3 {
+    font-size: 13px;
+    margin: 5% 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .account-container {
+    margin-left: 20%;
+  }
+
+  .account-container h1 {
+    font-size: 50px;
+  }
+
+  .account-details {
+    margin-top: 5%;
+  }
+
+  .account-details h3 {
+    margin: 2% 0;
+  }
+
+}
+
+.account-container {
+  animation: entrance .5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.account-container h1 {
+  font-family: "Bebas Neue";
+  color: #707070;
+}
+
+.account-container p {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.account-details {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

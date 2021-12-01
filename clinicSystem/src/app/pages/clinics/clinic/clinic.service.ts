@@ -15,9 +15,16 @@ export class ClinicService {
   getClinic(id: string){
     this.http.get(`http://127.0.0.1:8000/clinic/${id}`).subscribe((response: any) => {
       //GET CLINIC DATA
-      this.clinic = new ClinicModel(response.clinic.id, response.clinic.name, response.clinic.address,
-        response.clinic.contact, response.clinic.email, response.clinic.operation_start,
-        response.clinic.operation_end, response.clinic.starting_day, response.clinic.end_day, response.clinic.description);
+      this.clinic = new ClinicModel(response.clinic.id,
+        response.clinic.name,
+        response.clinic.address,
+        response.clinic.contact,
+        response.clinic.email,
+        response.clinic.operation_start.substring(0, 5),
+        response.clinic.operation_end.substring(0, 5),
+        response.clinic.starting_day,
+        response.clinic.end_day,
+        response.clinic.description);
 
       //GET STAFF DATA
       this.staff = [];

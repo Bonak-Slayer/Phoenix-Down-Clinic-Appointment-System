@@ -30,16 +30,17 @@ import { MobileNavbarComponent } from './pages/mobile-navbar/mobile-navbar.compo
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'appointments', component: AppointmentsComponent},
+  {path: 'appointments/:id', component: AppointmentComponent},
   {path: 'clinics', component: AllClinicsComponent},
   {path: 'clinic/:id', component: ClinicComponent},
   {path: 'clinic/:id/appointment', component: ClinicAppointmentComponent},
   {path: 'clinic/:id/inquiry', component: ClinicInquiryComponent},
-  {path: 'appointments', component: AppointmentsComponent},
-  {path: 'appointments/:id', component: AppointmentComponent},
   {path: 'messages', component: MessagesComponent},
   {path: 'messages/sent', component: SentMessagesComponent},
   {path: 'messages/compose', component: ComposeMessageComponent},
-  {path: 'messages/message', component: MessageComponent}
+  {path: 'messages/message', component: MessageComponent},
+  {path: 'account', component: AccountComponent}
 ]
 
 @NgModule({
