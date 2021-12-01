@@ -14,8 +14,8 @@
         <button class="nav-button" routerLink="/messages/compose">COMPOSE</button>
     </div>
     <div class="inbox-container">
-        <div class="message" *ngFor="let message of sentMessagesService.messages">
-            <a (click)="messageService.getMessageId(message.id)">
+        <div class="message" *ngFor="let message of messageService.messages">
+            <a (click)="messageService.getMessageId(message.id, 'sent')">
                 <div class="div-width-100">
                     <ul>
                         <li class="message-info">

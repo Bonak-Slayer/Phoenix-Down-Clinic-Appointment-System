@@ -12,6 +12,7 @@ export class MessageService {
 
   messages: MessageModel[] = [];
   message: any;
+  messageType: string = 'receive';
   
   composeMessageStatus: string = 'COMPOSE MESSAGE';
   constructor(private httpService: HttpClient, private reroute: Router, private loginService: LoginService) { }
@@ -27,7 +28,24 @@ export class MessageService {
     })
   }
 
-  getMessageId(id: string){
+  getSentMessages(){
+    this.messages = [];
+
+    this.httpService.get(`http://127.0.0.1:8000/sentmessages/${this.loginService.user_data.id}`).subscribe((response:any) => {
+
+      console.log(response.sent);
+      for(let message of response.sent){
+        let newMessage = new MessageModel(message.id, message.content, message.date, message.sender, message.recipient);
+        this.messages.push(newMessage);
+      }
+
+      this.messages.reverse();
+    })
+  }
+
+  getMessageId(id: string, messageType: string){
+    this.messageType = messageType;
+
     this.message = this.messages.find(message => message.id == id);
     this.reroute.navigate(['/messages/message'])
   }

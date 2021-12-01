@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/login/login.service';
 import { MessageService } from '../message.service';
-import { SentMessagesService } from './sent-messages.service';
 
 @Component({
   selector: 'app-sent-messages',
@@ -14,13 +13,12 @@ export class SentMessagesComponent implements OnInit {
   constructor(
     private loginService: LoginService, 
     private reroute: Router,
-    public messageService: MessageService,
-    public sentMessagesService: SentMessagesService,
+    public messageService: MessageService
     ) { }
 
   ngOnInit(): void {
     if(this.loginService.isLoggedIn){
-      this.sentMessagesService.getSentMessages();
+      this.messageService.getSentMessages();
     }
     else {
       this.reroute.navigate(['/login']);

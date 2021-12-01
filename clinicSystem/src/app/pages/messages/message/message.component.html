@@ -5,7 +5,8 @@
     <p>Below are the contents of the message received from {{ messageService.message.sender }}.</p>
   </div>
   <div class="details">
-    <p>SENDER: {{ messageService.message.sender }}</p>
+    <p *ngIf="messageService.messageType == 'receive'">SENDER: {{ messageService.message.sender }}</p>
+    <p *ngIf="messageService.messageType == 'sent'">RECIPIENT: {{ messageService.message.recipient }}</p>
     <p>DATE SENT: {{ messageService.message.date.substring(0, 9) }}</p>
     <p>TIME SENT: {{ messageService.message.date.substring(11, 16) }}</p>
     <hr>
@@ -16,6 +17,6 @@
     </div>
   </div>
   <div class="reply">
-    <button class="reply-btn" (click)="reply()">REPLY</button>
+    <button class="reply-btn" (click)="reply()" *ngIf="messageService.messageType == 'receive'">REPLY</button>
   </div>
 </div>

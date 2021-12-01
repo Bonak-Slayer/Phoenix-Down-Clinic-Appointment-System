@@ -15,7 +15,7 @@
     </div>
     <div class="inbox-container">
         <div class="message" *ngFor="let message of messageService.messages">
-            <a (click)="messageService.getMessageId(message.id)">
+            <a (click)="messageService.getMessageId(message.id, 'receive')">
                 <div class="div-width-100">
                     <ul>
                         <li class="message-info">
