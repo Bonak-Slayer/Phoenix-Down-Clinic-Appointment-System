@@ -30,7 +30,6 @@ export class ClinicService {
       this.staff = [];
       for(let staffMember of response.staff){
         let addMember = new ClinicStaffmodel(staffMember.id, staffMember.user, staffMember.role, staffMember.specialization);
-        console.log(addMember);
         this.staff.push(addMember);
       }
     })

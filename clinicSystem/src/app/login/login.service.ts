@@ -15,7 +15,7 @@ export class LoginService {
 
   constructor(private httpService: HttpClient, private reroute: Router) { }
 
-  login(email: string, password: string){
+  login(email: string, password: string, portal: string){
     let form = new FormData();
     form.append('email', email);
     form.append('password', password);
@@ -40,15 +40,40 @@ export class LoginService {
           setTimeout(() => {this.loginStatus = 'LOGIN'}, 3000)
         }
         else{
-          this.loginStatus = "LOGIN SUCCESS";
-          this.currentUser = `${this.user_data.first_name}`;
-          this.isLoggedIn = true;
 
-          setTimeout( () => {
-            this.reroute.navigate(['/clinics'])
-          }, 1000)
+          switch (portal) {
+            //HANDLING PATIENT LOGIN
+            case 'patient':
+              this.loginStatus = "LOGIN SUCCESS";
+              this.currentUser = `${this.user_data.first_name}`;
+              this.isLoggedIn = true;
+
+              setTimeout( () => {
+                this.reroute.navigate(['/clinics'])
+              }, 1000);
+              break;
+
+            //HANDLING STAFF LOGIN
+            case 'staff':
+              if(this.user_data.category == 'Staff'){
+                this.loginStatus = "LOGIN SUCCESS";
+                this.currentUser = `${this.user_data.first_name}`;
+                this.isLoggedIn = true;
+
+                setTimeout( () => {
+                  this.reroute.navigate(['/staff/assignedClinic'])
+                }, 1000)
+              }
+              else{
+                this.loginStatus = "ACCESS IS FOR STAFF ONLY";
+                setTimeout(() => { this.loginStatus = 'LOGIN' }, 1500)
+              }
+              break;
+          }
         }
       }
+
+      //IF AN ERROR OCCURS DURING LOGIN
       else{
         console.log(response.message);
         setTimeout(() => {this.loginStatus = 'LOGIN'}, 3000)

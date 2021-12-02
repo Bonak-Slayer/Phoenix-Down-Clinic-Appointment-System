@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from "./login.service";
+import {LoginService} from "../../login/login.service";
 import {NgForm} from "@angular/forms";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-staff-login',
+  templateUrl: './staff-login.component.html',
+  styleUrls: ['./staff-login.component.css']
 })
-export class LoginComponent implements OnInit {
-  message: string = "LOGIN";
+export class StaffLoginComponent implements OnInit {
 
   constructor(public loginService: LoginService) { }
 
@@ -20,7 +19,7 @@ export class LoginComponent implements OnInit {
     let password = form.value.password;
 
     if(form.valid === true){
-      this.loginService.login(email, password, 'patient');
+      this.loginService.login(email, password, 'staff');
     }
   }
 }

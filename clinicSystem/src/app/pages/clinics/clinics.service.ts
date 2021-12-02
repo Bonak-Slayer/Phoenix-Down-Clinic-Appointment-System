@@ -13,7 +13,6 @@ export class ClinicsService {
   getClinics(){
     this.http.get('http://127.0.0.1:8000/').subscribe((response: any) => {
       this.clinics = response.clinics;
-      console.log(response.clinics);
     })
   }
 
@@ -24,7 +23,6 @@ export class ClinicsService {
 
       this.http.post('http://127.0.0.1:8000/', formData).subscribe((response: any) => {
         this.clinics = response.clinics;
-        console.log(response.clinics);
       })
     }
   }

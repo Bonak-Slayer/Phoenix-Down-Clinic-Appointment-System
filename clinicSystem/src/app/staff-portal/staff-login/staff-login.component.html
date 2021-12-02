@@ -1,0 +1,25 @@
+<div class="staff-login-container"></div>
+<div class="login-container">
+  <div class="fields">
+    <h1>{{ loginService.loginStatus }}</h1>
+    <form (ngSubmit)="checkValues(staffLoginForm)" #staffLoginForm="ngForm">
+      <label>Email: </label>
+      <div class="input-container">
+        <input type="email" name="email" ngModel required email>
+      </div>
+
+      <label>Password: </label>
+      <div class="input-container">
+        <input type="password" name="password" ngModel required>
+      </div>
+
+      <div class="input-container">
+        <input type="submit" value="LOG IN" id="submit-button">
+      </div>
+    </form>
+
+    <p id="info">OLONGAPO CITY CLINICS APPOINTMENT SYSTEM</p>
+    <p>CLINIC STAFF PORTAL</p>
+    <a routerLink="/">RETURN TO HOMEPAGE</a>
+  </div>
+</div>

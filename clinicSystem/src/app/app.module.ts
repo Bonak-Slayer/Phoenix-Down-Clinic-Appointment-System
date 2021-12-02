@@ -27,10 +27,14 @@ import { SentMessagesComponent } from './pages/messages/sent-messages/sent-messa
 import { MessageComponent } from './pages/messages/message/message.component';
 import { MobileNavbarComponent } from './pages/mobile-navbar/mobile-navbar.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { StaffLoginComponent } from './staff-portal/staff-login/staff-login.component';
+import { StaffNavbarComponent } from './staff-portal/staff-pages/staff-navbar/staff-navbar.component';
+import { StaffAssignedClinicComponent } from './staff-portal/staff-pages/staff-assigned-clinic/staff-assigned-clinic.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'staff/login', component: StaffLoginComponent},
   {path: 'appointments', component: AppointmentsComponent},
   {path: 'appointments/:id', component: AppointmentComponent},
   {path: 'clinics', component: AllClinicsComponent},
@@ -42,9 +46,10 @@ const routes: Routes = [
   {path: 'messages/compose', component: ComposeMessageComponent},
   {path: 'messages/message', component: MessageComponent},
   {path: 'account', component: AccountComponent},
+  {path: 'staff/assignedClinic', component: StaffAssignedClinicComponent},
   {path: 'invalid', component: NotfoundComponent},
   {path: '**', redirectTo: 'invalid'}
-]
+];
 
 @NgModule({
   declarations: [
@@ -70,6 +75,9 @@ const routes: Routes = [
     MessageComponent,
     MobileNavbarComponent,
     NotfoundComponent,
+    StaffLoginComponent,
+    StaffNavbarComponent,
+    StaffAssignedClinicComponent,
   ],
   imports: [
     BrowserModule,
