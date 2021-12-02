@@ -3,13 +3,13 @@
   <p>Details of the user that have been inputted by the user during sign up are listed here.</p>
 
   <div class="account-details">
-    <h3>First Name: {{ loginService.user_data.first_name }}</h3>
-    <h3>Middle Name: {{ loginService.user_data.middle_name }}</h3>
-    <h3>Last Name: {{ loginService.user_data.last_name }}</h3>
-    <h3>E-Mail: {{ loginService.user_data.email }}</h3>
-    <h3>Address: {{ loginService.user_data.address }}</h3>
-    <h3>Contact: {{ loginService.user_data.contact }}</h3>
-    <h3>Sex: {{ loginService.user_data.sex }}</h3>
+    <h3>First Name: <span class="details">{{ loginService.user_data.first_name }}</span></h3>
+    <h3>Middle Name: <span class="details">{{ loginService.user_data.middle_name }}</span></h3>
+    <h3>Last Name: <span class="details">{{ loginService.user_data.last_name }}</span></h3>
+    <h3>E-Mail: <span class="details">{{ loginService.user_data.email }}</span></h3>
+    <h3>Address: <span class="details">{{ loginService.user_data.address }}</span></h3>
+    <h3>Contact: <span class="details">{{ loginService.user_data.contact }}</span></h3>
+    <h3>Sex: <span class="details">{{ loginService.user_data.sex }}</span></h3>
   </div>
 </div>
 <app-navbar></app-navbar>

@@ -21,9 +21,8 @@ export class LoginService {
     form.append('password', password);
 
     this.httpService.post('http://127.0.0.1:8000/login', form).subscribe((response: any) => {
-      this.loginStatus = response.message;
 
-      if(this.loginStatus === 'LOGIN SUCCESS'){
+      if(response.message === 'LOGIN SUCCESS'){
         //SETTING NECESSARY VARIABLES
         this.user_data = new LoginModel(response.user_data.id,
                                         response.user_data.first_name,
@@ -32,18 +31,27 @@ export class LoginService {
                                         response.user_data.email,
                                         response.user_data.address,
                                         response.user_data.contact,
-                                        response.user_data.sex,);
+                                        response.user_data.sex,
+                                        response.user_data.user_category,
+                                        response.user_data.offense_count,);
 
-        this.currentUser = `${this.user_data.first_name}`;
-        this.isLoggedIn = true;
+        if(this.user_data.offenses >= 10){
+          this.loginStatus = "THIS ACCOUNT IS BLACKLISTED";
+          setTimeout(() => {this.loginStatus = 'LOGIN'}, 3000)
+        }
+        else{
+          this.loginStatus = "LOGIN SUCCESS";
+          this.currentUser = `${this.user_data.first_name}`;
+          this.isLoggedIn = true;
 
-        setTimeout( () => {
-          this.reroute.navigate(['/clinics'])
-        }, 1000)
+          setTimeout( () => {
+            this.reroute.navigate(['/clinics'])
+          }, 1000)
+        }
       }
       else{
         console.log(response.message);
-        setTimeout(() => {this.loginStatus = 'LOGIN'}, 1000)
+        setTimeout(() => {this.loginStatus = 'LOGIN'}, 3000)
       }
     })
   }

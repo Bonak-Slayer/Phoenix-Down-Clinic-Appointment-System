@@ -26,6 +26,7 @@ import { AppointmentComponent } from './pages/appointments/appointment/appointme
 import { SentMessagesComponent } from './pages/messages/sent-messages/sent-messages.component';
 import { MessageComponent } from './pages/messages/message/message.component';
 import { MobileNavbarComponent } from './pages/mobile-navbar/mobile-navbar.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -40,7 +41,9 @@ const routes: Routes = [
   {path: 'messages/sent', component: SentMessagesComponent},
   {path: 'messages/compose', component: ComposeMessageComponent},
   {path: 'messages/message', component: MessageComponent},
-  {path: 'account', component: AccountComponent}
+  {path: 'account', component: AccountComponent},
+  {path: 'invalid', component: NotfoundComponent},
+  {path: '**', redirectTo: 'invalid'}
 ]
 
 @NgModule({
@@ -66,6 +69,7 @@ const routes: Routes = [
     SentMessagesComponent,
     MessageComponent,
     MobileNavbarComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

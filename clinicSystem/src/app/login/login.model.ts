@@ -6,5 +6,7 @@ export class LoginModel {
               public email: string,
               public address: string,
               public contact: string,
-              public sex: string,){}
+              public sex: string,
+              public category: string,
+              public offenses: string){}
 }
