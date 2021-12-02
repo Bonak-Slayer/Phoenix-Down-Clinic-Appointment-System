@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="container">
   <div class="clinic-name">
-    <h1>CLINIC NAME</h1>
+    <h1>{{ inquiryService.heading }}</h1>
   </div>
   <div class="header-details">
     <h3>CREATE AN INQUIRY</h3>
@@ -15,9 +15,9 @@
     <button class="use-template-btn buttons" (click)="useTemplate(templateSelecton.value)">USE TEMPLATE</button>
   </div>
 
-  <form>
+  <form (ngSubmit)="inquiryService.makeInquiry(inquiryForm)" #inquiryForm="ngForm">
     <div class="inquiry-content">
-      <textarea name="text-input" id="input-area" [(ngModel)]="templateFill"></textarea>
+      <textarea name="textInput" id="input-area" [(ngModel)]="templateFill" ngModel required placeholder="Enter text here..."></textarea>
     </div>
     <div class="submit">
       <input type="submit" value="SUBMIT INQUIRY" class="submit-btn buttons">
