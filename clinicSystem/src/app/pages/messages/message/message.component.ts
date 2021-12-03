@@ -16,8 +16,9 @@ export class MessageComponent implements OnInit {
               private reroute: Router) { }
 
   ngOnInit(): void {
-    if(!this.loginService.isLoggedIn){
+    if(!this.loginService.isLoggedIn || this.loginService.portal != 'Patient'){
       this.reroute.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

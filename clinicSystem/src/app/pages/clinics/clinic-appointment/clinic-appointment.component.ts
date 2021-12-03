@@ -17,8 +17,9 @@ export class ClinicAppointmentComponent implements OnInit {
               public appointmentService: ClinicAppointmentService) { }
 
   ngOnInit(): void {
-    if (!this.loginService.isLoggedIn){
+    if (!this.loginService.isLoggedIn || this.loginService.portal != 'Patient'){
       this.reroute.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

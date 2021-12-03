@@ -1,1 +1,19 @@
-<p>staff-navbar works!</p>
+<div class="navbar">
+  <div class="user-content">
+    <div id="user-profile"></div>
+    <h3>{{ loginService.user_data.first_name }}</h3>
+    <hr>
+  </div>
+
+  <div class="pages">
+    <ul class="page-links">
+      <li class="page-link"><a routerLink="/staff/assignedClinics">CLINICS</a></li>
+      <li class="page-link"><a routerLink="/staff/notifications">NOTIFICATIONS</a></li>
+      <li class="page-link"><a routerLink="/staff/account">ACCOUNT</a></li>
+    </ul>
+  </div>
+
+  <div class="signout-container">
+    <button id="sign-out-button" (click)="loginService.signOut('staff')">SIGN OUT</button>
+  </div>
+</div>

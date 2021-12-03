@@ -16,12 +16,13 @@ export class AppointmentComponent implements OnInit {
   private loginService: LoginService, private reroute: Router) { }
 
   ngOnInit(): void {
-    if(this.loginService.isLoggedIn){
+    if(this.loginService.isLoggedIn && this.loginService.portal == 'Patient'){
       this.appointmentService.getAppointment(this.pathService.snapshot.params['id']);
       this.timeValidation(this.appointmentService.appointment.date);
     }
     else{
       this.reroute.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

@@ -13,11 +13,12 @@ export class MessagesComponent implements OnInit {
   constructor(private loginService: LoginService, private reroute: Router, public messageService: MessageService) { }
 
   ngOnInit(): void {
-    if(this.loginService.isLoggedIn){
+    if(this.loginService.isLoggedIn && this.loginService.portal == 'Patient'){
       this.messageService.getMessages();
     }
     else {
       this.reroute.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

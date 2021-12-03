@@ -13,11 +13,12 @@ export class AllClinicsComponent implements OnInit {
   constructor(public clinicsService: ClinicsService, private router: Router, public loginService: LoginService) { }
 
   ngOnInit(): void {
-    if(this.loginService.isLoggedIn){
+    if(this.loginService.isLoggedIn && this.loginService.portal == 'Patient'){
       this.clinicsService.getClinics();
     }
     else{
       this.router.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

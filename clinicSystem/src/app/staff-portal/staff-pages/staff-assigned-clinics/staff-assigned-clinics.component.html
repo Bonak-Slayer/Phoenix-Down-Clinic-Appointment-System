@@ -1,0 +1,21 @@
+<div class="staff-assigned-clinics-container">
+  <div class="assigned-clinics-description">
+    <h1>ASSIGNED CLINICS</h1>
+    <p>Here are the clinics where you are registered as a staff member.</p>
+    <hr>
+  </div>
+
+  <div class="clinics">
+    <div class="clinic" *ngFor="let clinic of staffService.assignedClinics" (click)="accessClinic(clinic.id)">
+      <div class="clinic-image"></div>
+      <div class="clinic-description-container {{ clinic.name }}">
+        <div class="clinic-description">
+          <h2>{{ clinic.name }}</h2>
+          <p *ngIf="clinic.description.length > 80">{{ clinic.description.substring(0, 80)}}...</p>
+          <p *ngIf="clinic.description.length <= 80">{{ clinic.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-staff-navbar></app-staff-navbar>

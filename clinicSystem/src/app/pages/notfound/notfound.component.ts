@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from "../../login/login.service";
 import {Router} from "@angular/router";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-notfound',
@@ -11,7 +12,7 @@ export class NotfoundComponent implements OnInit {
 
   countdown: number = 5;
 
-  constructor(private loginService: LoginService, private route: Router) { }
+  constructor(private loginService: LoginService, private route: Router, private redirect: Location) { }
 
   ngOnInit(): void {
     this.countDown();
@@ -26,7 +27,7 @@ export class NotfoundComponent implements OnInit {
     }
     else{
       if(this.loginService.isLoggedIn){
-        this.route.navigate(['/clinics'])
+        this.redirect.back();
       }
       else{
         this.route.navigate(['/'])

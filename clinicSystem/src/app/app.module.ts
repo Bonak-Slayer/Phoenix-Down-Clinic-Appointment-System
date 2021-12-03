@@ -29,7 +29,9 @@ import { MobileNavbarComponent } from './pages/mobile-navbar/mobile-navbar.compo
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { StaffLoginComponent } from './staff-portal/staff-login/staff-login.component';
 import { StaffNavbarComponent } from './staff-portal/staff-pages/staff-navbar/staff-navbar.component';
-import { StaffAssignedClinicComponent } from './staff-portal/staff-pages/staff-assigned-clinic/staff-assigned-clinic.component';
+import { StaffAssignedClinicComponent } from './staff-portal/staff-pages/staff-assigned-clinics/staff-assigned-clinic/staff-assigned-clinic.component';
+import { StaffAccountComponent } from './staff-portal/staff-pages/staff-account/staff-account.component';
+import { StaffAssignedClinicsComponent } from './staff-portal/staff-pages/staff-assigned-clinics/staff-assigned-clinics.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -46,7 +48,8 @@ const routes: Routes = [
   {path: 'messages/compose', component: ComposeMessageComponent},
   {path: 'messages/message', component: MessageComponent},
   {path: 'account', component: AccountComponent},
-  {path: 'staff/assignedClinic', component: StaffAssignedClinicComponent},
+  {path: 'staff/assignedClinics', component: StaffAssignedClinicsComponent},
+  {path: 'staff/assignedClinics/:id', component: StaffAssignedClinicComponent},
   {path: 'invalid', component: NotfoundComponent},
   {path: '**', redirectTo: 'invalid'}
 ];
@@ -78,6 +81,8 @@ const routes: Routes = [
     StaffLoginComponent,
     StaffNavbarComponent,
     StaffAssignedClinicComponent,
+    StaffAccountComponent,
+    StaffAssignedClinicsComponent,
   ],
   imports: [
     BrowserModule,

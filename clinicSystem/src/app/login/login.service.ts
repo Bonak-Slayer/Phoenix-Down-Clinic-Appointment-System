@@ -8,6 +8,7 @@ import {LoginModel} from "./login.model";
 })
 export class LoginService {
 
+  portal: string = 'Patient';
   isLoggedIn: boolean = false;
   loginStatus: string = 'LOGIN';
   currentUser: string = '';
@@ -47,6 +48,7 @@ export class LoginService {
               this.loginStatus = "LOGIN SUCCESS";
               this.currentUser = `${this.user_data.first_name}`;
               this.isLoggedIn = true;
+              this.portal = 'Patient';
 
               setTimeout( () => {
                 this.reroute.navigate(['/clinics'])
@@ -56,17 +58,18 @@ export class LoginService {
             //HANDLING STAFF LOGIN
             case 'staff':
               if(this.user_data.category == 'Staff'){
+                this.portal = 'Staff';
                 this.loginStatus = "LOGIN SUCCESS";
                 this.currentUser = `${this.user_data.first_name}`;
                 this.isLoggedIn = true;
 
                 setTimeout( () => {
-                  this.reroute.navigate(['/staff/assignedClinic'])
+                  this.reroute.navigate(['/staff/assignedClinics'])
                 }, 1000)
               }
               else{
                 this.loginStatus = "ACCESS IS FOR STAFF ONLY";
-                setTimeout(() => { this.loginStatus = 'LOGIN' }, 1500)
+                setTimeout(() => { this.loginStatus = 'LOGIN' }, 2000)
               }
               break;
           }
@@ -81,11 +84,16 @@ export class LoginService {
     })
   }
 
-  signOut(){
+  signOut(page: string){
     this.isLoggedIn = false;
     this.user_data = null;
     this.currentUser = '';
     this.loginStatus = 'LOGIN';
-    this.reroute.navigate(['/login']);
+    if(page == 'patient'){
+      this.reroute.navigate(['/login']);
+    }
+    else{
+      this.reroute.navigate(['/staff/login']);
+    }
   }
 }

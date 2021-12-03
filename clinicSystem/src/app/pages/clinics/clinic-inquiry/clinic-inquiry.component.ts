@@ -21,18 +21,18 @@ export class ClinicInquiryComponent implements OnInit {
 
   constructor(private loginService: LoginService,
               private reroute: Router,
-              public inquiryService: InquiryService,
-              public clinicService: ClinicService) { }
+              public inquiryService: InquiryService) { }
 
   ngOnInit(): void {
-    if(!this.loginService.isLoggedIn){
-      this.reroute.navigate(['/login']);
-    }
-    else{
+    if(this.loginService.isLoggedIn && this.loginService.portal == 'Patient'){
       this.templates = [];
       this.templates.push(this.firstTemplate);
       this.templates.push(this.secondTemplate);
       this.templates.push(this.thirdTemplate);
+    }
+    else{
+      this.reroute.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

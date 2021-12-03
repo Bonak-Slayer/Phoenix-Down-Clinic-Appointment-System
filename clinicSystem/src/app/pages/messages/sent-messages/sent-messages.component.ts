@@ -17,11 +17,12 @@ export class SentMessagesComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    if(this.loginService.isLoggedIn){
+    if(this.loginService.isLoggedIn && this.loginService.portal == 'Patient'){
       this.messageService.getSentMessages();
     }
     else {
       this.reroute.navigate(['/login']);
+      this.loginService.signOut('patient');
     }
   }
 

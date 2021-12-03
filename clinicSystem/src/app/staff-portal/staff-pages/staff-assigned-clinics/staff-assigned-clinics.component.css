@@ -1,0 +1,143 @@
+@media (max-width: 768px) {
+  .clinics-description {
+    margin-top: 15%;
+  }
+}
+
+@media (min-width: 768px) {
+  .staff-assigned-clinics-container {
+    margin-left: 20%;
+  }
+
+  .assigned-clinics-description h1{
+    font-size: 50px;
+  }
+
+  .clinic {
+    max-width: 35%;
+    margin: 3%;
+  }
+
+  .clinics {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .search input {
+    width: 50%;
+  }
+
+  #submit-button {
+    width: 10%;
+  }
+}
+
+.staff-assigned-clinics-container {
+  animation: entrance .3s ease-in;
+}
+
+.assigned-clinics-description h1{
+  font-family: Bebas Neue;
+  color: #707070;
+}
+
+.assigned-clinics-description p {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.assigned-clinics-description hr {
+  margin: 5% 0;
+  margin-right: 3%;
+}
+
+.search {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.search input {
+  height: 40px;
+}
+
+#submit-button {
+  font-family: Bahnschrift;
+  font-weight: 700;
+
+  height: 46px;
+  background: #232E21;
+  color: white;
+  border: 1px solid #232E21;
+  transition: background-color .3s, color .3s, border .3s;
+}
+
+#submit-button:hover {
+  background-color: #00D0E7;
+  border: 1px solid #00D0E7;
+}
+
+.clinics {
+  margin-top: 5%;
+}
+
+.clinic {
+  height: 300px;
+  flex: 1 0 30%;
+}
+
+.clinic-image {
+  margin-left: -2px;
+  margin-top: -2px;
+  height: 150px;
+  width: 100.5%;
+  border: 1px solid #707070;
+}
+
+.clinic-description-container {
+  margin-left: -2px;
+  background-color: #00D0E7;
+  height: 50%;
+  width: 100.5%;
+  border: 1px solid #00D0E7;
+  font-family: Bahnschrift;
+}
+
+.clinic-description {
+  padding: 2% 5%;
+}
+
+.clinic-description h2, p{
+  color: white;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .staff-assigned-clinics-container {
+    margin: 3% 3% 10% 3%;
+  }
+
+  .clinic {
+    width: 100%;
+    margin: 3% 0;
+  }
+
+  .clinics {
+    display: block;
+  }
+
+  .search input {
+    width: 60%;
+  }
+
+  #submit-button {
+    width: 20%;
+  }
+}

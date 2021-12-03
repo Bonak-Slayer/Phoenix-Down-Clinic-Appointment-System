@@ -1,0 +1,177 @@
+@media (max-width: 768px) {
+  .clinic-container {
+    margin: 3% 3%;
+  }
+
+  .clinic-details {
+    display: block;
+  }
+
+  .clinic-schedules {
+    width: 100%;
+    margin: 1% 0;
+    padding-top: 3%;
+  }
+
+  .clinic-interactions{
+    width: 100%;
+  }
+
+  .clinic-interactions button {
+    width: 40%;
+  }
+
+  .clinic-general-description {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .clinic-container {
+    margin-left: 20%;
+  }
+
+  .clinic-description h1{
+    font-size: 50px;
+  }
+
+  .clinic-image {
+    width: 65%;
+  }
+
+  .clinic-details {
+    display: flex;
+  }
+
+  .clinic-schedules {
+    width: 25%;
+    margin: 0 1%;
+  }
+
+  .clinic-interactions{
+    width: 70%;
+  }
+
+  .clinic-interactions button {
+    width: 25%;
+  }
+
+  .clinic-general-description {
+    width: 60%;
+  }
+}
+
+.clinic-container {
+  animation: entrance .3s ease-in;
+}
+
+.clinic-description h1, h4 {
+  font-family: Bebas Neue;
+  color: #707070;
+}
+
+.clinic-description h4 {
+  font-size: 20px;
+  font-weight: 500;
+  transition: color .3s;
+}
+
+.clinic-description h4:hover {
+  color: #32D800;
+}
+
+.clinic-description a {
+  text-decoration: none;
+}
+
+.clinic-image {
+  border: 2px solid #707070;
+  height: 360px;
+}
+
+.clinic-schedules {
+  background-color: #353535;
+  height: 364px;
+  text-align: center;
+}
+
+.clinic-schedules h2, h3{
+  font-family: Bahnschrift;
+}
+
+.clinic-schedules h2 {
+  color: #32D800;
+}
+
+.clinic-schedules h3 {
+  color: white;
+}
+
+#detail-divider {
+  margin: 0 10%;
+}
+
+.clinic-general-description p {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.clinic-additional-information {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-family: Bahnschrift;
+}
+
+.clinic-additional-information h2, h3, p{
+  color: #707070;
+}
+
+#info-divider {
+  margin-right: 10%;
+}
+
+.staff-container {
+  margin-top: 3%;
+}
+
+.staff-info {
+  margin-bottom: 3%;
+}
+
+.staff-info li {
+  color: #707070;
+}
+
+/* clinic interactions buttons */
+.clinic-interactions {
+  margin-top: 3%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+.clinic-interactions button {
+  background-color: transparent;
+  border: 3px solid #32D800;
+  border-radius: 10px;
+
+  margin: 1% 5%;
+  padding: 1% 0;
+
+  font-family: Bahnschrift;
+  font-weight: 700;
+  transition: background-color .3s, color .3s;
+}
+
+.clinic-interactions button:hover {
+  background-color: #32D800;
+  color: white;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
