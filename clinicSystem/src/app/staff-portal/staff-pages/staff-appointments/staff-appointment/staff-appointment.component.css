@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) {
+  .appointment-management-container {
+    margin-left: 20%;
+  }
+
+  .appointment-management-container h1{
+    font-size: 50px;
+  }
+
+  .appointment-details h1 {
+    font-size: 25px;
+  }
+
+  .submit-buttons {
+    height: 40px;
+    width: 20%;
+  }
+}
+
+.appointment-management-container h1{
+  font-family: "Bebas Neue";
+  color: #707070;
+}
+
+.appointment-management-container p{
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.appointment-details {
+  margin-top: 5%;
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.appointment-details h1 {
+  font-family: Bahnschrift;
+  margin-bottom: 3%;
+}
+
+.appointment-details h1 span {
+  color: #0EAFE9;
+}
+
+.form-approval-container {
+  text-align: center;
+  margin: 10% 0;
+  color: #707070;
+  font-family: Bahnschrift;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.submit-buttons {
+  border-radius: 10px;
+
+  background: transparent;
+  font-family: Bahnschrift;
+  font-weight: 700;
+  margin: 3% 3%;
+  transition: color .3s, background-color .3s;
+}
+
+#approve {
+  border: 2px solid #32d800;
+}
+
+#approve:hover {
+  color: white;
+  background-color: #32d800;
+}
+
+#reject {
+  border: 2px solid #EF0000;
+}
+
+#reject:hover {
+  color: white;
+  background-color: #EF0000;
+}
+
+

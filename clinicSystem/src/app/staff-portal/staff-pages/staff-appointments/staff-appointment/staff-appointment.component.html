@@ -1,4 +1,38 @@
 <div class="appointment-management-container">
   <h1>MANAGE APPOINTMENT</h1>
+  <p>You can approve or reject appointments made by patients here.</p>
+  <hr>
+
+  <div class="appointment-details">
+    <h1>THIS APPOINTMENT IS
+      <span *ngIf="appointmentService.appointment.status == 'Approved'
+                   || appointmentService.appointment.status == 'Pending'; else alternative">
+        CURRENTLY {{ appointmentService.appointment.status.toUpperCase() }}.
+      </span>
+    </h1>
+
+    <ng-template #alternative>
+      <span>{{ appointmentService.appointment.status.toUpperCase() }}.</span>
+    </ng-template>
+
+
+    <h2>APPOINTMENT DETAILS</h2>
+    <h3>Patient: {{ appointmentService.appointment.patient }}</h3>
+    <h3>Category: {{ appointmentService.appointment.category }}</h3>
+    <h3>Requested Physician: {{ appointmentService.appointment.doctor }}</h3>
+    <h3>Appointment Date: {{ appointmentService.appointment.date.substring(0, 10) }}</h3>
+  </div>
+
+  <div class="form-approval-container">
+    <form (ngSubmit)="appointmentService.manageAppointment(approvalForm, appointmentStatus)" #approvalForm="ngForm">
+      <input name="appointmentTime" type="time" ngModel>
+      <p>{{ appointmentService.prompt }}</p>
+
+      <div class="button-container">
+        <input type="submit" id="approve" class="submit-buttons" (click)="appointmentVerdict('Approved')" value="APPROVE">
+        <input type="submit" id="reject" class="submit-buttons" (click)="appointmentVerdict('Rejected')" value="REJECT">
+      </div>
+    </form>
+  </div>
 </div>
 <app-staff-navbar></app-staff-navbar>
