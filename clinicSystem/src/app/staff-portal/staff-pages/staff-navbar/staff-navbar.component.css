@@ -48,7 +48,7 @@
 }
 
 .page-link a:hover {
-  color: #00D0E7;
+  color: #0EAFE9;
 }
 
 .signout-container {
@@ -61,7 +61,7 @@
   font-size: 15px;
   font-weight: 700;
   background-color: #353535;
-  border: 3px solid #00D0E7;
+  border: 3px solid #0EAFE9;
   border-radius: 10px;
   padding: 1% 0;
 
@@ -72,7 +72,7 @@
 }
 
 #sign-out-button:hover {
-  background-color: #00D0E7;
+  background-color: #0EAFE9;
   color: #232E21;
 }
 

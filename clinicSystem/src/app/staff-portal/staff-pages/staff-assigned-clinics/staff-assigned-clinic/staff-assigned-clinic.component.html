@@ -1,29 +1,31 @@
 <div class="clinic-container">
   <div class="clinic-description">
-    <!--<h1>{{ clinicService.clinic.name }}</h1>-->
-    <a routerLink="/clinics"><h4>RETURN TO CLINICS PAGE</h4></a>
+    <h1>{{ staffService.assignedClinic.name }}</h1>
+    <a routerLink="/staff/assignedClinics"><h4>RETURN TO CLINICS PAGE</h4></a>
   </div>
 
   <div class="clinic-details">
     <div class="clinic-image"></div>
     <div class="clinic-schedules">
-      <!--<h2>OPERATING HOURS</h2>
-      <h3>{{ clinicService.clinic.operationStart }} - {{ clinicService.clinic.operationEnd }}</h3>
-      <h3>{{ clinicService.clinic.startDay }} - {{ clinicService.clinic.endDay }}</h3>
+      <h2>OPERATING HOURS</h2>
+      <h3>{{ staffService.assignedClinic.operationStart }} - {{ staffService.assignedClinic.operationEnd }}</h3>
+      <h3>{{ staffService.assignedClinic.startDay }} - {{ staffService.assignedClinic.endDay }}</h3>
       <hr id="detail-divider">
       <h2>CONTACT</h2>
-      <h3>{{ clinicService.clinic.contact }}</h3>
-      <h3>{{ clinicService.clinic.email }}</h3>-->
+      <h3>{{ staffService.assignedClinic.contact }}</h3>
+      <h3>{{ staffService.assignedClinic.email }}</h3>
     </div>
   </div>
 
   <div class="clinic-interactions">
-    <button class="interactions-btn">ALL APPOINTMENTS</button>
+    <button class="interactions-btn" routerLink="/staff/assignedClinics/{{ staffService.assignedClinic.id}}/appointments">
+      ALL APPOINTMENTS
+    </button>
     <button class="interactions-btn">ALL INQUIRIES</button>
   </div>
 
   <div class="clinic-general-description">
-    <!--<p>{{ clinicService.clinic.description }}</p>-->
+    <p>{{ staffService.assignedClinic.description }}</p>
   </div>
 
   <div class="clinic-additional-information">
@@ -31,17 +33,17 @@
     <hr id="info-divider">
     <div class="address-container">
       <h3>ADDRESS</h3>
-      <!--<p>{{ clinicService.clinic.address }}</p>-->
+      <p>{{ staffService.assignedClinic.address }}</p>
     </div>
 
     <div class="staff-container">
       <h3>STAFF</h3>
-      <!--<div *ngFor="let member of clinicService.staff" class="staff-info">
+      <div *ngFor="let member of staffService.staff" class="staff-info">
         <p>{{ member.role}} {{ member.user }}</p>
         <ul *ngFor="let specialty of member.specialization">
           <li>{{ specialty }}</li>
         </ul>
-      </div>-->
+      </div>
     </div>
   </div>
 </div>

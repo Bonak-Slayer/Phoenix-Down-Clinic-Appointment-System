@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {ClinicModel} from "../pages/clinics/clinic/clinic.model";
 import {LoginService} from "../login/login.service";
 import {HttpClient} from "@angular/common/http";
+import {ClinicStaffmodel} from "../pages/clinics/clinic.staffmodel";
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ export class StaffService {
 
   assignedClinics: ClinicModel[] = [];
   assignedClinic: any;
+  staff: ClinicStaffmodel[] = [];
 
   constructor(private http: HttpClient, private loginService: LoginService) { }
 
@@ -34,12 +36,24 @@ export class StaffService {
 
         this.assignedClinics.push(newClinic);
       }
-
-      console.log(this.assignedClinics)
     })
   }
 
-  getAssignedClinic(){
+  getStaff(id: string){
+    this.staff = [];
 
+    this.http.get(`http://127.0.0.1:8000/staff/allclinics/getClinic/${id}`).subscribe((response: any) => {
+      for(let member of response.staff){
+        let staffMember = new ClinicStaffmodel(
+          member.id,
+          member.user,
+          member.role,
+          member.specialization
+        );
+
+        this.staff.push(staffMember);
+      }
+    })
   }
+
 }

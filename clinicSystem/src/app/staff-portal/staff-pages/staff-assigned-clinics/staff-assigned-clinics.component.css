@@ -72,8 +72,8 @@
 }
 
 #submit-button:hover {
-  background-color: #00D0E7;
-  border: 1px solid #00D0E7;
+  background-color: #0EAFE9;
+  border: 1px solid #0EAFE9;
 }
 
 .clinics {
@@ -95,10 +95,10 @@
 
 .clinic-description-container {
   margin-left: -2px;
-  background-color: #00D0E7;
+  background-color: #0EAFE9;
   height: 50%;
   width: 100.5%;
-  border: 1px solid #00D0E7;
+  border: 1px solid #0EAFE9;
   font-family: Bahnschrift;
 }
 

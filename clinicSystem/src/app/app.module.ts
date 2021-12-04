@@ -32,6 +32,8 @@ import { StaffNavbarComponent } from './staff-portal/staff-pages/staff-navbar/st
 import { StaffAssignedClinicComponent } from './staff-portal/staff-pages/staff-assigned-clinics/staff-assigned-clinic/staff-assigned-clinic.component';
 import { StaffAccountComponent } from './staff-portal/staff-pages/staff-account/staff-account.component';
 import { StaffAssignedClinicsComponent } from './staff-portal/staff-pages/staff-assigned-clinics/staff-assigned-clinics.component';
+import { StaffAppointmentsComponent } from './staff-portal/staff-pages/staff-appointments/staff-appointments.component';
+import { StaffAppointmentComponent } from './staff-portal/staff-pages/staff-appointments/staff-appointment/staff-appointment.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -50,6 +52,8 @@ const routes: Routes = [
   {path: 'account', component: AccountComponent},
   {path: 'staff/assignedClinics', component: StaffAssignedClinicsComponent},
   {path: 'staff/assignedClinics/:id', component: StaffAssignedClinicComponent},
+  {path: 'staff/assignedClinics/:id/appointments', component: StaffAppointmentsComponent},
+  {path: 'staff/assignedClinics/:id/appointments/:appointment_id', component: StaffAppointmentComponent},
   {path: 'invalid', component: NotfoundComponent},
   {path: '**', redirectTo: 'invalid'}
 ];
@@ -83,6 +87,8 @@ const routes: Routes = [
     StaffAssignedClinicComponent,
     StaffAccountComponent,
     StaffAssignedClinicsComponent,
+    StaffAppointmentsComponent,
+    StaffAppointmentComponent,
   ],
   imports: [
     BrowserModule,

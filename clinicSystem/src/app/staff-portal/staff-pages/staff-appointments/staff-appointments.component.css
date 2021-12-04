@@ -1,0 +1,66 @@
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) {
+  .all-appointments-container {
+    margin-left: 20%;
+  }
+
+  .all-appointments-container h1{
+    font-size: 50px;
+  }
+
+  .appointments-container {
+    width: 80%;
+    height: 450px;
+  }
+}
+
+.all-appointments-container h1{
+  font-family: "Bebas Neue";
+  color: #707070;
+}
+
+.all-appointments-container p{
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.all-appointments-container hr {
+  margin: 5% 0;
+  margin-right: 3%;
+}
+
+.appointments-container {
+  border: 1px solid #707070;
+  overflow-y: scroll;
+}
+
+.appointment {
+  width: 100%;
+  border-bottom: 1px solid #707070;
+}
+
+.appointment h3 {
+  margin-left: 3%;
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.Approved {
+  color: #0BAC11;
+}
+
+.Pending {
+  color: #EF9400;
+}
+
+.Rejected {
+  color: #EF0000;
+}
+
+#no-appointments {
+  font-family: Bahnschrift;
+  color: #707070;
+}
