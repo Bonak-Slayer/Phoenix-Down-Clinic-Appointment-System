@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+
+}
+
+@media (min-width: 768px) {
+  .notifs-container {
+    margin-left: 20%;
+  }
+
+  .notifs-container h1{
+    font-size: 50px;
+  }
+}
+
+.notifs-container {
+  color: #707070;
+}
+
+.notifs-container h1{
+  font-family: "Bebas Neue";
+}
+
+.notifs-container p{
+  font-family: Bahnschrift;
+}
+
+.notifs-container hr {
+  margin-bottom: 5%;
+}

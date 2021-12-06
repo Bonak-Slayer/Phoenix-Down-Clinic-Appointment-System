@@ -1,1 +1,12 @@
-<p>notifs works!</p>
+<div class="notifs-container">
+  <h1>NOTIFICATIONS</h1>
+  <p>Your notifications are listed here.</p>
+  <hr>
+
+  <div class="notifications">
+    <div *ngFor="let notif of notifService.notifications">
+      <h4>{{ notif.date.substring(0, 9) }} {{ notif.date.substring(11, 16) }} <span>{{ notif.content }}</span></h4>
+    </div>
+  </div>
+</div>
+<app-navbar></app-navbar>

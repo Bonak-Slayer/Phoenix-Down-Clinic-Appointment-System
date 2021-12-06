@@ -41,6 +41,7 @@ const routes: Routes = [
   {path: 'staff/login', component: StaffLoginComponent},
   {path: 'appointments', component: AppointmentsComponent},
   {path: 'appointments/:id', component: AppointmentComponent},
+  {path: 'notifications', component: NotifsComponent},
   {path: 'clinics', component: AllClinicsComponent},
   {path: 'clinic/:id', component: ClinicComponent},
   {path: 'clinic/:id/appointment', component: ClinicAppointmentComponent},

@@ -21,11 +21,14 @@
     <h3>Category: {{ appointmentService.appointment.category }}</h3>
     <h3>Requested Physician: {{ appointmentService.appointment.doctor }}</h3>
     <h3>Appointment Date: {{ appointmentService.appointment.date.substring(0, 10) }}</h3>
+    <h3 *ngIf="appointmentService.appointment.status == 'Approved'">
+      Appointment Time: {{ appointmentService.appointment.date.substring(11, 16) }}
+    </h3>
   </div>
 
   <div class="form-approval-container">
     <form (ngSubmit)="appointmentService.manageAppointment(approvalForm, appointmentStatus)" #approvalForm="ngForm">
-      <input name="appointmentTime" type="time" ngModel>
+      <input id="time" name="appointmentTime" type="time" ngModel>
       <p>{{ appointmentService.prompt }}</p>
 
       <div class="button-container">

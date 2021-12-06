@@ -16,7 +16,7 @@
             <span id="rejected">REJECTED APPOINTMENT:</span> {{ appointment.doctor }}
           </h4>
 
-          <h4 *ngIf="appointment.date == 'Approved'">
+          <h4 *ngIf="appointment.status == 'Approved'">
             <span id="approved">APPOINTMENT WITH:</span> Dr. {{ appointment.doctor }}
           </h4>
         </div>
