@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {NgForm} from "@angular/forms";
+import {LoginService} from "../../login/login.service";
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,10 @@ import {NgForm} from "@angular/forms";
 export class ClinicsService {
 
   clinics: any;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private login: LoginService) { }
 
   getClinics(){
-    this.http.get('http://127.0.0.1:8000/').subscribe((response: any) => {
+    this.http.get(`${this.login.apiPath}/`).subscribe((response: any) => {
       this.clinics = response.clinics;
     })
   }
@@ -21,7 +22,7 @@ export class ClinicsService {
       let formData = new FormData();
       formData.append('search', clinic.value.searchClinic);
 
-      this.http.post('http://127.0.0.1:8000/', formData).subscribe((response: any) => {
+      this.http.post(`${this.login.apiPath}/`, formData).subscribe((response: any) => {
         this.clinics = response.clinics;
       })
     }

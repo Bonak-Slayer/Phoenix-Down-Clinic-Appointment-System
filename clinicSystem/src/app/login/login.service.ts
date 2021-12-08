@@ -8,6 +8,7 @@ import {LoginModel} from "./login.model";
 })
 export class LoginService {
 
+  apiPath: string =  'http://192.168.100.99:8000';
   portal: string = 'Patient';
   isLoggedIn: boolean = false;
   loginStatus: string = 'LOGIN';
@@ -21,7 +22,7 @@ export class LoginService {
     form.append('email', email);
     form.append('password', password);
 
-    this.httpService.post('http://127.0.0.1:8000/login', form).subscribe((response: any) => {
+    this.httpService.post(`${this.apiPath}/login`, form).subscribe((response: any) => {
 
       if(response.message === 'LOGIN SUCCESS'){
         //SETTING NECESSARY VARIABLES

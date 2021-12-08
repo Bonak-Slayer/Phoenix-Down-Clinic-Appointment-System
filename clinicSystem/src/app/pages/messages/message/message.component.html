@@ -1,4 +1,3 @@
-<app-navbar></app-navbar>
 <div class="container">
   <div class="header">
     <h1>MESSAGE</h1>
@@ -7,7 +6,7 @@
   <div class="details">
     <p *ngIf="messageService.messageType == 'receive'">SENDER: {{ messageService.message.sender }}</p>
     <p *ngIf="messageService.messageType == 'sent'">RECIPIENT: {{ messageService.message.recipient }}</p>
-    <p>DATE SENT: {{ messageService.message.date.substring(0, 9) }}</p>
+    <p>DATE SENT: {{ messageService.message.date.substring(0, 10) }}</p>
     <p>TIME SENT: {{ messageService.message.date.substring(11, 16) }}</p>
     <hr>
   </div>
@@ -20,3 +19,5 @@
     <button class="reply-btn" (click)="reply()" *ngIf="messageService.messageType == 'receive'">REPLY</button>
   </div>
 </div>
+<app-mobile-navbar></app-mobile-navbar>
+<app-navbar></app-navbar>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ClinicModel} from "./clinic.model";
 import {ClinicStaffmodel} from "../clinic.staffmodel";
+import {LoginService} from "../../../login/login.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +11,10 @@ export class ClinicService {
 
   clinic: any;
   staff: ClinicStaffmodel[] = [];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private loginService: LoginService) { }
 
   getClinic(id: string){
-    this.http.get(`http://127.0.0.1:8000/clinic/${id}`).subscribe((response: any) => {
+    this.http.get(`${this.loginService.apiPath}/clinic/${id}`).subscribe((response: any) => {
       //GET CLINIC DATA
       this.clinic = new ClinicModel(response.clinic.id,
         response.clinic.name,

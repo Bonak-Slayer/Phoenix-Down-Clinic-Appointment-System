@@ -23,7 +23,7 @@ export class InquiryService {
     formData.append('clinic', this.clinicService.clinic.id);
     formData.append('content', form.value.textInput);
 
-    this.http.post('http://127.0.0.1:8000/makeInquiry', formData).subscribe((response: any) => {
+    this.http.post(`${this.loginService.apiPath}/makeInquiry`, formData).subscribe((response: any) => {
       if(response.message == 'inquiry success'){
         this.heading = 'INQUIRY SUCCESSFULLY MADE';
         setTimeout(() => {

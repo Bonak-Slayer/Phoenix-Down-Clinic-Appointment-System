@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {StaffappointmentModel} from "./staffappointment.model";
 import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
+import {LoginService} from "../../../login/login.service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,15 @@ export class StaffAppointmentsService {
   appointment: any;
   prompt: string = 'Please specify the time that the patient must arrive in the clinic.';
 
-  constructor(private http: HttpClient, private staffService: StaffService, private route: Router) { }
+  constructor(private http: HttpClient,
+              private staffService: StaffService,
+              private route: Router,
+              private loginService: LoginService) { }
 
   getAppointments(){
     this.allAppointments = [];
 
-    this.http.get(`http://127.0.0.1:8000/staff/clinic/appointments/${this.staffService.assignedClinic.id}`)
+    this.http.get(`${this.loginService.apiPath}/staff/clinic/appointments/${this.staffService.assignedClinic.id}`)
       .subscribe((response: any) => {
         for(let appointment of response.appointments){
           let newAppointment = new StaffappointmentModel(
@@ -44,7 +48,7 @@ export class StaffAppointmentsService {
         formData.append('time', form.value.appointmentTime);
         formData.append('status', status);
 
-        this.http.post(`http://127.0.0.1:8000/staff/clinic/appointments/approveAppointment/${this.appointment.id}`, formData)
+        this.http.post(`${this.loginService.apiPath}/staff/clinic/appointments/approveAppointment/${this.appointment.id}`, formData)
           .subscribe((response: any) => {
 
             this.prompt = response.message;
@@ -65,7 +69,7 @@ export class StaffAppointmentsService {
     else if(status == 'Rejected'){
       formData.append('status', status);
 
-      this.http.post(`http://127.0.0.1:8000/staff/clinic/appointments/approveAppointment/${this.appointment.id}`, formData)
+      this.http.post(`${this.loginService.apiPath}/staff/clinic/appointments/approveAppointment/${this.appointment.id}`, formData)
         .subscribe((response: any) => {
 
           this.prompt = response.message;

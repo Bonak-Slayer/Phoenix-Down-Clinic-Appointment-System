@@ -4,9 +4,13 @@
   <hr>
 
   <div class="notifications">
-    <div *ngFor="let notif of notifService.notifications">
-      <h4>{{ notif.date.substring(0, 9) }} {{ notif.date.substring(11, 16) }} <span>{{ notif.content }}</span></h4>
+    <div *ngFor="let notif of notifService.notifications" class="notification">
+      <h4>
+        <span class="notif-date">{{ notif.date.substring(0, 10) }} {{ notif.date.substring(11, 16) }}</span>
+        <span class="notif-content">{{ notif.content }}</span>
+      </h4>
     </div>
   </div>
 </div>
+<app-mobile-navbar></app-mobile-navbar>
 <app-navbar></app-navbar>

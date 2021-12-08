@@ -14,7 +14,7 @@ export class AppointmentService {
   constructor(private loginService: LoginService, private http: HttpClient, private reroute: Router) { }
 
   getAppointments(){
-    this.http.get(`http://127.0.0.1:8000/getAppointments/${this.loginService.user_data.id}`).subscribe((response: any) => {
+    this.http.get(`${this.loginService.apiPath}/getAppointments/${this.loginService.user_data.id}`).subscribe((response: any) => {
       this.appointments = [];
 
       for(let appointment of response.appointments){

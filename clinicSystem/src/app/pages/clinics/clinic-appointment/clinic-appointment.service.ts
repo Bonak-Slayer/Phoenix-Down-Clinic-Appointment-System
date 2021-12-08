@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {LoginService} from "../../../login/login.service";
 import {NgForm} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
 import {ClinicService} from "../clinic/clinic.service";
 
 @Injectable({
@@ -35,7 +35,7 @@ export class ClinicAppointmentService {
       appointmentForm.append('patient', this.loginService.user_data.id);
       appointmentForm.append('clinic', this.clinicService.clinic.id);
 
-      this.http.post('http://127.0.0.1:8000/appointment', appointmentForm).subscribe((response: any) => {
+      this.http.post(`${this.loginService.apiPath}/appointment`, appointmentForm).subscribe((response: any) => {
         if(response.message == 'appointment created'){
           this.reroute.navigate(['/appointments']);
         }

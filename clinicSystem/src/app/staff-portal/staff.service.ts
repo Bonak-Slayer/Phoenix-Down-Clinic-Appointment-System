@@ -19,7 +19,7 @@ export class StaffService {
     this.assignedClinics = [];
 
     let id = this.loginService.user_data.id;
-    this.http.get(`http://127.0.0.1:8000/staff/allclinics/${id}`).subscribe((response: any) => {
+    this.http.get(`${this.loginService.apiPath}/staff/allclinics/${id}`).subscribe((response: any) => {
       for(let clinic of response.clinics){
 
         let newClinic = new ClinicModel(
@@ -42,7 +42,7 @@ export class StaffService {
   getStaff(id: string){
     this.staff = [];
 
-    this.http.get(`http://127.0.0.1:8000/staff/allclinics/getClinic/${id}`).subscribe((response: any) => {
+    this.http.get(`${this.loginService.apiPath}/staff/allclinics/getClinic/${id}`).subscribe((response: any) => {
       for(let member of response.staff){
         let staffMember = new ClinicStaffmodel(
           member.id,

@@ -3,12 +3,12 @@
   <div class="fields">
     <h1>{{ loginService.loginStatus }}</h1>
     <form (ngSubmit)="checkValues(loginForm)" #loginForm="ngForm">
-      <label>Email: </label>
+      <label>E-MAIL: </label>
       <div class="input-container">
         <input type="email" name="email" ngModel required email>
       </div>
 
-      <label>Password: </label>
+      <label>PASSWORD: </label>
       <div class="input-container">
         <input type="password" name="password" ngModel required>
       </div>

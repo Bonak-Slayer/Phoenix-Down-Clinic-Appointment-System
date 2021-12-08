@@ -14,7 +14,7 @@ export class NotifService {
   getNotifications(){
     this.notifications = [];
 
-    this.http.get(`http://127.0.0.1:8000/getNotifications/${this.loginService.user_data.id}`)
+    this.http.get(`${this.loginService.apiPath}/getNotifications/${this.loginService.user_data.id}`)
       .subscribe((response: any) => {
 
         for(let notif of response.notifications){

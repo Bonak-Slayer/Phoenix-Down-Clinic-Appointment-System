@@ -19,7 +19,7 @@ export class MessageService {
 
   getMessages(){
     this.messages = [];
-    this.httpService.get(`http://127.0.0.1:8000/messages/${this.loginService.user_data.id}`).subscribe((response:any) => {
+    this.httpService.get(`${this.loginService.apiPath}/messages/${this.loginService.user_data.id}`).subscribe((response:any) => {
       for(let message of response.inbox){
         let newMessage = new MessageModel(message.id, message.content, message.date, message.sender, message.recipient);
         this.messages.push(newMessage);
@@ -31,7 +31,7 @@ export class MessageService {
   getSentMessages(){
     this.messages = [];
 
-    this.httpService.get(`http://127.0.0.1:8000/sentmessages/${this.loginService.user_data.id}`).subscribe((response:any) => {
+    this.httpService.get(`${this.loginService.apiPath}/sentmessages/${this.loginService.user_data.id}`).subscribe((response:any) => {
 
       console.log(response.sent);
       for(let message of response.sent){
@@ -57,7 +57,7 @@ export class MessageService {
       formData.append('recipient', form.value.recipient);
       formData.append('content', form.value.messagecontent);
 
-      this.httpService.post('http://127.0.0.1:8000/sendMessage', formData).subscribe((response: any) => {
+      this.httpService.post(`${this.loginService.apiPath}/sendMessage`, formData).subscribe((response: any) => {
         if(response.message == 'message received'){
           this.composeMessageStatus = 'MESSAGE SENT';
 

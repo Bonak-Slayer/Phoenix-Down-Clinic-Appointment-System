@@ -1,16 +1,16 @@
 <div class="mobile-navbar-container">
   <div class="navbar-toggle">
-    Links
+    <h4 (click)="showDropdown()">OPTIONS</h4>
   </div>
 
   <div class="pages">
-    <nav class="navbar-links">
-      <div class="page-link" routerLink="/appointments">MY APPOINTMENTS</div>
-      <div class="page-link" routerLink="">NOTIFICATIONS</div>
-      <div class="page-link" routerLink="/clinics">CLINICS</div>
-      <div class="page-link" routerLink="/messages">MESSAGES</div>
-      <div class="page-link" routerLink="">ACCOUNT</div>
-      <div class="page-link" (click)="loginService.signOut('patient')">SIGN OUT</div>
+    <nav class="navbar-links" id="options">
+      <h2 class="nav-link" routerLink="/appointments">MY APPOINTMENTS</h2>
+      <h2 class="nav-link" routerLink="/notifications">NOTIFICATIONS</h2>
+      <h2 class="nav-link" routerLink="/clinics">CLINICS</h2>
+      <h2 class="nav-link" routerLink="/messages">MESSAGES</h2>
+      <h2 class="nav-link" routerLink="/account">ACCOUNT</h2>
+      <h2 class="nav-link" (click)="loginService.signOut('patient')">SIGN OUT</h2>
     </nav>
   </div>
 </div>
