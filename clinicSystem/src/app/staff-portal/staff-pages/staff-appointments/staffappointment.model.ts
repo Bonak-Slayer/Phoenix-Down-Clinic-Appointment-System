@@ -5,5 +5,6 @@ export class StaffappointmentModel {
               public category: string,
               public patient: string,
               public doctor: string,
-              public clinic: string){}
+              public clinic: string,
+              public dateCreated: string){}
 }

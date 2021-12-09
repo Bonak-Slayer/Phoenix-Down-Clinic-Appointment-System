@@ -10,11 +10,21 @@
     </div>
 
     <div class="appointment-details">
-      <div class="appointment-status">
+      <div class="appointment-status" id="appointmentInfo">
         <div *ngIf="appointmentService.appointment.status == 'Approved'">
           <h2>YOU HAVE SCHEDULED YOUR APPOINTMENT FOR</h2>
           <h2><span class="highlight">{{ appointmentService.appointment.date.substring(0, 10) }}</span></h2>
           <h2><span class="highlight">{{ appointmentService.appointment.date.substring(11, 16) }}</span></h2>
+        </div>
+
+        <div *ngIf="appointmentService.appointment.status == 'Requested for Cancellation'">
+          <h2>YOU HAVE REQUESTED FOR AN APPOINTMENT <span class="highlight">CANCELLATION.</span></h2>
+          <h2>YOU WILL RECEIVE A <span class="highlight">NOTIFICATION</span> ONCE IT HAS BEEN CANCELLED.</h2>
+        </div>
+
+        <div *ngIf="appointmentService.appointment.status == 'Requested for Reschedule'">
+          <h2>YOU HAVE REQUESTED FOR AN APPOINTMENT <span class="highlight">RESCHEDULE.</span></h2>
+          <h2>YOU WILL RECEIVE A <span class="highlight">NOTIFICATION</span> ONCE IT HAS BEEN RESCHEDULED.</h2>
         </div>
 
         <div *ngIf="appointmentService.appointment.status == 'Pending'">
@@ -27,7 +37,22 @@
         </div>
       </div>
 
-      <div class="user-details">
+      <div class="reschedule-appointment" id="reschedule">
+        <form (ngSubmit)="appointmentService.rescheduleAppointment(rescheduleForm)" #rescheduleForm="ngForm">
+          <h2>PLEASE ENTER THE DATE YOU WANT TO RESCHEDULE TO:</h2>
+          <input name="rescheduledDate" type="date" id="reschedule-form" ngModel required>
+          <input type="submit" value="RESCHEDULE" class="request-change">
+          <button class="request-change" (click)="appointmentService.hideContent('showMain')">CANCEL</button>
+        </form>
+      </div>
+
+      <div class="cancel-appointment" id="cancel">
+        <h2>ARE YOU SURE YOU WANT TO CANCEL THIS APPOINTMENT?</h2>
+        <button class="request-change" (click)="appointmentService.cancelAppointment()">YES</button>
+        <button class="request-change" (click)="appointmentService.hideContent('showMain')">NO</button>
+      </div>
+
+      <div class="user-details" id="userInfo">
         <h2><span class="highlight">APPOINTMENT DETAILS:</span></h2>
 
         <div class="information">
@@ -36,9 +61,9 @@
         </div>
       </div>
 
-      <div class="buttons-container" *ngIf="appointmentService.appointment.status != 'Rejected'">
-        <button class="request-change">RESCHEDULE APPOINTMENT</button>
-        <button class="request-change">CANCEL APPOINTMENT</button>
+      <div class="buttons-container" id="approval" *ngIf="appointmentService.appointment.status == 'Approved'">
+        <button class="request-change" (click)="updateAppointment('resched')">RESCHEDULE APPOINTMENT</button>
+        <button class="request-change" (click)="updateAppointment('cancel')">CANCEL APPOINTMENT</button>
       </div>
     </div>
 

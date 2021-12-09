@@ -4,5 +4,6 @@ export class AppointmentModel {
               public status: string,
               public category: string,
               public doctor: string,
-              public clinic: string){}
+              public clinic: string,
+              public dateCreated: string){}
 }

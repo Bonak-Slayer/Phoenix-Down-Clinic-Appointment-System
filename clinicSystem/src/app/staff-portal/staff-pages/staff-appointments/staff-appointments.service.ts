@@ -33,7 +33,8 @@ export class StaffAppointmentsService {
             appointment.category,
             appointment.patient,
             appointment.doctor,
-            appointment.clinic);
+            appointment.clinic,
+            appointment.date_created);
 
           this.allAppointments.push(newAppointment);
         }

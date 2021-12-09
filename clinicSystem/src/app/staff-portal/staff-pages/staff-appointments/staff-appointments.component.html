@@ -6,6 +6,7 @@
   <div class="appointments-container" *ngIf="appointments.allAppointments.length > 0; else noAppointments">
     <div class="appointment" *ngFor="let appointment of appointments.allAppointments" (click)="accessAppointment(appointment.id)">
       <h3>
+        <span>{{ appointment.dateCreated.substring(0, 10) }}</span> -
         <span>{{ appointment.category }}</span> -
         {{ appointment.patient }} -
         <span class="{{ appointment.status }}">{{ appointment.status }}</span>

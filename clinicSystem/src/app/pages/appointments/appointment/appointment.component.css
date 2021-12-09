@@ -108,12 +108,25 @@
   color: white;
 }
 
+.reschedule-appointment, .cancel-appointment {
+  display: none;
+  text-align: center;
+  margin-top: 30%;
+}
+
+#reschedule-form {
+  width: 40%;
+  margin: 3% 30%;
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
 .buttons-container {
   margin-top: 5%;
   text-align: center;
 }
 
-.buttons-container button {
+.request-change {
   width: 30%;
   max-width: 30%;
   margin: 2%;
@@ -129,7 +142,7 @@
   transition: background-color .3s, color .3s;
 }
 
-.buttons-container button:hover {
+.request-change:hover {
   background-color: #32d800;
   color: white;
 }

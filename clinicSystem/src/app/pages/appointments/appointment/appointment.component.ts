@@ -10,15 +10,14 @@ import {LoginService} from "../../../login/login.service";
 })
 export class AppointmentComponent implements OnInit {
 
-  verifyTime: string = 'AM';
-
-  constructor(public appointmentService: AppointmentService, private pathService: ActivatedRoute,
-  private loginService: LoginService, private reroute: Router) { }
+  constructor(public appointmentService: AppointmentService,
+              private pathService: ActivatedRoute,
+              private loginService: LoginService,
+              private reroute: Router) { }
 
   ngOnInit(): void {
     if(this.loginService.isLoggedIn && this.loginService.portal == 'Patient'){
       this.appointmentService.getAppointment(this.pathService.snapshot.params['id']);
-      this.timeValidation(this.appointmentService.appointment.date);
     }
     else{
       this.reroute.navigate(['/login']);
@@ -26,11 +25,16 @@ export class AppointmentComponent implements OnInit {
     }
   }
 
-  timeValidation(time: string){
-    if(time != null){
-      if(+time.substring(11, 12) >= 13 && +time.substring(11, 12) < 24){
-        this.verifyTime = 'PM';
-      }
+  updateAppointment(process: string){
+    this.appointmentService.hideContent('hideMain');
+
+    if(process == 'resched'){
+      let reschedule: any = document.getElementById('reschedule');
+      reschedule.style.display = 'block';
+    }
+    else if(process == 'cancel'){
+      let cancel: any = document.getElementById('cancel');
+      cancel.style.display = 'block';
     }
   }
 }

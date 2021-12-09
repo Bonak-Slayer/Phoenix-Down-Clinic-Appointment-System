@@ -51,6 +51,14 @@
   text-align: center;
 }
 
+#reschedule {
+  color: #EFE900;
+}
+
+#cancel {
+  color: #EF7400;
+}
+
 #pending {
   color: #EF9400;
 }
