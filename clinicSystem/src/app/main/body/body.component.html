@@ -4,9 +4,15 @@
         <div class="content-1-details">
             <h1>MAKE AN APPOINTMENT <span class="now">NOW</span>.</h1>
             <h3>MEDICAL APPOINTMENTS MADE EASIER, AND MORE ACCESSIBLE.</h3>
-            <button class="signup-btn">SIGN UP</button>
+            <button class="signup-btn" id="sign-up" (click)="signUp()">SIGN UP</button>
+
+            <div id="portals">
+              <button class="portal-button" routerLink="/signUp/patient">PATIENT SIGN-UP</button>
+              <button class="portal-button" routerLink="/signUp/staff">STAFF SIGN-UP</button>
+            </div>
         </div>
     </div>
+
     <div class="content-2">
         <div class="content-2-details">
             <div class="content-2-title">
@@ -22,9 +28,7 @@
                 </p>
             </div>
         </div>
-        <div class="content-2-image">
-            <p>IMAGE CONTENT</p>
-        </div>
+        <div class="content-2-image"></div>
     </div>
 </div>
 <app-main-footer></app-main-footer>

@@ -25,12 +25,22 @@
 
           <h4 *ngIf="appointment.status == 'Rejected'">
             {{ appointment.dateCreated.substring(0, 16) }} -
-            <span id="rejected">REJECTED APPOINTMENT:</span> {{ appointment.doctor }}
+            <span class="rejected">REJECTED APPOINTMENT:</span> {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Approved'">
             {{ appointment.dateCreated.substring(0, 16) }} -
-            <span id="approved">APPOINTMENT WITH:</span> Dr. {{ appointment.doctor }}
+            <span class="approved">APPOINTMENT WITH:</span> Dr. {{ appointment.doctor }}
+          </h4>
+
+          <h4 *ngIf="appointment.status == 'Cancelled'">
+            {{ appointment.dateCreated.substring(0, 16) }} -
+            <span class="approved">CANCELLED APPOINTMENT:</span> Dr. {{ appointment.doctor }}
+          </h4>
+
+          <h4 *ngIf="appointment.status == 'Cancellation Request Rejected'">
+            {{ appointment.dateCreated.substring(0, 16) }} -
+            <span class="rejected">CANCELLATION REJECTED:</span> Dr. {{ appointment.doctor }}
           </h4>
         </div>
       </a>

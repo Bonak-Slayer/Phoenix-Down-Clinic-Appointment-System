@@ -1,4 +1,9 @@
 @media (max-width: 768px) {
+  .account-container {
+    margin: 0 3%;
+    margin-top: 15%;
+  }
+
   .account-details {
     margin-top: 10%;
   }

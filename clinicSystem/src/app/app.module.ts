@@ -34,9 +34,13 @@ import { StaffAccountComponent } from './staff-portal/staff-pages/staff-account/
 import { StaffAssignedClinicsComponent } from './staff-portal/staff-pages/staff-assigned-clinics/staff-assigned-clinics.component';
 import { StaffAppointmentsComponent } from './staff-portal/staff-pages/staff-appointments/staff-appointments.component';
 import { StaffAppointmentComponent } from './staff-portal/staff-pages/staff-appointments/staff-appointment/staff-appointment.component';
+import { PatientSignupComponent } from './signup/patient-signup/patient-signup.component';
+import { StaffSignupComponent } from './signup/staff-signup/staff-signup.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
+  {path: 'signUp/patient', component: PatientSignupComponent},
+  {path: 'signUp/staff', component: StaffSignupComponent},
   {path: 'login', component: LoginComponent},
   {path: 'staff/login', component: StaffLoginComponent},
   {path: 'appointments', component: AppointmentsComponent},
@@ -90,6 +94,8 @@ const routes: Routes = [
     StaffAssignedClinicsComponent,
     StaffAppointmentsComponent,
     StaffAppointmentComponent,
+    PatientSignupComponent,
+    StaffSignupComponent,
   ],
   imports: [
     BrowserModule,

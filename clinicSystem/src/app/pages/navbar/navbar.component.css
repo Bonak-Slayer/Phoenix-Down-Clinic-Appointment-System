@@ -1,6 +1,6 @@
 .navbar {
   height: 100%;
-  width: 15%;
+  width: 17%;
   background-color: #353535;
 
   position: fixed;
@@ -76,8 +76,7 @@
   color: #232E21;
 }
 
-/* mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar {
     display: none;
   }

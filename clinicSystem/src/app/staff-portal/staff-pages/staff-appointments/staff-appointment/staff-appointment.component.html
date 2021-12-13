@@ -26,16 +26,37 @@
     </h3>
   </div>
 
-  <div class="form-approval-container">
-    <form (ngSubmit)="appointmentService.manageAppointment(approvalForm, appointmentStatus)" #approvalForm="ngForm">
-      <input id="time" name="appointmentTime" type="time" ngModel>
+  <div *ngIf="appointmentService.appointment.status == 'Pending' &&
+    appointmentService.appointment.status == 'Requested for Reschedule'">
+
+    <div class="form-approval-container">
+      <form (ngSubmit)="appointmentService.manageAppointment(approvalForm, appointmentStatus)" #approvalForm="ngForm">
+        <input id="time" name="appointmentTime" type="time" ngModel>
+        <p>{{ appointmentService.prompt }}</p>
+
+        <div class="button-container">
+          <input type="submit" class="submit-buttons approve" (click)="appointmentVerdict('Approved')" value="APPROVE">
+          <input type="submit" class="submit-buttons reject" (click)="appointmentVerdict('Rejected')" value="REJECT">
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div *ngIf="appointmentService.appointment.status == 'Requested for Cancellation'">
+    <div class="form-approval-container">
       <p>{{ appointmentService.prompt }}</p>
 
       <div class="button-container">
-        <input type="submit" id="approve" class="submit-buttons" (click)="appointmentVerdict('Approved')" value="APPROVE">
-        <input type="submit" id="reject" class="submit-buttons" (click)="appointmentVerdict('Rejected')" value="REJECT">
+        <button class="submit-buttons approve" (click)="appointmentService.appointmentCancellation('Approved')">
+          APPROVE CANCELLATION
+        </button>
+
+        <button class="submit-buttons reject" (click)="appointmentService.appointmentCancellation('Rejected')">
+          REJECT CANCELLATION
+        </button>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 <app-staff-navbar></app-staff-navbar>

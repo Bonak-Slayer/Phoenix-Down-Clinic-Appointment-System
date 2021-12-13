@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {StaffAppointmentsService} from "../staff-appointments.service";
 import {StaffService} from "../../../staff.service";
-import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-staff-appointment',
@@ -12,9 +11,15 @@ export class StaffAppointmentComponent implements OnInit {
 
   appointmentStatus: string = '';
 
-  constructor(public appointmentService: StaffAppointmentsService, public staffService: StaffService) { }
+  constructor(public appointmentService: StaffAppointmentsService) { }
 
   ngOnInit(): void {
+    if(this.appointmentService.appointment.status != 'Requested for Cancellation'){
+      this.appointmentService.prompt = 'Please specify the time that the patient must arrive in the clinic.';
+    }
+    else {
+      this.appointmentService.prompt = 'You may accept or reject the request for cancellation.';
+    }
   }
 
   appointmentVerdict(source: string){

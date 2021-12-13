@@ -1,3 +1,13 @@
+@media (max-width: 768px){
+  #navbar-text{
+    display: none;
+  }
+
+  a {
+    font-size: 13px;
+  }
+}
+
 .container{
     font-family: Bahnschrift;
     color: #fff;
@@ -5,8 +15,9 @@
     margin: 0;
     background-color: transparent;
     position: relative;
-    width: 101%;
+    width: 100%;
     margin: 0% -.6%;
+    animation: entrance .5s ease-in-out;
 }
 
 ul{
@@ -30,6 +41,7 @@ a {
   color: white;
   transition: .3s;
 }
+
 a:hover{
     color: #32d800;
 }
@@ -39,9 +51,14 @@ a:hover{
     padding-left: 2%;
 }
 
-/* mobile responsive design */
-@media (max-width: 768px){
-    #navbar-text{
-        display: none;
-    }
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    left: -10px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }

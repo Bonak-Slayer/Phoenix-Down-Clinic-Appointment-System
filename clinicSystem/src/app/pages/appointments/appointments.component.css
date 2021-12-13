@@ -47,8 +47,11 @@
 .appointment {
   width: 100%;
   border-bottom: solid 1px #707070;
-  transition: color .3s;
-  text-align: center;
+  transition: background-color .3s, color .3s;
+}
+
+.appointment-details {
+  margin-left: 3%;
 }
 
 #reschedule {
@@ -63,11 +66,11 @@
   color: #EF9400;
 }
 
-#approved {
+.approved {
   color: #0BAC11;
 }
 
-#rejected {
+.rejected {
   color: #EF0000;
 }
 

@@ -17,6 +17,18 @@
           <h2><span class="highlight">{{ appointmentService.appointment.date.substring(11, 16) }}</span></h2>
         </div>
 
+        <div *ngIf="appointmentService.appointment.status == 'Cancelled'">
+          <h2>YOUR REQUEST FOR CANCELLATION HAS BEEN APPROVED.</h2>
+          <h2><span class="highlight">{{ appointmentService.appointment.date.substring(0, 10) }}</span></h2>
+          <h2><span class="highlight">{{ appointmentService.appointment.date.substring(11, 16) }}</span></h2>
+        </div>
+
+        <div *ngIf="appointmentService.appointment.status == 'Cancellation Request Rejected'">
+          <h2>YOUR REQUEST FOR CANCELLATION HAS BEEN REJECTED.</h2>
+          <h2><span class="highlight">{{ appointmentService.appointment.date.substring(0, 10) }}</span></h2>
+          <h2><span class="highlight">{{ appointmentService.appointment.date.substring(11, 16) }}</span></h2>
+        </div>
+
         <div *ngIf="appointmentService.appointment.status == 'Requested for Cancellation'">
           <h2>YOU HAVE REQUESTED FOR AN APPOINTMENT <span class="highlight">CANCELLATION.</span></h2>
           <h2>YOU WILL RECEIVE A <span class="highlight">NOTIFICATION</span> ONCE IT HAS BEEN CANCELLED.</h2>

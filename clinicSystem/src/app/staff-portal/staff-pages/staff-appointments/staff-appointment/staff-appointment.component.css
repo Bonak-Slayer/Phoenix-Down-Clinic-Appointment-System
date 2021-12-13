@@ -78,20 +78,20 @@
   transition: color .3s, background-color .3s;
 }
 
-#approve {
+.approve {
   border: 2px solid #32d800;
 }
 
-#approve:hover {
+.approve:hover {
   color: white;
   background-color: #32d800;
 }
 
-#reject {
+.reject {
   border: 2px solid #EF0000;
 }
 
-#reject:hover {
+.reject:hover {
   color: white;
   background-color: #EF0000;
 }

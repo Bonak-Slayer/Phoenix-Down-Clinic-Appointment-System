@@ -1,16 +1,98 @@
-/* body styling for full screen(no white spaces on the sides) */
+@media (max-width: 768px){
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .content-1{
+    background-position: right;
+    margin-top: -2%;
+    margin-left: -2%;
+    width: 104.5%;
+  }
+
+  .content-1 h1{
+    font-size: 40px;
+  }
+
+  .content-2 h3{
+    font-size: small;
+    font-weight: lighter;
+  }
+
+  .content-2-image{
+    display: none;
+  }
+
+  .signup-btn {
+    font-size: 20px;
+    height: 50px;
+    width: 50%;
+  }
+
+  #portals {
+    width: 100%;
+  }
+
+  .portal-button {
+    margin: 0 10%;
+    font-size: 13px;
+    height: 40px;
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-1 {
+    width: 101.5%;
+  }
+
+  .content-1 h1 {
+    font-family: Bebas Neue, Bahnschrift;
+    font-size: 5vw;
+  }
+
+  .content-1 h3 {
+    margin-top: -3%;
+    font-family: Bahnschrift, Calibri;
+    font-size: 20px;
+  }
+
+  .signup-btn {
+    font-size: 20px;
+    height: 50px;
+    width: 20%;
+  }
+
+  .content-2-title h1{
+    font-size: 60px;
+  }
+
+  #portals {
+    width: 50%;
+  }
+
+  .portal-button {
+    font-size: 15px;
+    height: 60px;
+    width: 40%;
+  }
+}
+
 .container{
     position: relative;
-    width: 100.6%;
-    height: 100.6%;
-    margin: -.6% -.6%;
+    width: 100%;
+    height: 100%;
+    margin-left: -1%;
+    margin-top: -1%;
 }
 
 button{
     transition: background .3s, color .3s;
 }
 
-/* First content of main page before login */
 .content-1{
     position: relative;
     font-family: Bahnschrift;
@@ -24,41 +106,36 @@ button{
     padding-top: 15%;
     padding-left: 7%;
     color: #fff;
+    animation: entrance .5s ease-in-out;
 }
-.content-1 h1{
-    font-family: Bebas Neue;
-    font-size: 5em;
-}
-.content-1 h3{
-    position: relative;
-    bottom: 4vw;
-}
-.now{
-    color: #32D800;
-}
-.signup-btn{
-    position: relative;
-    bottom: 3vw;
-    padding: .5em 4.5em;
 
+.now {
+    color: white;
+    animation: changeColor .5s ease-in-out;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.signup-btn {
+    margin-top: 3%;
+    position: relative;
     text-align: center;
-    font-size: 1em;
     color: #fff;
     font-weight: 700;
 
-    border: solid;
+    border: 3px solid #32d800;
     border-radius: 8px;
-    border-color: #32D800;
     background-color: transparent;
+    animation: emphasis 2s ease-in-out;
+    animation-delay: 1s;
+    transition: background-color .3s;
 }
-.signup-btn:hover{
+
+.signup-btn:hover {
     background-color: #32D800;
-    color: black;
 }
 
-
-/* Second Cotent of main page before login */
-.content-2{
+.content-2 {
     position: relative;
     margin: -.6%;
     display: flex;
@@ -69,48 +146,82 @@ button{
 
     color: #707070;
 }
+
 .content-2 > * {
     flex-basis: 100%;
     padding: 5%;
 }
-.content-2-title{
+
+.content-2-title h1{
     font-family: Bebas Neue;
+    color: #707070;
 }
-.content-2-subtitle{
+
+.content-2-subtitle {
     font-family: Poppins;
 }
-.content-2-image{
+
+.content-2-image {
+    background-image: url("stethoscope-gdbd29a3ca_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    border: solid;
-    border-color: #353535;
-    margin: 5%;
-    margin-top: 0;
-    margin-bottom: 0;
+    border: 1px solid #353535;
+    margin: 0 4%;
 }
 
-/* mobile responsive design */
-@media (max-width: 768px){
-    body{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+#portals {
+  display: none;
+  margin-top: 3%;
+}
 
-    /* First content of main page before login */
-    .content-1{
-        background-position: right;
-    }
-    .content-1 h1{
-        font-size: 4em;
-    }
-    .content-2 h3{
-        font-size: small;
-        font-weight: lighter;
-    }
+.portal-button {
+  border: 3px solid #32d800;
+  border-radius: 10px;
 
-    /* Second Cotent of main page before login */
-    .content-2-image{
-        display: none;
-    }
+  background: transparent;
+  font-family: Bahnschrift;
+  color: white;
+  margin: 0 3%;
+  transition: background-color .3s;
+}
+
+.portal-button:hover {
+  background-color: #32d800;
+}
+
+@keyframes changeColor {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: #32d800;
+  }
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes emphasis {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: #32d800;
+  }
+
+  100% {
+    background-color: transparent;
+  }
 }

@@ -12,4 +12,13 @@ export class BodyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  signUp(){
+    let signUpButton: any;
+    signUpButton = document.getElementById('sign-up');
+    signUpButton.style.display = 'none';
+
+    let portals: any;
+    portals = document.getElementById('portals');
+    portals.style.display = 'inline-block';
+  }
 }

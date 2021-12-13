@@ -13,7 +13,7 @@ export class StaffAppointmentsService {
 
   allAppointments: StaffappointmentModel[] = [];
   appointment: any;
-  prompt: string = 'Please specify the time that the patient must arrive in the clinic.';
+  prompt: string = '';
 
   constructor(private http: HttpClient,
               private staffService: StaffService,
@@ -81,5 +81,30 @@ export class StaffAppointmentsService {
           }, 1500)
         })
     }
+  }
+
+  appointmentCancellation(status: string){
+    let formData = new FormData();
+
+    if(status == 'Approved'){
+      formData.append('status', 'cancelApproved');
+      this.prompt = 'You have approved the cancellation request.';
+    }
+    else {
+      formData.append('status', 'cancelRejected');
+      this.prompt = 'You have rejected the cancellation request.';
+    }
+
+
+    this.http.post(`${this.loginService.apiPath}/staff/clinic/appointments/approveAppointment/${this.appointment.id}`, formData)
+      .subscribe((response: any) => {
+        console.log(response.message);
+
+        setTimeout(() => {
+          this.prompt = '';
+          this.route
+            .navigate([`/staff/assignedClinics/${this.staffService.assignedClinic.id}/appointments`])
+        }, 1500)
+      })
   }
 }
