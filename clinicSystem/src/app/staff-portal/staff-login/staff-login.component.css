@@ -67,8 +67,8 @@
 }
 
 #submit-button:hover {
-  background-color: #0EAFE9;
-  border: 2px solid #0EAFE9;
+  background-color: #48CAE4;
+  border: 2px solid #48CAE4;
 }
 
 #info {
@@ -101,7 +101,7 @@ a {
 }
 
 a:hover {
-  color: #0EAFE9;
+  color: #48CAE4;
 }
 
 @keyframes backgroundFill {
@@ -109,7 +109,7 @@ a:hover {
     background-color: white;
   }
   100% {
-    background-color: #0EAFE9;
+    background-color: #48CAE4;
   }
 }
 
