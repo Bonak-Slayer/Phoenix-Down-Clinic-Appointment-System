@@ -56,9 +56,9 @@
   top: 0;
   left: 0;
 
-  background-color: #2A3235;
+  background-color: #fff;
   font-family: Bahnschrift;
-  color: white;
+  color: #151515;
 }
 
 .featured-image {
@@ -71,7 +71,8 @@
 .sign-up-form {
   text-align: center;
   font-family: Poppins, Bahnschrift;
-  background-color: #151515;
+  background-color: #48CAE4;
+  border-radius: 10pt;
   animation: formEntrance .5s;
   animation-fill-mode: forwards;
 }
@@ -82,10 +83,10 @@
 
 .textfield {
   height: 30px;
-  background-color: #303030;
+  background-color: #48CAE4;
   border: none;
-  border-bottom: 1px solid white;
-  color: white;
+  border-bottom: 1px solid #353535;
+  color: #151515;
 }
 
 .radio-button {
@@ -98,10 +99,10 @@
 }
 
 .button-container button, .button-container input{
-  border: 2px solid #32d800;
+  border: 2px solid #353533;
   border-radius: 10px;
   background-color: transparent;
-  color: white;
+  color: #151515;
   font-weight: 700;
 
   height: 50px;
@@ -110,7 +111,8 @@
 }
 
 .button-container button:hover, .button-container input:hover {
-  background-color: #32d800;
+  background-color: #353535;
+  color: #fff;
 }
 
 #secondary-values {
@@ -119,9 +121,9 @@
 
 #birth {
   border: none;
-  border-bottom: 1px solid white;
-  background-color: #303030;
-  color: white;
+  border-bottom: 1px solid #353535;
+  background-color: #48CAE4;
+  color: #151515;
   font-family: Bahnschrift;
 }
 
