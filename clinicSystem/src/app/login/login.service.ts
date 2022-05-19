@@ -8,7 +8,7 @@ import {LoginModel} from "./login.model";
 })
 export class LoginService {
 
-  apiPath: string =  'http://192.168.100.99:8000';
+  apiPath: string =  'http://127.0.0.1:8000';
   portal: string = 'Patient';
   isLoggedIn: boolean = false;
   loginStatus: string = 'LOGIN';

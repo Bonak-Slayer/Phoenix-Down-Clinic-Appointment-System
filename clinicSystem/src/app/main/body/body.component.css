@@ -110,7 +110,7 @@ button{
 }
 
 .now {
-    color: white;
+    color: #fff;
     animation: changeColor .5s ease-in-out;
     animation-delay: .5s;
     animation-fill-mode: forwards;
@@ -123,7 +123,7 @@ button{
     color: #fff;
     font-weight: 700;
 
-    border: 3px solid #32d800;
+    border: 3px solid #48CAE4;
     border-radius: 8px;
     background-color: transparent;
     animation: emphasis 2s ease-in-out;
@@ -132,7 +132,7 @@ button{
 }
 
 .signup-btn:hover {
-    background-color: #32D800;
+    background-color: #48CAE4;
 }
 
 .content-2 {
@@ -176,7 +176,7 @@ button{
 }
 
 .portal-button {
-  border: 3px solid #32d800;
+  border: 3px solid #48CAE4;
   border-radius: 10px;
 
   background: transparent;
@@ -187,7 +187,7 @@ button{
 }
 
 .portal-button:hover {
-  background-color: #32d800;
+  background-color: #48CAE4;
 }
 
 @keyframes changeColor {
@@ -196,7 +196,7 @@ button{
   }
 
   100% {
-    color: #32d800;
+    color: #48CAE4;
   }
 }
 
@@ -218,7 +218,7 @@ button{
   }
 
   50% {
-    background-color: #32d800;
+    background-color: #48CAE4;
   }
 
   100% {

@@ -62,12 +62,12 @@
   }
 
   .contact-info {
-    border-left: 1px solid #32d800;
+    border-left: 1px solid #48CAE4;
     padding-left: 3%;
   }
 
   .navigation {
-    border-left: 1px solid #32d800;
+    border-left: 1px solid #48CAE4;
     padding-left: 3%;
   }
 
@@ -84,11 +84,11 @@
 }
 
 .footer-content h2 {
-  color: #32d800;
+  color: #48CAE4;
 }
 
 .contact-info p {
-  color: #32d800;
+  color: #48CAE4;
 }
 
 .contact-info span {
@@ -100,5 +100,5 @@
 }
 
 .navigation p:hover {
-  color: #32d800;
+  color: #48CAE4;
 }
