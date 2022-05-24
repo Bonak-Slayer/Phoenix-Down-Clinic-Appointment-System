@@ -101,4 +101,5 @@
 
 .navigation p:hover {
   color: #48CAE4;
+  cursor: pointer;
 }

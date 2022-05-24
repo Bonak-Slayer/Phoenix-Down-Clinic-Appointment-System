@@ -133,6 +133,7 @@ button{
 
 .signup-btn:hover {
     background-color: #48CAE4;
+    cursor: pointer;
 }
 
 .content-2 {
@@ -188,6 +189,7 @@ button{
 
 .portal-button:hover {
   background-color: #48CAE4;
+  cursor: pointer;
 }
 
 @keyframes changeColor {
