@@ -8,6 +8,7 @@
   }
 
   .information-container {
+    text-align: center;
     display: flex;
   }
 
@@ -93,7 +94,7 @@
 }
 
 .highlight {
-  color: #32d800;
+  color: #48CAE4;
 }
 
 .rejected {
@@ -137,13 +138,13 @@
   padding: 2%;
 
   background-color: transparent;
-  border: 2px solid #32d800;
+  border: 2px solid #48CAE4;
   border-radius: 10px;
   transition: background-color .3s, color .3s;
 }
 
 .request-change:hover {
-  background-color: #32d800;
+  background-color: #48CAE4;
   color: white;
 }
 
