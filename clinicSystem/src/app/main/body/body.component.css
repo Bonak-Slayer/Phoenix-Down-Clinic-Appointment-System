@@ -122,11 +122,13 @@ button{
     text-align: center;
     color: #fff;
     font-weight: 700;
+    opacity: 0;
 
     border: 3px solid #48CAE4;
     border-radius: 8px;
     background-color: transparent;
-    animation: emphasis 2s ease-in-out;
+    animation: emphasis .3s ease-in-out;
+    animation-fill-mode: forwards;
     animation-delay: 1s;
     transition: background-color .3s;
 }

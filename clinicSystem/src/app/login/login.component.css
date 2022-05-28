@@ -23,9 +23,6 @@
   left: 0;
 
   clip-path: polygon(70% 0, 100% 0, 100% 100%,  20% 100%);
-  background-image: url("./login-portal-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 
   animation: fill 2s;
   animation-fill-mode: forwards;
@@ -124,9 +121,15 @@ a:hover {
 @keyframes fill {
   0% {
     opacity: 0;
+    background-image: url("./login-portal-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   100% {
     opacity: 1;
+    background-image: url("./login-portal-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
