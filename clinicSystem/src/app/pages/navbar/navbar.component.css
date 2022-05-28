@@ -73,6 +73,7 @@
 
 #sign-out-button:hover {
   background-color: #03045E;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

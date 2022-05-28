@@ -58,6 +58,7 @@
 #submit-button {
   font-family: Bahnschrift;
   font-weight: 700;
+  margin-left: 1%;
 
   height: 46px;
   background: #023E8A;
@@ -67,8 +68,10 @@
 }
 
 #submit-button:hover {
-  background-color: #48CAE4;
-  border: 1px solid #48CAE4;
+  background-color: #00B4D8;
+  border: 1px solid #00B4D8;
+  color: #fff;
+  cursor: pointer;
 }
 
 .clinics {
@@ -78,6 +81,10 @@
 .clinic {
   height: 300px;
   flex: 1 0 30%;
+}
+
+.clinic :hover {
+  cursor: pointer;
 }
 
 .clinic-image {

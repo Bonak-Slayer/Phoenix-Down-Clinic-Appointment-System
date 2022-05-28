@@ -80,7 +80,7 @@
 
 #submit-button:hover {
   background-color: #48CAE4;
-  border: 2px solid #48CAE4;
+  cursor: pointer;
 }
 
 #info {
@@ -114,6 +114,7 @@ a {
 
 a:hover {
   color: #48CAE4;
+  cursor: pointer;
 }
 
 @keyframes fill {

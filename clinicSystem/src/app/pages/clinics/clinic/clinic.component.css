@@ -78,7 +78,7 @@
 }
 
 .clinic-description h4:hover {
-  color: #32D800;
+  color: #48CAE4;
 }
 
 .clinic-description a {
@@ -101,7 +101,7 @@
 }
 
 .clinic-schedules h2 {
-  color: #32D800;
+  color: #48CAE4;
 }
 
 .clinic-schedules h3 {
@@ -152,7 +152,7 @@
 }
 .clinic-interactions button {
   background-color: transparent;
-  border: 3px solid #32D800;
+  border: 3px solid #48CAE4;
   border-radius: 10px;
 
   margin: 1% 5%;
@@ -164,8 +164,10 @@
 }
 
 .clinic-interactions button:hover {
-  background-color: #32D800;
-  color: white;
+  background-color: #0096C7;
+  border: #0096C7;
+  color: #fff;
+  cursor: pointer;
 }
 
 @keyframes entrance {
