@@ -1,1 +1,16 @@
-<p>staff-account works!</p>
+<div class="staff-account-container">
+  <h1>MY ACCOUNT</h1>
+  <p>Details of the user that have been inputted by the user during sign up are listed here.</p>
+  <hr>
+
+  <div class="staff-account-details">
+    <h3>First Name: <span class="details">{{ loginService.user_data.first_name }}</span></h3>
+    <h3>Middle Name: <span class="details">{{ loginService.user_data.middle_name }}</span></h3>
+    <h3>Last Name: <span class="details">{{ loginService.user_data.last_name }}</span></h3>
+    <h3>E-Mail: <span class="details">{{ loginService.user_data.email }}</span></h3>
+    <h3>Address: <span class="details">{{ loginService.user_data.address }}</span></h3>
+    <h3>Contact: <span class="details">{{ loginService.user_data.contact }}</span></h3>
+    <h3>Sex: <span class="details">{{ loginService.user_data.sex }}</span></h3>
+  </div>
+</div>
+<app-staff-navbar></app-staff-navbar>

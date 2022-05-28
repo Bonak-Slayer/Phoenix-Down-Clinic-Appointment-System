@@ -1,1 +1,82 @@
-<p>staff-signup works!</p>
+<div class="sign-up-container">
+  <div class="featured-image container-content">
+    <h2>OLONGAPO CITY CLINICS APPOINTMENT SYSTEM</h2>
+    <h4>STAFF SIGN-UP</h4>
+  </div>
+
+  <div class="sign-up-form container-content">
+    <h1>{{ signup.message }}</h1>
+    <hr>
+
+    <form (ngSubmit)="signup.staffSignup(signUpForm)" #signUpForm="ngForm">
+      <div id="page-1">
+        <h4>FIRST NAME</h4>
+        <input name="firstName" id="first-name" class="textfield" type="text" placeholder="Enter first name..." required ngModel>
+
+        <h4>MIDDLE NAME</h4>
+        <input name="middleName" id="middle-name" class="textfield" type="text" placeholder="Enter middle name..." required ngModel>
+
+        <h4>LAST NAME</h4>
+        <input name="lastName" id="last-name" class="textfield" type="text" placeholder="Enter last name..." required ngModel>
+
+        <h4>PASSWORD</h4>
+        <input name="password" id="password" class="textfield" type="password" placeholder="Enter password..." minlength="8" required ngModel>
+
+        <h4>SEX</h4>
+        <label>MALE</label>
+        <input type="radio" name="sex" value="Male" ngModel>
+
+        <label>FEMALE</label>
+        <input type="radio" name="sex" value="Female" ngModel>
+
+        <div class="button-container">
+          <button type="button" (click)="formControl(2)">NEXT</button>
+        </div>
+      </div>
+
+      <div id="page-2">
+        <h4>E-MAIL</h4>
+        <input name="email" class="textfield" type="email" placeholder="Enter e-mail..."  required ngModel>
+
+        <h4>ADDRESS</h4>
+        <input name="address" class="textfield" type="text" placeholder="Enter address..." required ngModel>
+
+        <h4>CONTACT</h4>
+        <input name="contact" class="textfield" type="text" placeholder="Enter contact number..." required ngModel>
+
+        <h4>DATE OF BIRTH</h4>
+        <input name="birth" id="birth" type="date" required ngModel>
+
+        <div class="button-container">
+          <button type="button" (click)="formControl(3)">NEXT</button>
+        </div>
+
+        <div class="button-container">
+          <button type="button" (click)="formControl(1)">PREVIOUS</button>
+        </div>
+      </div>
+
+      <div id="page-3">
+        <h4>SELECT SPECIALIZATION(S)</h4>
+        <p>(Press and Hold "CTRL" and click on each Applicable Field)</p>
+        <select name="specializations" id="spec" ngModel multiple>
+          <option value="{{ spec }}" *ngFor="let spec of signup.specializations">{{ spec }}</option>
+        </select>
+
+        <h4>SELECT ROLE</h4>
+        <select name="roles" id="roles" ngModel required>
+          <option value="{{ role }}" *ngFor="let role of signup.roles">{{ role }}</option>
+        </select>
+
+        <div class="button-container">
+          <input type="submit" value="SIGN UP">
+        </div>
+
+        <div class="button-container">
+          <button type="button" (click)="formControl(2)">PREVIOUS</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<app-main-footer></app-main-footer>

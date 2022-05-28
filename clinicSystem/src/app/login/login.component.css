@@ -24,7 +24,7 @@
 
   clip-path: polygon(70% 0, 100% 0, 100% 100%,  20% 100%);
 
-  animation: backgroundFill 2s;
+  animation: fill 2s;
   animation-fill-mode: forwards;
   animation-delay: .5s;
 }
@@ -116,7 +116,7 @@ a:hover {
   color: #48CAE4;
 }
 
-@keyframes backgroundFill {
+@keyframes fill {
   0% {
     background-color: white;
   }

@@ -6,16 +6,24 @@
   </div>
 
   <div class="clinics">
-    <div class="clinic" *ngFor="let clinic of staffService.assignedClinics" (click)="accessClinic(clinic.id)">
-      <div class="clinic-image"></div>
-      <div class="clinic-description-container {{ clinic.name }}">
-        <div class="clinic-description">
-          <h2>{{ clinic.name }}</h2>
-          <p *ngIf="clinic.description.length > 80">{{ clinic.description.substring(0, 80)}}...</p>
-          <p *ngIf="clinic.description.length <= 80">{{ clinic.description }}</p>
+    <div *ngIf="staffService.assignedClinics.length == 0; else clinics" class="no-clinics">
+      <h2>It seems you are not a staff member of any registered clinics within our system...</h2>
+      <h2>Please <span>register</span> a clinic or <span>associate</span> with an existing clinic.</h2>
+      <p>If you think there was a mistake, do not hesitate to contact the administrator at clinicadmin@test.com.</p>
+    </div>
+
+    <ng-template #clinics>
+      <div class="clinic" *ngFor="let clinic of staffService.assignedClinics" (click)="accessClinic(clinic.id)">
+        <div class="clinic-image"></div>
+        <div class="clinic-description-container {{ clinic.name }}">
+          <div class="clinic-description">
+            <h2>{{ clinic.name }}</h2>
+            <p *ngIf="clinic.description.length > 80">{{ clinic.description.substring(0, 80)}}...</p>
+            <p *ngIf="clinic.description.length <= 80">{{ clinic.description }}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-template>
   </div>
 </div>
 <app-staff-navbar></app-staff-navbar>

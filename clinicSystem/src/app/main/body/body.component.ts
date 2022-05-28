@@ -20,5 +20,10 @@ export class BodyComponent implements OnInit {
     let portals: any;
     portals = document.getElementById('portals');
     portals.style.display = 'inline-block';
+
+    setTimeout(() => {
+      portals.style.display = 'none';
+      signUpButton.style.display = 'block';
+    }, 5000);
   }
 }

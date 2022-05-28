@@ -18,13 +18,11 @@ export class ClinicsService {
   }
 
   searchClinic(clinic: NgForm){
-    if(clinic.valid){
       let formData = new FormData();
       formData.append('search', clinic.value.searchClinic);
 
       this.http.post(`${this.login.apiPath}/`, formData).subscribe((response: any) => {
         this.clinics = response.clinics;
       })
-    }
   }
 }

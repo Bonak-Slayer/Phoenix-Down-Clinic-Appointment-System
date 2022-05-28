@@ -26,7 +26,7 @@
     </h3>
   </div>
 
-  <div *ngIf="appointmentService.appointment.status == 'Pending' &&
+  <div *ngIf="appointmentService.appointment.status == 'Pending' ||
     appointmentService.appointment.status == 'Requested for Reschedule'">
 
     <div class="form-approval-container">

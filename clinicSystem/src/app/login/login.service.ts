@@ -79,7 +79,7 @@ export class LoginService {
 
       //IF AN ERROR OCCURS DURING LOGIN
       else{
-        console.log(response.message);
+        this.loginStatus = 'LOGIN FAILED';
         setTimeout(() => {this.loginStatus = 'LOGIN'}, 3000)
       }
     })

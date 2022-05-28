@@ -1,0 +1,73 @@
+@media (max-width: 768px) {
+  .staff-account-container {
+    margin: 0 3%;
+    margin-top: 15%;
+  }
+
+  .staff-account-details {
+    margin-top: 10%;
+  }
+
+  .staff-account-details h3 {
+    font-size: 13px;
+    margin: 5% 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .staff-account-container {
+    margin-left: 20%;
+  }
+
+  .staff-account-container h1 {
+    font-size: 50px;
+  }
+
+  .staff-account-container hr {
+    margin-right: 3%;
+  }
+
+  .staff-account-details {
+    margin-top: 5%;
+  }
+
+  .staff-account-details h3 {
+    margin: 2% 0;
+  }
+
+}
+
+.staff-account-container {
+  animation: entrance .5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.staff-account-container h1 {
+  font-family: "Bebas Neue";
+  color: #707070;
+}
+
+.staff-account-container p {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.staff-account-details {
+  font-family: Bahnschrift;
+  color: #0EAFE9;
+}
+
+.details {
+  color: #707070;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,15 +1,32 @@
 @media (max-width: 768px) {
-  .clinics-description {
-    margin-top: 15%;
+  .associate-container {
+    margin: 3% 3% 10% 3%;
+  }
+
+  .clinic {
+    width: 100%;
+    margin: 3% 0;
+  }
+
+  .clinics {
+    display: block;
+  }
+
+  .search input {
+    width: 60%;
+  }
+
+  #submit-button {
+    width: 20%;
   }
 }
 
 @media (min-width: 768px) {
-  .staff-assigned-clinics-container {
+  .associate-container {
     margin-left: 20%;
   }
 
-  .assigned-clinics-description h1{
+  .description h1{
     font-size: 50px;
   }
 
@@ -30,23 +47,32 @@
   #submit-button {
     width: 10%;
   }
+
+  #associate-button {
+    height: 40px;
+  }
 }
 
-.staff-assigned-clinics-container {
-  animation: entrance .3s ease-in;
-}
-
-.assigned-clinics-description h1{
-  font-family: Bebas Neue;
-  color: #707070;
-}
-
-.assigned-clinics-description p {
+.associate-container {
   font-family: Bahnschrift;
   color: #707070;
 }
 
-.assigned-clinics-description hr {
+.associate-container {
+  animation: entrance .3s ease-in;
+}
+
+.description h1{
+  font-family: Bebas Neue;
+  color: #707070;
+}
+
+.description p {
+  font-family: Bahnschrift;
+  color: #707070;
+}
+
+.description hr {
   margin-right: 3%;
 }
 
@@ -102,11 +128,28 @@
 }
 
 .clinic-description {
+  color: white;
   padding: 2% 5%;
 }
 
-.clinic-description h2, p{
+.associate-button-container {
+  text-align: center;
+}
+
+#associate-button {
+  width: 40%;
   color: white;
+  font-weight: 700;
+  background-color: #232E21;
+  border: 1px solid #232E21;
+  border-radius: 10px;
+  transition: color .3s, background-color .3s, border .3s;
+}
+
+#associate-button:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: #232E21;
 }
 
 @keyframes entrance {
@@ -116,36 +159,4 @@
   100% {
     opacity: 1;
   }
-}
-
-@media (max-width: 768px) {
-  .staff-assigned-clinics-container {
-    margin: 3% 3% 10% 3%;
-  }
-
-  .clinic {
-    width: 100%;
-    margin: 3% 0;
-  }
-
-  .clinics {
-    display: block;
-  }
-
-  .search input {
-    width: 60%;
-  }
-
-  #submit-button {
-    width: 20%;
-  }
-}
-
-.no-clinics, .no-clinics p {
-  font-family: Bahnschrift;
-  color: #707070;
-}
-
-.no-clinics p {
-  margin-top: 5%;
 }

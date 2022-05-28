@@ -1,0 +1,63 @@
+<div class="register-container">
+  <div class="clinic-description">
+    <h1>REGISTER CLINIC</h1>
+    <p>You may register your clinic here. Please fill out all the required fields, as well as upload the necessary documents.</p>
+    <hr>
+  </div>
+
+  <div class="form-container">
+    <h2>PLEASE FILL OUT THE FORM BELOW.</h2>
+    <div class="form">
+      <form (ngSubmit)="staff.registerClinic(registrationForm)" #registrationForm="ngForm">
+        <h4 id="clinicName">WHAT IS THE NAME OF YOUR CLINIC?</h4>
+        <input name="name" class="textfield longtext" type="text" ngModel required placeholder="Enter clinic name...">
+
+        <h4>WHERE IS THE CLINIC LOCATED?</h4>
+        <input name="address" class="textfield longtext" type="text" ngModel required placeholder="Enter clinic address...">
+
+        <h4>PLEASE ENTER A CONTACT NUMBER:</h4>
+        <input name="contact" class="textfield longtext" type="text" ngModel required placeholder="Enter clinic contact...">
+
+        <h4>WHAT IS THE E-MAIL OF THE CLINIC?</h4>
+        <input name="email" class="textfield longtext" type="email" ngModel required placeholder="Enter clinic e-mail...">
+
+        <h4>WHEN DO YOUR OPERATIONS START?</h4>
+        <input name="timeStart" type="time" ngModel required>
+
+        <h4>WHEN DO YOUR OPERATIONS END?</h4>
+        <input name="timeEnd" type="time" ngModel required>
+
+        <h4>WHAT DAY DOES YOUR OPERATIONS START?</h4>
+        <select name="dayStart" class="dayfield" required ngModel>
+          <option value="Monday" selected>Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+
+        <h4>WHAT DAY DOES YOUR OPERATIONS END?</h4>
+        <select name="dayEnd" class="dayfield" required ngModel>
+          <option value="Monday" selected>Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+
+        <h4>PLEASE WRITE A GENERAL DESCRIPTION FOR YOUR CLINIC:</h4>
+        <textarea name="description" id="clinic-description" ngModel required placeholder="Enter description here..."></textarea>
+
+        <div class="submit-container">
+          <h4>By clicking submit, you agree to our Terms and Conditions for use.</h4>
+          <input id="submit-button" type="submit" value="SUBMIT">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-staff-navbar></app-staff-navbar>

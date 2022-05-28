@@ -9,37 +9,37 @@
       <a routerLink="/appointments/{{ appointment.id }}">
         <div class="appointment-details">
           <h4 *ngIf="appointment.status == 'Requested for Reschedule'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }}
             <span id="reschedule">RESCHEDULE REQUESTED:</span> {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Requested for Cancellation'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }} -
             <span id="cancel">CANCELLATION REQUESTED:</span> {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Pending'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }}
             <span id="pending">PENDING APPOINTMENT:</span> {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Rejected'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }}
             <span class="rejected">REJECTED APPOINTMENT:</span> {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Approved'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }}
             <span class="approved">APPOINTMENT WITH:</span> Dr. {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Cancelled'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }}
             <span class="approved">CANCELLED APPOINTMENT:</span> Dr. {{ appointment.doctor }}
           </h4>
 
           <h4 *ngIf="appointment.status == 'Cancellation Request Rejected'">
-            {{ appointment.dateCreated.substring(0, 16) }} -
+            {{ appointment.dateCreated.substring(0, 10) }} {{ appointment.dateCreated.substring(11, 16) }}
             <span class="rejected">CANCELLATION REJECTED:</span> Dr. {{ appointment.doctor }}
           </h4>
         </div>

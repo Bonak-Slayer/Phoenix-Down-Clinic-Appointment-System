@@ -1,0 +1,33 @@
+<div class="associate-container">
+  <div class="description">
+    <h1>ASSOCIATE WITH EXISTING CLINICS</h1>
+    <p>You may request for association to clinics in this page.</p>
+    <hr>
+  </div>
+
+  <div class="search">
+    <form (ngSubmit)="clinics.searchClinic(searchForm)" #searchForm="ngForm">
+      <input type="text" name="searchClinic" placeholder="ENTER CLINIC NAME HERE..." ngModel required>
+      <input type="submit" value="SEARCH" id="submit-button">
+    </form>
+  </div>
+
+  <div class="clinics">
+    <div class="clinic" *ngFor="let clinic of clinics.clinics">
+      <div class="clinic-image"></div>
+
+      <div class="clinic-description-container">
+        <div class="clinic-description">
+          <h2>{{ clinic.name }}</h2>
+          <p *ngIf="clinic.description.length > 80">{{ clinic.description.substring(0, 80)}}...</p>
+          <p *ngIf="clinic.description.length <= 80">{{ clinic.description }}</p>
+
+          <div class="associate-button-container">
+            <button type="button" id="associate-button" (click)="staff.associate(clinic.id)">ASSOCIATE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-staff-navbar></app-staff-navbar>

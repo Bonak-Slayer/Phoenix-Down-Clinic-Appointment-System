@@ -60,9 +60,9 @@
   font-weight: 700;
 
   height: 46px;
-  background: #232E21;
+  background: #023E8A;
   color: white;
-  border: 1px solid #232E21;
+  border: 1px solid #023E8A;
   transition: background-color .3s, color .3s, border .3s;
 }
 
