@@ -68,7 +68,7 @@
 
 .clinic-description h1, h4 {
   font-family: Bebas Neue;
-  color: #707070;
+  color: #151515;
 }
 
 .clinic-description h4 {
@@ -78,7 +78,7 @@
 }
 
 .clinic-description h4:hover {
-  color: #48CAE4;
+  color: #023E8A;
 }
 
 .clinic-description a {
@@ -86,12 +86,12 @@
 }
 
 .clinic-image {
-  border: 2px solid #707070;
+  border: 2px solid #151515;
   height: 360px;
 }
 
 .clinic-schedules {
-  background-color: #353535;
+  background-color: #fff;
   height: 364px;
   text-align: center;
 }
@@ -101,11 +101,11 @@
 }
 
 .clinic-schedules h2 {
-  color: #48CAE4;
+  color: #023E8A;
 }
 
 .clinic-schedules h3 {
-  color: white;
+  color: #151515;
 }
 
 #detail-divider {
@@ -114,7 +114,7 @@
 
 .clinic-general-description p {
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
 }
 
 .clinic-additional-information {
@@ -124,7 +124,7 @@
 }
 
 .clinic-additional-information h2, h3, p{
-  color: #707070;
+  color: #151515;
 }
 
 #info-divider {
@@ -140,7 +140,7 @@
 }
 
 .staff-info li {
-  color: #707070;
+  color: #151515;
 }
 
 /* clinic interactions buttons */
@@ -152,7 +152,7 @@
 }
 .clinic-interactions button {
   background-color: transparent;
-  border: 3px solid #48CAE4;
+  border: 3px solid #023E8A;
   border-radius: 10px;
 
   margin: 1% 5%;
@@ -164,8 +164,8 @@
 }
 
 .clinic-interactions button:hover {
-  background-color: #0096C7;
-  border: #0096C7;
+  background-color: #023E8A;
+  border: #023E8A;
   color: #fff;
   cursor: pointer;
 }

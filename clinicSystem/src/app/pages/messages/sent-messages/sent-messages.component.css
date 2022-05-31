@@ -42,7 +42,7 @@
 
 .messages-container{
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
 
   animation: entrance .5s;
 }
@@ -70,18 +70,18 @@
   font-family: Bahnschrift;
   font-weight: 600;
   font-size: large;
-  color: #707070;
+  color: #151515;
   transition: color .3s;
 }
 
 .nav-button:hover{
-  color: #32D800;
+  color: #023E8A;
   cursor: pointer;
 }
 
 /* messages inbox container */
 .inbox-container{
-  border: 1px solid #707070;
+  border: 1px solid #151515;
   height: 400px;
   overflow-y: scroll;
 }
@@ -93,7 +93,7 @@
 .message{
   position: relative;
   width: 100%;
-  border-bottom: solid 1px #707070;
+  border-bottom: solid 1px #151515;
 
   font-family: Bahnschrift;
 }
@@ -112,11 +112,11 @@ li{
   text-decoration: none;
 }
 .message-info{
-  color: #707070;
+  color: #151515;
   transition: .3s;
 }
 .message-info:hover{
-  color: #32d800;
+  color: #023E8A;
 }
 #message-content{
   font-weight: 600;
@@ -124,7 +124,7 @@ li{
 .message-date{
   float: right;
 
-  color: #32D800;
+  color: #023E8A;
 }
 
 @keyframes entrance {

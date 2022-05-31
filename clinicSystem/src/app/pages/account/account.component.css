@@ -41,21 +41,21 @@
 
 .account-container h1 {
   font-family: "Bebas Neue";
-  color: #707070;
+  color: #151515;
 }
 
 .account-container p {
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
 }
 
 .account-details {
   font-family: Bahnschrift;
-  color: #0BAC11;
+  color: #023E8A;
 }
 
 .details {
-  color: #707070;
+  color: #151515;
 }
 
 @keyframes entrance {

@@ -17,7 +17,7 @@
 
 .container{
     font-family: Bahnschrift;
-    color: #707070;
+    color: #151515;
 
     margin-right: 5%;
     animation: entrance .5s;
@@ -68,7 +68,7 @@
 
 .send-btn{
     background-color: transparent;
-    border: 3px solid #32D800;
+    border: 3px solid #023E8A;
     border-radius: 10px;
     padding: 20% 50%;
 
@@ -78,7 +78,7 @@
 }
 
 .send-btn:hover{
-    background-color: #32D800;
+    background-color: #023E8A;
     color: white;
 }
 

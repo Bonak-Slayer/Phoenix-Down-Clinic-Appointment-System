@@ -41,7 +41,7 @@
 
 .clinic-appointment-container h1, h4{
   font-family: "Bebas Neue";
-  color: #707070;
+  color: #151515;
 }
 
 #return-button {
@@ -51,7 +51,7 @@
 }
 
 #return-button:hover {
-  color: #32D800;
+  color: #023E8A;
 }
 
 .clinic-appointment-container a {
@@ -62,12 +62,12 @@
   margin-top: 3%;
   margin-bottom: 10%;
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
 }
 
 .form-container h4 {
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
 }
 
 .form {
@@ -83,7 +83,7 @@
 }
 
 .radio-button:hover {
-  color: #32D800;
+  color: #023E8A;
 }
 
 .physician-field {
@@ -109,7 +109,7 @@
 
 #submit-button {
   background-color: transparent;
-  border: 3px solid #32D800;
+  border: 3px solid #023E8A;
   border-radius: 10px;
 
   padding: 1% 0;
@@ -120,7 +120,7 @@
 }
 
 #submit-button:hover {
-  background-color: #32D800;
+  background-color: #023E8A;
   color: white;
 }
 

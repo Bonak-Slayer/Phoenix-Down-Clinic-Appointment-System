@@ -50,7 +50,7 @@
 
 .container{
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
   animation: entrance .5s;
 }
 
@@ -70,11 +70,11 @@
 
 #templates-selection{
   text-align: center;
-  border: 1px solid #707070;
+  border: 1px solid #151515;
   padding: .5% 0;
 }
 .use-template-btn{
-  border: 1px solid #32d800;
+  border: 1px solid #023E8A;
   border-radius: 0;
 
   margin-left: 1%;
@@ -111,13 +111,13 @@
   font-weight: 700;
 
   background-color: transparent;
-  border: 3px solid #32D800;
+  border: 3px solid #023E8A;
   border-radius: 10px;
   transition: background-color .3s, color .3s;
 }
 
 .buttons:hover{
-  background-color: #32d800;
+  background-color: #023E8A;
   color: white;
 }
 

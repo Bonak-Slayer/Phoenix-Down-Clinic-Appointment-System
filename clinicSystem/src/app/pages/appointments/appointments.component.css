@@ -24,7 +24,7 @@
 
 .appointments-container {
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
   animation: entrance .5s;
 }
 
@@ -35,18 +35,18 @@
 .all-appointments-container {
   margin-top: 3%;
   height: 450px;
-  border: solid 1px #707070;
+  border: solid 1px #151515;
   overflow-y: scroll;
 }
 
 .all-appointments-container a {
-  color: #707070;
+  color: #151515;
   text-decoration: none;
 }
 
 .appointment {
   width: 100%;
-  border-bottom: solid 1px #707070;
+  border-bottom: solid 1px #151515;
   transition: background-color .3s, color .3s;
 }
 

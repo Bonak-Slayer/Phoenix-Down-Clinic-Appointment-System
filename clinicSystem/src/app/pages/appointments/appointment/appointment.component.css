@@ -8,7 +8,6 @@
   }
 
   .information-container {
-    text-align: center;
     display: flex;
   }
 
@@ -16,7 +15,6 @@
     margin-right: 3%;
     height: 550px;
     width: 25%;
-    border: 1px solid #707070;
   }
 
   .appointment-details {
@@ -43,7 +41,7 @@
     margin-right: 3%;
     height: 550px;
     width: 100%;
-    border: 1px solid #707070;
+    border: 1px solid #151515;
   }
 
   .appointment-details {
@@ -55,7 +53,7 @@
 .appointment-container {
   margin-bottom: 5%;
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
   animation: entrance .5s;
 }
 
@@ -66,12 +64,11 @@
 .information-container {
   width: 95%;
   margin-top: 3%;
-  border: 1px solid #707070;
-  background-color: #353535;
+  border: 1px solid #151515;
+  background-color: #fff;
 }
 
 .image-container {
-  border-bottom: 1px solid #353535;
   height: 40%;
   width: 100%;
 }
@@ -83,28 +80,23 @@
 }
 
 .appointment-status {
-  text-align: center;
-  padding: 5%;
+  padding: 5% 0;
 }
 
 .appointment-details h2 {
-  color: white;
+  color: #151515;
 }
 
 .highlight {
-  color: #48CAE4;
+  color: #023E8A;
 }
 
 .rejected {
   color: #EF0000;
 }
 
-.user-details {
-    text-align: center;
-}
-
 .information h3 {
-  color: white;
+  color: #151515;
 }
 
 .reschedule-appointment, .cancel-appointment {
@@ -117,7 +109,7 @@
   width: 40%;
   margin: 3% 30%;
   font-family: Bahnschrift;
-  color: #707070;
+  color: #151515;
 }
 
 .buttons-container {
@@ -132,17 +124,17 @@
   font-family: Bahnschrift;
   font-weight: 700;
   font-size: 15px;
-  color: white;
+  color: #151515;
   padding: 2%;
 
   background-color: transparent;
-  border: 2px solid #48CAE4;
+  border: 2px solid #023E8A;
   border-radius: 10px;
   transition: background-color .3s, color .3s;
 }
 
 .request-change:hover {
-  background-color: #48CAE4;
+  background-color: #023E8A;
   color: white;
 }
 

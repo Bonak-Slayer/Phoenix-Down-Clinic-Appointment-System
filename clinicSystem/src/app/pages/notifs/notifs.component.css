@@ -32,7 +32,7 @@
 }
 
 .notifs-container {
-  color: #707070;
+  color: #151515;
   animation: entrance .5s ease-in-out;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .notifications {
-  border: 1px solid #707070;
+  border: 1px solid #151515;
   height: 450px;
   overflow-y: scroll;
 }
@@ -59,11 +59,11 @@
   font-family: Bahnschrift;
   padding-bottom: 1%;
   padding-left: 1%;
-  border-bottom: 1px solid #707070;
+  border-bottom: 1px solid #151515;
 }
 
 .notif-date {
-  color: #48CAE4;
+  color: #023E8A;
   margin-right: 1%;
 }
 

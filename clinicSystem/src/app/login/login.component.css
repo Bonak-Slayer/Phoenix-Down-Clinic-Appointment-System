@@ -69,18 +69,19 @@
 
 #submit-button {
   margin-top: 5%;
-  background-color: #023E8A;
-  border: none;
+  background-color: #fff;
+  border: 2px solid #023E8A;
   height: 30px;
 
-  color: white;
+  color: #151515;
   font-family: Bahnschrift;
   font-weight: 700;
   transition: background-color .3s, border .3s;
 }
 
 #submit-button:hover {
-  background-color: #03045E;
+  background-color: #023E8A;
+  color: #fff;
   cursor: pointer;
 }
 
